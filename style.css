@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: Arial, sans-serif;
+  }
+
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+body {
+    font-size: 14px;
+    background-image: url("https://anyvoo.com/wp-content/uploads/2020/04/Old-School-Wood-Plank-Video-Conference-Background-Design-Full-Image-No-Logo.jpg");
+  }
+
+  ::backdrop{
+    background-image: url("https://anyvoo.com/wp-content/uploads/2020/04/Old-School-Wood-Plank-Video-Conference-Background-Design-Full-Image-No-Logo.jpg");
+}
+  
+
+
+@media screen and (orientation:portrait) {
+
+
+    #portraitButtonDiv{
+        border: 4px outset rgb(122, 113, 113);
+        margin: 5%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .portraitButtons{
+        border: 4px outset rgb(122, 113, 113);
+        width: 35vw;
+        height: 15vh;
+        font-size: 2.75vh;
+        background-color: black;
+        color: white;
+        padding: 4vh 4vw;
+        display: flex;
+        margin: 4vw auto;
+        justify-content: center;
+    }  
+
+    .portraitButtonText{
+        width: auto;
+        height: auto;
+        display: block;
+        justify-content: center;
+    }
+}

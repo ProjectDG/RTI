@@ -12,6 +12,8 @@
 body {
     font-size: 14px;
     background-image: url("https://anyvoo.com/wp-content/uploads/2020/04/Old-School-Wood-Plank-Video-Conference-Background-Design-Full-Image-No-Logo.jpg");
+    display: flex;
+    flex-wrap: wrap;
   }
 
   ::backdrop{
@@ -22,39 +24,53 @@ body {
 
 @media screen and (orientation:portrait) {
 
+  #buttonDiv{
+    border: 4px outset rgb(122, 113, 113);
+    margin: 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.4);
 
-    #portraitButtonDiv{
-        border: 4px outset rgb(122, 113, 113);
-        margin: 5%;
-        display: flex;
-        flex-wrap: wrap;
-        background-color: rgba(0, 0, 0, 0.4);
+  }
 
-    }
+  .main-buttons,
+  .brand-buttons,
+  .back-button,
+  .abc-buttons
+  {
+    border: 4px outset rgb(122, 113, 113);
+    width: 35vw;
+    height: 15vh;
+    font-size: 2.25vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    margin: 4vw auto;
+    justify-content: center;
+  }  
 
-    .portrait-buttons,
-    .tequila-buttons,
-    .vodka-buttons
-    {
-        border: 4px outset rgb(122, 113, 113);
-        width: 35vw;
-        height: 15vh;
-        font-size: 2.75vh;
-        background-color: black;
-        color: white;
-        display: flex;
-        margin: 4vw auto;
-        justify-content: center;
-    }  
+  .button-text{
+    margin: auto;
+    height: auto;
+    display: block;
+    justify-content: center;
+  }
 
-    .portrait-button-text{
-        margin: auto;
-        height: auto;
-        display: block;
-        justify-content: center;
-    }
+  .back-button{
+    margin: 2vh auto 0 auto;
+    width: 90vw;
+    height: 10vh;
+  }
 
-    .liquor-buttons{
-      display: none;
-    }
+  .abc-buttons{
+    width: 23vw;
+    height: 5vh;
+    margin: 2vw auto 1.25vh auto;
+    font-size: 2vh;
+    font-family: monospace;
+    padding: 0%;
+  }
+
+
+  
 }

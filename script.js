@@ -1,69 +1,123 @@
+
+
 $(document).ready(function(){
-    var alphabet = $("#alphabet");
-    var mainButtons = $(".main-buttons");
-    var tequilaMain = $(".tequila-main");
-    var vodkaMain = $(".vodka-main");
-    var backButton = $(".back-button");
-    var brandButtons = $(".brand-buttons");
+
+  // Switches to fullscreen with first button press.
+    var elem = document.getElementsByTagName("BODY")[0];
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+
+
+    // Variables to simplify selectors
     var tequilas = $(".tequila");
     var vodkas = $(".vodka");
-    var buttonArea = document.getElementById('buttonDiv');
 
 
-    const tequilaList = {
-       'Don Julio' : [],
-        'José Cuervo Tradicional' : [],
-        'Teremana' : [],
+    // Drink Type List
+    const typeList = {
+      'Tequila' : [],
+      'Vodka' : [],
+      'Whiskey' : [],
+      'Gin' : [],
+      'Rum' : [],
+      'Scotch' : [],
+      'Liqueur' : [],
+      'Wine' : [],
+      'Beer' : [],
+      'Jarritos' : []
     }
 
 
-    function loadBrands(/*curr*/) {
+    // Tequila List
+    const tequilaList = {
+      'Don Julio' : ["Tequila"],
+      'José Cuervo Tradicional' : ["Tequila"],
+      'Teremana' : ["Tequila"],
+      'Patron' : ["Tequila"]
+    }
+    
 
-        const targetDiv = buttonArea;
 
-        Object.keys(tequilaList).forEach((brand) => {
+    const vodkaList = {
+      'Finlandia' : ["Vodka"],
+      'Grey Goose' : ["Vodka"],
+      'Ketel One' : ["Vodka"],
+      'Tito\'s' : ["Vodka"]
+   }
+
+
+   // Creates the main buttons for selecting which type of drink they want
+   function loadTypes() {
+    const targetDiv = $("#buttonDiv");
+    Object.keys(typeList).forEach((type) => {
+        let button = document.createElement("button");
+        let span = document.createElement("span");
+        button.appendChild(span);
+        span.innerHTML = type;
+        span.setAttribute('class', 'button-text')
+        button.setAttribute('class', "main-buttons");
+        button.setAttribute('value', type)
+        targetDiv.append(button);
+
+        console.log(type)
+    });
+}
+
+
+    // Creates buttons for the different brands of liquor
+    function loadBrands(current) {
+        const targetDiv = $("#buttonDiv");
+        Object.keys(current).forEach((brand) => {
             let button = document.createElement("button");
             let span = document.createElement("span");
             button.appendChild(span);
             span.innerHTML = brand;
             span.setAttribute('class', 'button-text')
             button.setAttribute('class', 'brand-buttons');
-            button.setAttribute('value', tequilaList[brand]);
+            button.setAttribute('value', current[brand]);
             targetDiv.append(button);
-        })
-        
+        });
     }
     
 
+    // Initialization
+    loadTypes();
+    loadBrands(tequilaList);
+    loadBrands(vodkaList);
+    $("#alphabetDiv").hide();
+    $(".back-button").hide();
+    $(".brand-buttons").hide();
 
-    $(alphabet).hide();
-    $(backButton).hide();
-    $(brandButtons).hide();
 
-
-    $(mainButtons).on('click', function(){
-        $(mainButtons).hide();
-        $(alphabet).show();
-        loadBrands();
+    // Tequila Buttons
+    $(".main-buttons[value|='Tequila'").on('click', function(){
+        $(".main-buttons").hide();
+        $(".brand-buttons[value|='Tequila'").show();
+        $(".back-button").show();
+        openFullscreen();
     });
 
-    $(tequilaMain).on('click', function(){
-        $(vodkas).hide();
-        $(tequilas).show();
-        $(backButton).show();
+    // Vodka Buttons
+    $(".main-buttons[value|='Vodka'").on('click', function(){
+        $(".main-buttons").hide();
+        $(".brand-buttons[value|='Vodka'").show();
+        $(".back-button").show();
+        openFullscreen();
     });
 
-    $(vodkaMain).on('click', function(){
-        $(tequilas).hide();
-        $(vodkas).show();
-        $(backButton).show();
+    // Back Button
+    $(".back-button").on('click', function(){
+        $(".brand-buttons").hide();
+        $(".back-button").hide();
+        $(".main-buttons").show();
     });
 
-
-    $(backButton).on('click', function(){
-        $(backButton).hide();
-        $(brandButtons).hide();
-        $(mainButtons).show();
-    });
-  
   });

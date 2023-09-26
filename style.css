@@ -24,13 +24,23 @@ body {
 
 @media screen and (orientation:portrait) {
 
+  #alphabetDiv{
+    width: 90%;
+    height: 5%;
+    margin: 1vh auto;
+    justify-content: center;
+  }
+
   #buttonDiv{
+    width: 90%;
+    height: 75%;
     border: 4px outset rgb(122, 113, 113);
-    margin: 0 5%;
+    margin: 3% 5%;
+    padding: 2%;
     display: flex;
     flex-wrap: wrap;
     background-color: rgba(0, 0, 0, 0.4);
-
+    overflow: scroll;
   }
 
   .main-buttons,
@@ -47,7 +57,13 @@ body {
     display: flex;
     margin: 4vw auto;
     justify-content: center;
-  }  
+  }
+  
+  .main-buttons{
+    width: 80vw;
+    height: 5.75vh;
+    margin: 2vw auto;
+  }
 
   .brand-buttons{
     width: 80vw;
@@ -59,21 +75,21 @@ body {
     margin: auto;
     height: auto;
     display: block;
-    justify-content: center;
+    justify-content: center
   }
 
   .back-button{
-    margin: 1.5vh auto 0 auto;
+    margin: .2vh auto 0 auto;
     width: 90vw;
     height: 10vh;
   }
 
-  .abc-buttons{
+  .abc-buttons{     /* change anyway */
     display: block;
     float: left;
-    width: 23vw;
-    height: 5vh;
-    margin: 2vw 1vw;
+    width: 20vw;
+    height: 4vh;
+    margin: 1vh 1.1vw;
     font-size: 2vh;
     font-family: monospace;
     padding: 0%;

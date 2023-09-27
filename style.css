@@ -31,7 +31,8 @@ body {
     justify-content: center;
   }
 
-  #buttonDiv{
+  #buttonDiv,
+  #mainButtonDiv{
     width: 90%;
     height: 75%;
     border: 4px outset rgb(122, 113, 113);
@@ -41,6 +42,11 @@ body {
     flex-wrap: wrap;
     background-color: rgba(0, 0, 0, 0.4);
     overflow: scroll;
+  }
+
+  #mainButtonDiv{
+    width: 90%;
+    height: 94vh;
   }
 
   .main-buttons,
@@ -61,8 +67,8 @@ body {
   
   .main-buttons{
     width: 80vw;
-    height: 5.75vh;
-    margin: 2vw auto;
+    height: 8vh;
+    margin: 1.5vw auto;
   }
 
   .brand-buttons{

@@ -15,12 +15,6 @@ function openFullscreen() {
 }
 
 
-
-    // Variables to simplify selectors
-    var tequilas = $(".tequila");
-    var vodkas = $(".vodka");
-
-
     // Drink Type List
     const typeList = {
       'Tequila' : [],
@@ -45,7 +39,7 @@ function openFullscreen() {
     }
     
 
-
+    // Vodka List
     const vodkaList = {
       'Finlandia' : ["Vodka"],
       'Grey Goose' : ["Vodka"],
@@ -56,7 +50,7 @@ function openFullscreen() {
 
    // Creates the main buttons for selecting which type of drink they want
    function loadTypes() {
-    const targetDiv = $("#buttonDiv");
+    const targetDiv = $("#mainButtonDiv");
     Object.keys(typeList).forEach((type) => {
         let button = document.createElement("button");
         let span = document.createElement("span");
@@ -66,8 +60,6 @@ function openFullscreen() {
         button.setAttribute('class', "main-buttons");
         button.setAttribute('value', type)
         targetDiv.append(button);
-
-        console.log(type)
     });
 }
 
@@ -95,11 +87,14 @@ function openFullscreen() {
     $("#alphabetDiv").hide();
     $(".back-button").hide();
     $(".brand-buttons").hide();
+    $("#buttonDiv").hide();
 
 
     // Tequila Buttons
     $(".main-buttons[value|='Tequila'").on('click', function(){
+        $("#mainButtonDiv").hide();
         $(".main-buttons").hide();
+        $("#buttonDiv").show();
         $(".brand-buttons[value|='Tequila'").show();
         $(".back-button").show();
         openFullscreen();
@@ -107,7 +102,9 @@ function openFullscreen() {
 
     // Vodka Buttons
     $(".main-buttons[value|='Vodka'").on('click', function(){
+        $("#mainButtonDiv").hide();
         $(".main-buttons").hide();
+        $("#buttonDiv").show();
         $(".brand-buttons[value|='Vodka'").show();
         $(".back-button").show();
         openFullscreen();
@@ -115,8 +112,10 @@ function openFullscreen() {
 
     // Back Button
     $(".back-button").on('click', function(){
+        $("#buttonDiv").hide();
         $(".brand-buttons").hide();
         $(".back-button").hide();
+        $("#mainButtonDiv").show();
         $(".main-buttons").show();
     });
 

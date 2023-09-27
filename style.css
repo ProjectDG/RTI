@@ -34,10 +34,10 @@ body {
   #buttonDiv,
   #mainButtonDiv{
     width: 90%;
-    height: 75%;
+    height: 80%;
     border: 4px outset rgb(122, 113, 113);
     margin: 3% 5%;
-    padding: 2%;
+    padding: 2vh 0;
     display: flex;
     flex-wrap: wrap;
     background-color: rgba(0, 0, 0, 0.4);
@@ -46,7 +46,7 @@ body {
 
   #mainButtonDiv{
     width: 90%;
-    height: 94vh;
+    height: 92vh;
   }
 
   .main-buttons,
@@ -67,14 +67,19 @@ body {
   
   .main-buttons{
     width: 80vw;
-    height: 8vh;
-    margin: 1.5vw auto;
+    height: auto;
+    margin: .5vh auto .5vh auto;
   }
 
   .brand-buttons{
     width: 80vw;
     height: 8vh;
     margin: 2vw auto;
+  }
+
+  [value~="Vodka"],
+  [value~="Class"]{
+    height: auto;
   }
 
   .button-text{

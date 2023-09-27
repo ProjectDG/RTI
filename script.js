@@ -29,9 +29,31 @@ function openFullscreen() {
       'Jarritos' : []
     }
 
+    // Tequila Class List
+    const tequilaClassList = {
+      'Blanco' : ["Class"],
+      'Reposado' : ["Class"],
+      'Anejo' : ["Class"],
+      'Joven' : ["Class"],
+      'Select Reserves' : ["Class"],
+      'Mezcal' : ["Class"]
+    }
 
-    // Tequila List
+
+    // Blanco Tequila List
     const tequilaList = {
+      '1 2 3 Organic' : ["Tequila"],
+      '1800' : ["Tequila"],
+      '1800 Coconut' : ["Tequila"],
+      '4 Copas' : ["Tequila"],
+      '512' : ["Tequila"],
+      '818' : ["Tequila"],
+      'Adictivo' : ["Tequila"],
+      'Agavales' : ["Tequila"],
+      'Ambhar' : ["Tequila"],
+      'Arette' : ["Tequila"],
+      'Arrogante' : ["Tequila"],
+      'Arta' : ["Tequila"],
       'Don Julio' : ["Tequila"],
       'José Cuervo Tradicional' : ["Tequila"],
       'Teremana' : ["Tequila"],
@@ -41,10 +63,13 @@ function openFullscreen() {
 
     // Vodka List
     const vodkaList = {
+      'Belvedere' : ["Vodka"],
       'Finlandia' : ["Vodka"],
       'Grey Goose' : ["Vodka"],
       'Ketel One' : ["Vodka"],
+      'Ketel One Citroen' : ["Vodka"],
       'Tito\'s' : ["Vodka"]
+      // Template  --------->    '' : ["Vodka"],
    }
 
 
@@ -82,6 +107,7 @@ function openFullscreen() {
 
     // Initialization
     loadTypes();
+    loadBrands(tequilaClassList)
     loadBrands(tequilaList);
     loadBrands(vodkaList);
     $("#alphabetDiv").hide();
@@ -90,17 +116,29 @@ function openFullscreen() {
     $("#buttonDiv").hide();
 
 
-    // Tequila Buttons
+    // Show Tequila Class Buttons
     $(".main-buttons[value|='Tequila'").on('click', function(){
         $("#mainButtonDiv").hide();
         $(".main-buttons").hide();
+        $(".brand-buttons").hide();
         $("#buttonDiv").show();
-        $(".brand-buttons[value|='Tequila'").show();
+        $(".brand-buttons[value|='Class'").show();
         $(".back-button").show();
         openFullscreen();
     });
 
-    // Vodka Buttons
+    // Show Tequila Buttons
+    $(".brand-buttons[value|='Class'").on('click', function(){
+      $("#mainButtonDiv").hide();
+      $(".main-buttons").hide();
+      $(".brand-buttons[value|='Class'").hide();
+      $("#buttonDiv").show();
+      $(".brand-buttons[value|='Tequila'").show();
+      $(".back-button").show();
+      openFullscreen();
+  });
+
+    // Show Vodka Buttons
     $(".main-buttons[value|='Vodka'").on('click', function(){
         $("#mainButtonDiv").hide();
         $(".main-buttons").hide();

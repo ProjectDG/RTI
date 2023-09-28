@@ -84,15 +84,7 @@ body {
   }
 
   [value~="ClassTequila"]
-  [value~="Blanco"],
-  [value~="Reposado"],
-  [value~="Anejo"],
-  [value~="Joven"],
-  [value~="Mezcal"],
-  [value~="Flavored"],
-  [value~="Select"],
   [value~="Vodka"],
-  [value~="ClassWhiskey"],
   [value~="Whiskey"]    /* Cut into classes */
   [value~="Rum"],
   [value~="Gin"],
@@ -105,7 +97,7 @@ body {
 
   #Draft, #Bottle{
     height: auto;
-    font-size: 200%;
+    font-size: 175%;
   }
 
   

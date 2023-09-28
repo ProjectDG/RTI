@@ -220,12 +220,59 @@ function openFullscreen() {
     // Whiskey List
     const whiskeyClassList = {
       'Bourbon' : ["ClassWhiskey"],
+      'Canadian' : ["ClassWhiskey"],
+      'Flavored' : ["ClassWhiskey"],
+      //'Indian' : ["ClassWhiskey"],
+      'Irish' : ["ClassWhiskey"],
+      //'Japanese' : ["ClassWhiskey"],
+      'Rye' : ["ClassWhiskey"],
+      'Scotch' : ["ClassWhiskey"],
+      'Single Malt & Blended' : ["ClassWhiskey"],
+      'Tennessee' : ["ClassWhiskey"],
+      //'White' : ["ClassWhiskey"]
     }
 
-    // Whiskey List
-    const whiskeyList = {
-      '' : ["Whiskey"],
+    // Bourbon List
+    const bourbonList = {
+      'Jim Beam' : ["Bourbon"],
     }
+
+    // Canadian List
+    const canadianList = {
+      '' : ["Canadian"],
+    }
+
+    // Flavored List
+    const flavoredList = {
+      '' : ["Flavored"],
+    }
+
+    // Irish List
+    const irishList = {
+      '' : ["Irish"],
+    }
+
+    // Rye List
+    const ryeList = {
+      '' : ["Rye"],
+    }
+
+    // Scotch List
+    const scotchList = {
+      '' : ["Scotch"],
+    }
+
+    // Single Malt & Blended List
+    const singleMaltBlendedList = {
+      'Test' : ["Single Malt & Blended"],
+    }
+
+    // TennesseeList
+    const TennesseeList = {
+      '' : ["Tennessee"],
+    }
+
+    
 
     // Rum List
     const rumList = {
@@ -386,6 +433,11 @@ function openFullscreen() {
           button.setAttribute('class', 'brand-buttons');
           button.setAttribute('value', current[brand]);
           targetDiv.append(button);
+
+          if(button.id === "Single Malt & Blended"){
+            button.setAttribute('id', 'SingleMaltBlended');
+            console.log(button.id)
+          }
       });
 }
 
@@ -421,7 +473,8 @@ function openFullscreen() {
     loadBrands(vodkaList);
     // Whiskeys-----------------------
     loadWhiskeyClass(whiskeyClassList);
-    loadBrands(whiskeyList);
+    loadBrands(bourbonList);
+    loadBrands(singleMaltBlendedList);
     // Rum----------------------------
     loadBrands(rumList);
     // Gin----------------------------
@@ -511,6 +564,18 @@ function openFullscreen() {
     $(".main-buttons[value|='Whiskey'").on('click', function(){
       hide();
       $(".brand-buttons[value|='ClassWhiskey'").show();
+    });
+
+    // Show Bourbon Buttons
+    $("#Bourbon").on('click', function(){
+      hide();
+      $(".brand-buttons[value|='Bourbon'").show();
+    });
+
+    // Show Single Malt & Blended Buttons
+    $("#SingleMaltBlended").on('click', function(){
+      hide();
+      $(".brand-buttons[value|='Single Malt & Blended'").show();
     });
 
     // Show Rum Buttons

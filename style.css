@@ -21,6 +21,12 @@ body {
 }
   
 
+@media screen and (orientation:landscape) {
+  .main-buttons{
+    display: none;
+  }
+}
+
 
 @media screen and (orientation:portrait) {
 
@@ -107,5 +113,4 @@ body {
   }
 
 
-  
 }

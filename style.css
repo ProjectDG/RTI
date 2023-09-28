@@ -83,9 +83,39 @@ body {
     margin: 2vw auto;
   }
 
+  [value~="ClassTequila"]
+  [value~="Blanco"],
+  [value~="Reposado"],
+  [value~="Anejo"],
+  [value~="Joven"],
+  [value~="Mezcal"],
+  [value~="Flavored"],
+  [value~="Select"],
   [value~="Vodka"],
-  [value~="Class"]{
+  [value~="ClassWhiskey"],
+  [value~="Whiskey"]    /* Cut into classes */
+  [value~="Rum"],
+  [value~="Gin"],
+  [value~="Cordials"],
+  [value~="Wine"],
+  [value~="DraftBeer"],
+  [value~="Jarritos"]{
     height: auto;
+  }
+
+  #Draft, #Bottle{
+    height: auto;
+    font-size: 200%;
+  }
+
+  
+
+  #Draft{
+    margin: 10vh auto 5vh auto;
+  }
+
+  #Bottle{
+    margin: 5vh auto 10vh auto;
   }
 
   .button-text{

@@ -256,11 +256,6 @@ function openFullscreen() {
       'Hendricks' : ["Gin"],
       'Tanqueray' : ["Gin"],
     }
-
-    // Scotch List
-    const scotchList = {
-      '' : ["Scotch"],
-    }
     
     // Cordials List
     const cordialsList = {
@@ -272,9 +267,48 @@ function openFullscreen() {
       '' : ["Wine"],
     }
 
-    // Beer List
-    const beerList = {
-      '' : ["Beer"],
+    // Beer Class List
+    const beerClassList = {
+      'Draft' : ["ClassBeer"],
+      'Bottle' : ["ClassBeer"],
+    }
+
+    // Draft Beer List
+    const draftBeerList = {
+      'Bone Hook "Lager"' : ["DraftBeer"],
+      'Bone Hook "Wicked Seas"' : ["DraftBeer"],
+      'Dos Equis "Lager"' : ["DraftBeer"],
+      'Kona "Big Wave"' : ["DraftBeer"],
+      'Modelo Especial' : ["DraftBeer"],
+      'Pacifico' : ["DraftBeer"],
+      'Ankrolab "Turtle Season"' : ["DraftBeer"],
+    }
+
+    // Bottle Beer List
+    const bottleBeerList = {
+      'Amstel Light' : ["BottleBeer"],
+      'Budweiser' : ["BottleBeer"],
+      'Bud Light' : ["BottleBeer"],
+      'Coors Light' : ["BottleBeer"],
+      'Corona Extra' : ["BottleBeer"],
+      'Corona Light' : ["BottleBeer"],
+      'Corona Premier' : ["BottleBeer"],
+      'Corona Familiar' : ["BottleBeer"],
+      'Corona N.A.' : ["BottleBeer"],
+      'Dos Equis "Amber"' : ["BottleBeer"],
+      'Dos Equis "Lager"' : ["BottleBeer"],
+      'Heineken' : ["BottleBeer"],
+      'Heineken N.A.' : ["BottleBeer"],
+      'Bone Hook "Island Breeze"' : ["BottleBeer"],
+      'Michelob Ultra' : ["BottleBeer"],
+      'Miller Light' : ["BottleBeer"],
+      'Modelo Especial' : ["BottleBeer"],
+      'Modelo Negra' : ["BottleBeer"],
+      'McKenzies "Pumpkin Jack"' : ["BottleBeer"],
+      'Tecate' : ["BottleBeer"],
+      'Victoria' : ["BottleBeer"],
+      'Bone hook " Wicked Seas"' : ["BottleBeer"],
+      'Yuengling' : ["BottleBeer"],
     }
    
 
@@ -354,6 +388,22 @@ function openFullscreen() {
           targetDiv.append(button);
       });
 }
+
+    // Loads Whiskey Classes
+    function loadBeerClass(current) {
+      const targetDiv = $("#buttonDiv");
+      Object.keys(current).forEach((brand) => {
+          let button = document.createElement("button");
+          let span = document.createElement("span");
+          button.appendChild(span);
+          span.innerHTML = brand;
+          span.setAttribute('class', 'button-text');
+          button.setAttribute('id', brand);
+          button.setAttribute('class', 'brand-buttons');
+          button.setAttribute('value', current[brand]);
+          targetDiv.append(button);
+  });
+}
     
 
     // Initialization---------------------------------------------------------
@@ -381,7 +431,9 @@ function openFullscreen() {
     // Wine---------------------------
     loadBrands(wineList);
     // Beer---------------------------
-    loadBrands(beerList);
+    loadBeerClass(beerClassList);
+    loadBrands(draftBeerList);
+    loadBrands(bottleBeerList);
     // Jarritos-----------------------
     loadBrands(jarritosList);
     $("#alphabetDiv").hide();
@@ -471,6 +523,24 @@ function openFullscreen() {
     $(".main-buttons[value|='Gin'").on('click', function(){
       hide();
       $(".brand-buttons[value|='Gin'").show();
+    });
+
+    // Show Beer Class Buttons
+    $(".main-buttons[value|='Beer'").on('click', function(){
+      hide();
+      $(".brand-buttons[value|='ClassBeer'").show();
+    });
+
+    // Show Draft Beer Buttons
+    $("#Draft").on('click', function(){
+      hide();
+      $(".brand-buttons[value|='DraftBeer'").show();
+    });
+
+    // Show Bottle Beer Buttons
+    $("#Bottle").on('click', function(){
+      hide();
+      $(".brand-buttons[value|='BottleBeer'").show();
     });
 
     // Show Jarritos Buttons

@@ -787,6 +787,12 @@ function openFullscreen() {
       $(".brand-buttons[value|='Blanco'").show();
     });
 
+    // Blanco Button Actions
+    $(".brand-buttons[value|='Blanco'").on('click', function(){
+      hide();
+      addBrandImage(this);
+  });
+
     // Show Reposado Tequila Buttons
     $("#Reposado").on('click', function(){
       hide();

@@ -641,9 +641,7 @@ function openFullscreen() {
       let categoryFirstLetter = current.value.toLowerCase()[0];
       let categoryRestOfLetters = current.value.slice(1).replaceAll(" ", "");
       let category = categoryFirstLetter + categoryRestOfLetters;
-      let firstLetter = current.id.toLowerCase()[0];
-      let restOfLetters = current.id.slice(1).replaceAll(" ", "");
-      let camelCase = firstLetter + restOfLetters;
+      let camelCase = current.id.replaceAll(" ", "");
       img.setAttribute("id", "image")
       img.src = "./images/" + category + camelCase + ".png";
 
@@ -656,7 +654,7 @@ function openFullscreen() {
       targetDiv.append(img);
       targetDiv.append(titleDiv);
       titleDiv.append(titleElement)
-      console.log(titleElement);
+      console.log(img.src);
 
 }
 

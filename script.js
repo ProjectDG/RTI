@@ -39,7 +39,6 @@ function openFullscreen() {
       'Select' : ["ClassTequila"]
     }
 
-
     // Blanco Tequila List
     const blancoList = {
       '512' : ["Blanco"],
@@ -66,6 +65,7 @@ function openFullscreen() {
       'Camarena' : ["Blanco"],
       'Cantera' : ["Blanco"],
       'Casa Del Sol' : ["Blanco"],
+      'Casa Maestri Flask' : ["Blanco"],
       'Casa Mexico' : ["Blanco"],
       'Casa Noble' : ["Blanco"],
       'Casamigos' : ["Blanco"],
@@ -77,7 +77,6 @@ function openFullscreen() {
       'Chinaco' : ["Blanco"],
       'Cimarron' : ["Blanco"],
       'Cincoro' : ["Blanco"],
-      'Casa Maestri Flask' : ["Blanco"],
       'Coa De Jima' : ["Blanco"],
       'Codigo' : ["Blanco"],
       'Codiga Rosa' : ["Blanco"],  // ------------------>  might need to change the class
@@ -102,12 +101,13 @@ function openFullscreen() {
       'Dulce Vida' : ["Blanco"],
       'El Jimador' : ["Blanco"],
       'El Luchador' : ["Blanco"],
-      'El Luchado 110' : ["Blanco"],
+      'El Luchador 110' : ["Blanco"],
       'El Mayor' : ["Blanco"],
       'El Tequileno' : ["Blanco"],
       'El Tesoro' : ["Blanco"],
-      'Espolon' : ["Blanco"],
+      'El Espolon' : ["Blanco"],
       'Eterno Verano' : ["Blanco"],
+      'Exotico' : ["Blanco"],
       'Florida Kush' : ["Blanco"],
       'Fortaleza' : ["Blanco"],
       'G4' : ["Blanco"],
@@ -120,10 +120,12 @@ function openFullscreen() {
       'Hussongs' : ["Blanco"],
       'Insolito' : ["Blanco"],
       'José Cuervo Tradicional' : ["Blanco"],
-      'Kah' : ["Blanco"],
+      //'Kah' : ["Blanco"],
+      'Komos' : ["Blanco"],
       'Lapis' : ["Blanco"],
       'Los Azulejos' : ["Blanco"],
       'Los Arango' : ["Blanco"],
+      'Los Nuhuales' : ["Blanco"],
       'Lunazul' : ["Blanco"],
       'Maestro Dobel' : ["Blanco"],
       'Maracame' : ["Blanco"],
@@ -145,7 +147,6 @@ function openFullscreen() {
       'Riazul' : ["Blanco"],
       'Rock\'N\'Roll' : ["Blanco"],
       'San Matias' : ["Blanco"],
-      'Santo Puro' : ["Blanco"],
       'Sauza Hornitos' : ["Blanco"],
       'Siempre' : ["Blanco"],
       'Siete Leguas' : ["Blanco"],
@@ -155,56 +156,171 @@ function openFullscreen() {
       'The Butterfly Cannon Blue' : ["Blanco"],
       'The Butterfly Cannon Rosa' : ["Blanco"],  // ---------------> Flavored or Joven?
       'Tosco' : ["Blanco"],
-      'Tres Generaciones' : ["Blanco"],
       'Tres Agaves' : ["Blanco"],
+      'Tres Generaciones' : ["Blanco"],
       'Tromba' : ["Blanco"],
       'Vanguardia' : ["Blanco"],
       'Vide De Louie' : ["Blanco"],
       'Villa One' : ["Blanco"],
-      'Volcan' : ["Blanco"],
+      'Volcan' : ["Blanco"]
     }
-
 
     // Reposado Tequila List
     const reposadoList = {
+      '512' : ["Reposado"],
+      '818' : ["Reposado"],
+      '1800' : ["Reposado"],
       '1 2 3' : ["Reposado"],
+      //'4 Copas' : ["Reposado"],
+      'Adictivo' : ["Reposado"],
+      //'Agavales' : ["Reposado"],
+      'Ambhar' : ["Reposado"],
+      'Arette' : ["Reposado"],
+      'Arrogante' : ["Reposado"],
+      'Arta' : ["Reposado"],
+      'Artenom' : ["Reposado"],
+      'Asombroso' : ["Reposado"],
+      //'Astral' : ["Reposado"],
+      'Avion' : ["Reposado"],
+      'Azunia' : ["Reposado"],
+      //'Baron' : ["Reposado"],
+      'Blue Nectar' : ["Reposado"],
+      'Blue Nectar Special Craft' : ["Reposado"],
+      //'Cabeza' : ["Reposado"],
+      'Cabo Wabo' : ["Reposado"],
+      //'Calirosa' : ["Reposado"],
+      'Camarena' : ["Reposado"],
+      'Cantera' : ["Reposado"],
+      'Casa Del Sol' : ["Reposado"],
+      'Casa Maestri Flask' : ["Reposado"],
+      'Casa Mexico' : ["Reposado"],
+      'Casa Noble' : ["Reposado"],
+      'Casamigos' : ["Reposado"],
+      'Catrina' : ["Reposado"],
+      'Cazadores' : ["Reposado"],
+      'Cenote' : ["Reposado"],
+      'Chamucos' : ["Reposado"],
+      'Chaquira' : ["Reposado"],
+      'Chinaco' : ["Reposado"],
+      //'Cimarron' : ["Reposado"],
+      'Cincoro' : ["Reposado"],
+      'Coa De Jima' : ["Reposado"],
+      'Codigo' : ["Reposado"],
+      'Corazon' : ["Reposado"],
+      //'Corazon Estate' : ["Reposado"],
+      //'Corazon Expesiones' : ["Reposado"],
+      'Corralejo' : ["Reposado"],
+      'Corzo' : ["Reposado"],
+      'Dano\'s' : ["Reposado"],
+      'DeLeon' : ["Reposado"],
+      'Don Cheyo' : ["Reposado"],
+      'Don Fulano' : ["Reposado"],
+      'Don Julio' : ["Reposado"],
+      'Don Julio Double Cask' : ["Reposado"],
+      //'Don Londres' : ["Reposado"],
+      'Don Suenos' : ["Reposado"],
+      'Don Abraham' : ["Reposado"],
+      'Don Felix' : ["Reposado"],
+      'Don Ramon' : ["Reposado"],
+      //'Dona Celia' : ["Reposado"],
+      //'Dos Primos' : ["Reposado"],
+      'Dos Armadillos' : ["Reposado"],
+      'Dulce Vida' : ["Reposado"],
+      'El Jimador' : ["Reposado"],
+      //'El Luchador' : ["Reposado"],
+      //'El Luchador 110' : ["Reposado"],
+      'El Mayor' : ["Reposado"],
+      //'El Tequileno' : ["Reposado"],
+      'El Tesoro' : ["Reposado"],
+      'El Espolon' : ["Reposado"],
+      'Eterno Verano' : ["Reposado"],
+      //'Florida Kush' : ["Reposado"],
+      'Fortaleza' : ["Reposado"],
+      'G4' : ["Reposado"],
+      'Gran Centenario' : ["Reposado"],
+      'Grand Mayan' : ["Reposado"],
+      'Herencia' : ["Reposado"],
+      'Herradura' : ["Reposado"],
+      'Hiatus' : ["Reposado"],
+      'Honor Claro' : ["Reposado"],
+      'Hussongs' : ["Reposado"],
+      'Insolito' : ["Reposado"],
+      'José Cuervo Tradicional' : ["Reposado"],
+      //'Kah' : ["Reposado"],
+      'Lapis' : ["Reposado"],
+      'Los Azulejos' : ["Reposado"],
+      'Los Arango' : ["Reposado"],
+      'Lunazul' : ["Reposado"],
+      'Maestro Dobel' : ["Reposado"],
+      'Maracame' : ["Reposado"],
+      'Mi Campo' : ["Reposado"],
+      'Mijenta' : ["Reposado"],
+      'Milagro' : ["Reposado"],
+      'Nueveuno' : ["Reposado"],
+      'Ocho' : ["Reposado"],
+      'Olmeca Altos' : ["Reposado"],
+      //'One With Life' : ["Reposado"],
+      'Padre Azul' : ["Reposado"],
+      'Paqui' : ["Reposado"],
+      'Partida' : ["Reposado"],
+      'Pasote' : ["Reposado"],
+      'Patron' : ["Reposado"],
+      //'Patron Estate' : ["Reposado"],
+      //'Pura Vida' : ["Reposado"],
+      'Revolucion' : ["Reposado"],
+      'Riazul' : ["Reposado"],
+      //'Rock\'N\'Roll' : ["Reposado"],
+      'San Matias' : ["Reposado"],
+      'Sauza Hornitos' : ["Reposado"],
+      'Siempre' : ["Reposado"],
+      'Siete Leguas' : ["Reposado"],
+      'Suerte' : ["Reposado"],
+      'Tapatio' : ["Reposado"],
+      'Teremana' : ["Reposado"],
+      //'The Butterfly Cannon Blue' : ["Reposado"],
+      //'The Butterfly Cannon Rosa' : ["Reposado"],  // ---------------> Flavored or Joven?
+      'Tosco' : ["Reposado"],
+      'Tres Agaves' : ["Reposado"],
+      'Tres Generaciones' : ["Reposado"],
+      'Tromba' : ["Reposado"],
+      'Vanguardia' : ["Reposado"],
+      //'Vide De Louie' : ["Reposado"],
+      'Villa One' : ["Reposado"],
+      'VIVA XXX11' : ["Reposado"],
+      'Volcan' : ["Reposado"],
+      'Yave' : ["Reposado"]
     }
-
 
     // Anejo Tequila List
     const anejoList = {
       '1 2 3' : ["Anejo"],
     }
 
-
     // Joven Tequila List
     const jovenList = {
       'Viva XXXII' : ["Joven"],
     }
-    
 
     // Select Tequila List
     const selectList = {
       '1 2 3' : ["Select"],
     }
 
-
     // Mezcal Tequila List
     const mezcalList = {
       'Santo Puro Mezquila' : ["Mezcal"],
     }
 
-
     // Flavored Tequila List
+    
     const flavoredTequilaList = {
       '1800 Coconut' : ["Flavored"],
       'Cantera Cafe' : ["Flavored"],
       'Dano\'s Infused' : ["Flavored"],
       'Ghost' : ["Flavored"],
       'Rock\'N\'Roll Mango' : ["Flavored"],
-      'Pina Loca' : ["Flavored"],
+      'Pina Loca' : ["Flavored"]
     }
-
 
     // Vodka List
     const vodkaList = {
@@ -221,7 +337,6 @@ function openFullscreen() {
     const whiskeyClassList = {
       'Bourbon' : ["ClassWhiskey"],
       'Canadian' : ["ClassWhiskey"],
-      'Flavored' : ["ClassWhiskey"],
       //'Indian' : ["ClassWhiskey"],
       'Irish' : ["ClassWhiskey"],
       //'Japanese' : ["ClassWhiskey"],
@@ -229,7 +344,8 @@ function openFullscreen() {
       'Scotch' : ["ClassWhiskey"],
       'Single Malt & Blended' : ["ClassWhiskey"],
       'Tennessee' : ["ClassWhiskey"],
-      //'White' : ["ClassWhiskey"]
+      //'White' : ["ClassWhiskey"],
+      'Flavored Whiskey' : ["ClassWhiskey"]
     }
 
     // Bourbon List
@@ -242,9 +358,9 @@ function openFullscreen() {
       '' : ["Canadian"],
     }
 
-    // Flavored List
-    const flavoredList = {
-      '' : ["Flavored"],
+    // Flavored Whiskey List
+    const flavoredWhiskeyList = {
+      '' : ["FlavoredWhiskey"]
     }
 
     // Irish List
@@ -264,15 +380,13 @@ function openFullscreen() {
 
     // Single Malt & Blended List
     const singleMaltBlendedList = {
-      'Test' : ["Single Malt & Blended"],
+      '' : ["Single Malt & Blended"],
     }
 
     // TennesseeList
-    const TennesseeList = {
-      '' : ["Tennessee"],
+    const tennesseeList = {
+      'Jack Daniels' : ["Tennessee"],
     }
-
-    
 
     // Rum List
     const rumList = {
@@ -358,8 +472,6 @@ function openFullscreen() {
       'Yuengling' : ["BottleBeer"],
     }
    
-
-
    // Jarritos List
    const jarritosList = {
     'Fruit Punch' : ["Jarritos"],
@@ -391,7 +503,7 @@ function openFullscreen() {
     // Creates buttons for the different brands of liquor
     function loadBrands(current) {
         const targetDiv = $("#buttonDiv");
-        Object.keys(current).forEach((brand) => {
+        Object.keys(current).sort().forEach((brand) => {
             let button = document.createElement("button");
             let span = document.createElement("span");
             button.appendChild(span);
@@ -438,10 +550,15 @@ function openFullscreen() {
             button.setAttribute('id', 'SingleMaltBlended');
             console.log(button.id)
           }
+
+          if(button.id === "Flavored Whiskey"){
+            button.setAttribute('id', 'FlavoredWhiskey');
+            console.log(button.id)
+          }
       });
 }
 
-    // Loads Whiskey Classes
+    // Loads Beer Classes
     function loadBeerClass(current) {
       const targetDiv = $("#buttonDiv");
       Object.keys(current).forEach((brand) => {
@@ -457,6 +574,7 @@ function openFullscreen() {
   });
 }
     
+
 
     // Initialization---------------------------------------------------------
     loadTypes();
@@ -474,7 +592,13 @@ function openFullscreen() {
     // Whiskeys-----------------------
     loadWhiskeyClass(whiskeyClassList);
     loadBrands(bourbonList);
+    loadBrands(canadianList);
+    loadBrands(irishList);
+    loadBrands(ryeList);
+    loadBrands(scotchList);
     loadBrands(singleMaltBlendedList);
+    loadBrands(tennesseeList);
+    loadBrands(flavoredWhiskeyList);
     // Rum----------------------------
     loadBrands(rumList);
     // Gin----------------------------
@@ -495,12 +619,13 @@ function openFullscreen() {
     $("#buttonDiv").hide();
     // -----------------------------------------------------------------------
 
+
+
     // Repetative Hide Function
     function hide(){
       $("#mainButtonDiv").hide();
       $(".main-buttons").hide();
       $(".brand-buttons").hide();
-      $(".brand-buttons[value|='Class'").hide();
       $("#buttonDiv").show();
       $(".back-button").show();
       openFullscreen();
@@ -572,10 +697,46 @@ function openFullscreen() {
       $(".brand-buttons[value|='Bourbon'").show();
     });
 
+    // Show Canadian Buttons
+    $("#Canadian").on('click', function(){
+      hide();
+      $(".brand-buttons[value|='Canadian'").show();
+    });
+    
+    // Show Irish Buttons
+    $("#Irish").on('click', function(){
+      hide();
+      $(".brand-buttons[value|='Irish'").show();
+    });
+
+    // Show Rye Buttons
+    $("#Rye").on('click', function(){
+      hide();
+      $(".brand-buttons[value|='Rye'").show();
+    });
+
+    // Show Scotch Buttons
+    $("#Scotch").on('click', function(){
+      hide();
+      $(".brand-buttons[value|='Scotch'").show();
+    });
+
     // Show Single Malt & Blended Buttons
     $("#SingleMaltBlended").on('click', function(){
       hide();
       $(".brand-buttons[value|='Single Malt & Blended'").show();
+    });
+
+    // Show Tennessee Buttons
+    $("#Tennessee").on('click', function(){
+      hide();
+      $(".brand-buttons[value|='Tennessee'").show();
+    });
+
+    // Show Flavored Whiskey Buttons
+    $("#FlavoredWhiskey").on('click', function(){
+      hide();
+      $(".brand-buttons[value|='FlavoredWhiskey'").show();
     });
 
     // Show Rum Buttons

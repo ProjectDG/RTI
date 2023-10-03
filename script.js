@@ -52,7 +52,8 @@ function openFullscreen() {
       'Arette' : ["Blanco"],
       'Arrogante' : ["Blanco"],
       'Arta' : ["Blanco"],
-      'Artenom' : ["Blanco"],
+      'ArteNom 1123' : ["Blanco"],
+      'ArteNom 1579' : ["Blanco"],
       'Asombroso' : ["Blanco"],
       'Astral' : ["Blanco"],
       'Avion' : ["Blanco"],
@@ -178,7 +179,7 @@ function openFullscreen() {
       'Arette' : ["Reposado"],
       'Arrogante' : ["Reposado"],
       'Arta' : ["Reposado"],
-      'Artenom' : ["Reposado"],
+      'ArteNom 1414' : ["Reposado"],
       'Asombroso' : ["Reposado"],
       //'Astral' : ["Reposado"],
       'Avion' : ["Reposado"],
@@ -286,14 +287,128 @@ function openFullscreen() {
       'Vanguardia' : ["Reposado"],
       //'Vide De Louie' : ["Reposado"],
       'Villa One' : ["Reposado"],
-      'VIVA XXX11' : ["Reposado"],
+      'VIVA XXXII' : ["Reposado"],
       'Volcan' : ["Reposado"],
       'Yave' : ["Reposado"]
     }
 
     // Anejo Tequila List
     const anejoList = {
+      '512' : ["Anejo"],
+      '818' : ["Anejo"],
+      '1800' : ["Anejo"],
       '1 2 3' : ["Anejo"],
+      '4 Copas' : ["Anejo"],
+      'Adictivo' : ["Anejo"],
+      //'Agavales' : ["Anejo"],
+      'Ambhar' : ["Anejo"],
+      'Arette' : ["Anejo"],
+      'Arrogante' : ["Anejo"],
+      'Arta' : ["Anejo"],
+      'ArteNom 1146' : ["Anejo"],
+      //'Asombroso' : ["Anejo"],
+      //'Astral' : ["Anejo"],
+      'Avion' : ["Anejo"],
+      'Azunia' : ["Anejo"],
+      'Azunia Black' : ["Anejo"],
+      //'Baron' : ["Anejo"],
+      'Blue Nectar' : ["Anejo"],
+      'Cabal' : ["Anejo"],
+      //'Cabeza' : ["Anejo"],
+      'Cabo Wabo' : ["Anejo"],
+      'Calirosa' : ["Anejo"],
+      'Camarena' : ["Anejo"],
+      'Cantera' : ["Anejo"],
+      'Casa Del Sol' : ["Anejo"],
+      'Casa Dragones' : ["Anejo"],
+      'Casa Maestri' : ["Anejo"],
+      'Casa Mexico' : ["Anejo"],
+      'Casa Noble' : ["Anejo"],
+      'Casamigos' : ["Anejo"],
+      'Casino' : ["Anejo"],
+      'Catrina' : ["Anejo"],
+      'Cazadores' : ["Anejo"],
+      'Cenote' : ["Anejo"],
+      'Chamucos' : ["Anejo"],
+      'Chaquira' : ["Anejo"],
+      'Chinaco' : ["Anejo"],
+      //'Cimarron' : ["Anejo"],
+      'Cincoro' : ["Anejo"],
+      //'Coa De Jima' : ["Anejo"],
+      'Codigo' : ["Anejo"],
+      'Corazon' : ["Anejo"],
+      //'Corazon Estate' : ["Anejo"],
+      //'Corazon Expesiones' : ["Anejo"],
+      'Corralejo' : ["Anejo"],
+      'Corzo' : ["Anejo"],
+      'Dano\'s' : ["Anejo"],
+      'DeLeon' : ["Anejo"],
+      'Don Abraham' : ["Anejo"],
+      'Don Cheyo' : ["Anejo"],
+      'Don Felix' : ["Anejo"],
+      'Don Fulano' : ["Anejo"],
+      'Don Julio' : ["Anejo"],
+      //'Don Londres' : ["Anejo"],
+      'Don Ramon' : ["Anejo"],
+      'Don Suenos' : ["Anejo"],
+      //'Dona Celia' : ["Anejo"],
+      //'Dos Primos' : ["Anejo"],
+      'Dos Armadillos' : ["Anejo"],
+      'Dulce Vida' : ["Anejo"],
+      'El Jimador' : ["Anejo"],
+      //'El Luchador' : ["Anejo"],
+      //'El Luchador 110' : ["Anejo"],
+      'El Mayor' : ["Anejo"],
+      //'El Tequileno' : ["Anejo"],
+      'El Tesoro' : ["Anejo"],
+      'El Espolon' : ["Anejo"],
+      'Florida Kush' : ["Anejo"],
+      'Fortaleza' : ["Anejo"],
+      'G4' : ["Anejo"],
+      'Gran Centenario' : ["Anejo"],
+      'Grand Mayan Ultra' : ["Anejo"],
+      'Herencia' : ["Anejo"],
+      'Herradura' : ["Anejo"],
+      'Hiatus' : ["Anejo"],
+      'Hussongs' : ["Anejo"],
+      'Insolito' : ["Anejo"],
+      'José Cuervo Tradicional' : ["Anejo"],
+      //'Kah' : ["Anejo"],
+      'Lapis' : ["Anejo"],
+      'Los Arango' : ["Anejo"],
+      'Los Azulejos MasterPiece' : ["Anejo"],
+      'Los Azulejos Talavera' : ["Anejo"],
+      'Lunazul' : ["Anejo"],
+      'Maestro Dobel' : ["Anejo"],
+      'Maracame' : ["Anejo"],
+      //'Mi Campo' : ["Anejo"],
+      //'Mijenta' : ["Anejo"],
+      'Milagro' : ["Anejo"],
+      'Nueveuno' : ["Anejo"],
+      'Ocho' : ["Anejo"],
+      'Olmeca Altos' : ["Anejo"],
+      'Padre Azul' : ["Anejo"],
+      'Paqui' : ["Anejo"],
+      'Partida' : ["Anejo"],
+      'Pasote' : ["Anejo"],
+      'Patron' : ["Anejo"],
+      'Pura Vida' : ["Anejo"],
+      'Revolucion' : ["Anejo"],
+      'Riazul' : ["Anejo"],
+      'San Matias Tahona' : ["Anejo"],
+      'Sauza Hornitos' : ["Anejo"],
+      'Sauza Hornitos Black' : ["Anejo"],
+      'Siete Leguas' : ["Anejo"],
+      'Suerte' : ["Anejo"],
+      'Tapatio' : ["Anejo"],
+      'Tosco' : ["Anejo"],
+      'Tres Agaves' : ["Anejo"],
+      'Tres Generaciones' : ["Anejo"],
+      'Tromba' : ["Anejo"],
+      'Vanguardia' : ["Anejo"],
+      'Villa One' : ["Anejo"],
+      'VIVA XXXII Extra Anejo' : ["Anejo"],
+      'Volcan' : ["Anejo"]
     }
 
     // Joven Tequila List
@@ -514,6 +629,35 @@ function openFullscreen() {
             button.setAttribute('value', current[brand]);
             targetDiv.append(button);
         });
+}
+
+    // Creates buttons for the different brands of liquor
+    function addBrandImage(current) {
+      const targetDiv = $("#buttonDiv");
+      const titleDiv  = document.createElement('div');
+      titleDiv.setAttribute("id", "titleDiv")
+ 
+      let img = document.createElement('img');
+      let categoryFirstLetter = current.value.toLowerCase()[0];
+      let categoryRestOfLetters = current.value.slice(1).replaceAll(" ", "");
+      let category = categoryFirstLetter + categoryRestOfLetters;
+      let firstLetter = current.id.toLowerCase()[0];
+      let restOfLetters = current.id.slice(1).replaceAll(" ", "");
+      let camelCase = firstLetter + restOfLetters;
+      img.setAttribute("id", "image")
+      img.src = "./images/" + category + camelCase + ".png";
+
+
+      let titleElement = document.createElement('p');
+      titleElement.setAttribute("id", "imageTitle")
+      titleElement.innerText = current.id;
+      
+      
+      targetDiv.append(img);
+      targetDiv.append(titleDiv);
+      titleDiv.append(titleElement)
+      console.log(titleElement);
+
 }
 
     // Loads Tequila Classes
@@ -775,6 +919,12 @@ function openFullscreen() {
   $(".brand-buttons[value|='Jarritos'").show();
     });
 
+    // Jarritos Button Actions
+    $(".brand-buttons[value|='Jarritos'").on('click', function(){
+      hide();
+      addBrandImage(this);
+    });
+
     // Back Button
     $(".back-button").on('click', function(){
       $("#buttonDiv").hide();
@@ -782,6 +932,8 @@ function openFullscreen() {
       $(".back-button").hide();
       $("#mainButtonDiv").show();
       $(".main-buttons").show();
+      $("#titleDiv").remove();
+      $("#image").remove();
     });
 
   });

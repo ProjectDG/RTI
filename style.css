@@ -30,13 +30,9 @@ body {
 
 @media screen and (orientation:portrait) {
 
-  #alphabetDiv{
-    width: 90%;
-    height: 5%;
-    margin: 1vh auto;
-    justify-content: center;
-  }
-
+  /*
+  #tequilaClassDiv,
+  */
   #buttonDiv,
   #mainButtonDiv,
   #titleDiv,
@@ -60,8 +56,7 @@ body {
 
   .main-buttons,
   .brand-buttons,
-  .back-button,
-  .abc-buttons
+  .back-button
   {
     border: 4px outset rgb(122, 113, 113);
     width: 35vw;
@@ -86,30 +81,43 @@ body {
     margin: 2vw auto;
   }
 
-  [value~="ClassTequila"]
+  /* if theres fewer buttons */
+  [value~="ClassTequila"],
   [value~="Vodka"],
-  [value~="Whiskey"]    /* Cut into classes */
-  [value~="Rum"],
+  [value~="Bourbon"],
+  [value~="Canadian"],
+  [value~="Irish"],
+  [value~="Rye"],
+  [value~="Scotch"],
+  [value~="Tennessee"],
+  [value~="FlavoredWhiskey"],
   [value~="Gin"],
-  [value~="Cordials"],
+  [value~="Brandy"],
   [value~="Wine"],
+  [value~="ClassBeer"],
   [value~="DraftBeer"],
-  [value~="Jarritos"]{
+  [value~="Jarritos"]
+  {
     height: auto;
   }
 
-  #Draft, #Bottle{
-    height: auto;
-    font-size: 175%;
+  #Abasolo{
+    margin: auto;
   }
-
-  #Draft{
-    margin: 10vh auto 5vh auto;
+/*
+  #Bourbon,
+  #Canadian,
+  #Irish,
+  #Mexican,
+  #Rye,
+  #Scotch,
+  #SingleMaltBlended,
+  #Tennessee,
+  #FlavoredWhiskey
+  {
+    height: 7.05vh;
   }
-
-  #Bottle{
-    margin: 5vh auto 10vh auto;
-  }
+*/
 
   .button-text{
     margin: auto;
@@ -122,17 +130,6 @@ body {
     margin: .2vh auto 0 auto;
     width: 90vw;
     height: 10vh;
-  }
-
-  .abc-buttons{     /* change anyway */
-    display: block;
-    float: left;
-    width: 20vw;
-    height: 4vh;
-    margin: 1vh 1.1vw;
-    font-size: 2vh;
-    font-family: monospace;
-    padding: 0%;
   }
 
   #imageDiv{

@@ -22,6 +22,7 @@ function openFullscreen() {
       'Whiskey' : [],
       'Rum' : [],
       'Gin' : [],
+      'Brandy' : [],
       'Cordials' : [],
       'Wine' : [],
       'Beer' : [],
@@ -413,28 +414,182 @@ function openFullscreen() {
 
     // Joven Tequila List
     const jovenList = {
-      'Viva XXXII' : ["Joven"],
+      'Viva XXXII' : ["Joven"]
     }
 
     // Select Tequila List
     const selectList = {
-      '1 2 3' : ["Select"],
+      '1800 Cristalino' : ["Select"],
+      '1800 Milenio' : ["Select"],
+      'Arette Extra Anejo' : ["Select"],
+      'Arta Extra Anejo' : ["Select"],
+      'Asombroso 5 Year' : ["Select"],
+      'Avion 44' : ["Select"],
+      'Avion Cristalino' : ["Select"],
+      'Cantera Extra Anejo' : ["Select"],
+      'Casa Noble Single Barrel' : ["Select"],
+      'Casa Dragones (Joven)' : ["Select"],
+      'Casino Azul Warship' : ["Select"],
+      'Casino Azul Extra Anejo' : ["Select"],
+      'Cazadores Extra Anejo' : ["Select"],
+      'Chaquira Extra Anejo' : ["Select"],
+      'Cincoro Gold' : ["Select"],
+      'Cincoro Extra Anejo' : ["Select"],
+      'Clase Azul (Blanco)' : ["Select"],
+      'Clase Azul (Reposado)' : ["Select"],
+      'Clase Azul (Anejo)' : ["Select"],
+      'Clase Azul (Mezcal)' : ["Select"],
+      'Clase Azul 5 Year Extra Anejo' : ["Select"],
+      'Clase Azule Dia De Los Muertos' : ["Select"],
+      'Codigo 1530 George Straight Anejo' : ["Select"],
+      'Codigo 1530 Barrel Strength Anejo' : ["Select"],
+      'Codigo Extra Anejo' : ["Select"],
+      'Corralejo 99,000 Horas' : ["Select"],
+      'Corralejo (Reposado) Triple Distilled ' : ["Select"],
+      'Deleon Extra Anejo' : ["Select"],
+      'Deleon Diamante' : ["Select"],
+      'Don Cheyo Extra Anejo' : ["Select"],
+      'Don Julio 1942' : ["Select"],
+      'Don Julio 70th' : ["Select"],
+      'Don Julio Primavera' : ["Select"],
+      'Don Julio Real' : ["Select"],
+      'Don Abraham Extra Anejo' : ["Select"],
+      'El Tesoro 80th' : ["Select"],
+      'El Tesoro Paradiso' : ["Select"],
+      'El Espolon 6 Year' : ["Select"],
+      'El Espolon Extra Anejo' : ["Select"],
+      'Fuenteseca 21 Year' : ["Select"],
+      'G4 Extra Anejo' : ["Select"],
+      'G4 5 Year Anejo' : ["Select"],
+      'Gran Coramino Cristalino' : ["Select"],
+      'Grand Love Extra Anejo' : ["Select"],
+      'Grand Mayan Ultra' : ["Select"],
+      'Herradura Scotch Cask' : ["Select"],
+      'Herradura Suprema' : ["Select"],
+      'Herradura Ultra' : ["Select"],
+      'Jose Cuervo Familia' : ["Select"],
+      'Komos Cristalino' : ["Select"],
+      'Komos Extra Anejo' : ["Select"],
+      'Komos Rosa (Reposado)' : ["Select"],
+      'Maestro Dobel 50' : ["Select"],
+      'Maestro Dobel Diamante' : ["Select"],
+      'Maestro Doble Humito' : ["Select"],
+      'Milagro Select Barrel Reserve (Blanco)' : ["Select"],
+      'Milagro Select Barrel Reserve (Reposado)' : ["Select"],
+      'Milagro Select Barrel Reserve (Anejo)' : ["Select"],
+      'Ocho Extra Anejo' : ["Select"],
+      'Partida Elegante' : ["Select"],
+      'Patron Gran Burdeos' : ["Select"],
+      'Patron Gran Platinum' : ["Select"],
+      'Patron El Alto' : ["Select"],
+      'Patron En Lalique' : ["Select"],
+      'Patron Gran Piedra' : ["Select"],
+      'Patron Guillermo Del Torro' : ["Select"],
+      'Patron Sherry' : ["Select"],
+      'Patron Extra Anejo' : ["Select"],
+      'Qui Extra Anejo' : ["Select"],
+      'Revolucion Cristalino' : ["Select"],
+      'Revoulcion Extra Anejo 3 Year' : ["Select"],
+      'Roca Patron (Blanco)' : ["Select"],
+      'Rock\'N\'Roll Cristalino' : ["Select"],
+      'San Matias Rey Sol' : ["Select"],
+      'Siete Leguas Dantano' : ["Select"],
+      'Suerte Extra Anejo' : ["Select"],
+      'Tapatio Excel' : ["Select"],
+      'Tres Cuatro Cinco Extra Anejo' : ["Select"],
     }
 
     // Mezcal Tequila List
     const mezcalList = {
+      'Amaras Cupreata' : ["Mezcal"],
+      'Amaras Espadin' : ["Mezcal"],
+      'Amaras Reposado' : ["Mezcal"],
+      'Agua Migica' : ["Mezcal"],
+      'Banhez Tobala' : ["Mezcal"],
+      'Casamigos' : ["Mezcal"],
+      'Clase Azul Durango' : ["Mezcal"],
+      'Clase Azul Guerero' : ["Mezcal"],
+      'Convite Coyote' : ["Mezcal"],
+      'Creyente (Joven)' : ["Mezcal"],
+      'Del Maguey Arronqueno' : ["Mezcal"],
+      'Del Maguey Chichicapa' : ["Mezcal"],
+      'Del Maguey Crema' : ["Mezcal"],
+      'Del Maguey Espadin' : ["Mezcal"],
+      'Del Maquey Las Milpas' : ["Mezcal"],
+      'Del Maguey Madrecuixe' : ["Mezcal"],
+      'Del Maguey Minero' : ["Mezcal"],
+      'Del Maguey Pechuga' : ["Mezcal"],
+      'Del Maguey Rio Minas' : ["Mezcal"],
+      'Del Maguey San Luis Rio' : ["Mezcal"],
+      'Del Maguey San Pablo' : ["Mezcal"],
+      'Del Maguey Santo Domingo' : ["Mezcal"],
+      'Del Maguey Vida' : ["Mezcal"],
+      'Del Maguey Wild Jabali' : ["Mezcal"],
+      'Del Maguey Wild Papalome' : ["Mezcal"],
+      'Del Maguey Wild Tobala' : ["Mezcal"],
+      'Delirio (Blanco)' : ["Mezcal"],
+      'Delirio (Reposado)' : ["Mezcal"],
+      'Delirio (Anejo)' : ["Mezcal"],
+      'Derrumbes Oaxaca' : ["Mezcal"],
+      'Derrumbes San Luis' : ["Mezcal"],
+      'Derrumbes Taumulipas' : ["Mezcal"],
+      'Derrumbes Zacatecus' : ["Mezcal"],
+      'Don Ramon (Joven)' : ["Mezcal"],
+      'Dos Hombres (Joven)' : ["Mezcal"],
+      'El Recuerdo Abocado' : ["Mezcal"],
+      'El Recuerdo (Joven)' : ["Mezcal"],
+      'Fabriquero Sotol' : ["Mezcal"],
+      'Fidencio Classico' : ["Mezcal"],
+      'Fidencio Madrecuixe' : ["Mezcal"],
+      'Fidencio Unico' : ["Mezcal"],
+      'Geu Beez Jabali (Joven)' : ["Mezcal"],
+      'Hijos Pear' : ["Mezcal"],
+      'Ilegal (Reposado)' : ["Mezcal"],
+      'Ilegal (Anejo)' : ["Mezcal"],
+      'Ilegal (Joven)' : ["Mezcal"],
+      'Kimo Sabe (Joven)' : ["Mezcal"],
+      'Leyenda Verde Potosi' : ["Mezcal"],
+      'Los Amantes (Reposado)' : ["Mezcal"],
+      'Los Amantes (Anejo)' : ["Mezcal"],
+      'Los Amantes (Joven)' : ["Mezcal"],
+      'Monte Alban' : ["Mezcal"],
+      'Montelobos Espadin' : ["Mezcal"],
+      'Montelobos (Joven)' : ["Mezcal"],
+      'Montelobos Tobala' : ["Mezcal"],
+      'Peo Criollo' : ["Mezcal"],
+      'Peolton Vegan Pechuga' : ["Mezcal"],
+      'Raicilla Sierra' : ["Mezcal"],
+      'Raicilla Tabernas' : ["Mezcal"],
+      'Rey Campero Cuishe' : ["Mezcal"],
+      'Ray Campero Espadin' : ["Mezcal"],
+      'Rey Campero Jabali' : ["Mezcal"],
+      'Rosaluna (Joven)' : ["Mezcal"],
       'Santo Puro Mezquila' : ["Mezcal"],
+      'Senorio (Anejo)' : ["Mezcal"],
+      'Sombra (Reposado)' : ["Mezcal"],
+      'Sombra (Joven)' : ["Mezcal"],
+      'Sotol La Higuera' : ["Mezcal"],
+      'Verde Momento' : ["Mezcal"],
+      'Xicala (Joven)' : ["Mezcal"],
+      'Xicaru (Blanco)' : ["Mezcal"],
+      'Xicuru (Reposado)' : ["Mezcal"],
+      'Xicuru (Anejo)' : ["Mezcal"],
+      'Zignum (Blanco)' : ["Mezcal"],
+      'Zignum (Reposado)' : ["Mezcal"],
+      'Zignum (Anejo)' : ["Mezcal"],
     }
 
     // Flavored Tequila List
-    
     const flavoredTequilaList = {
       '1800 Coconut' : ["Flavored"],
       'Cantera Cafe' : ["Flavored"],
       'Dano\'s Infused' : ["Flavored"],
       'Ghost' : ["Flavored"],
       'Rock\'N\'Roll Mango' : ["Flavored"],
-      'Pina Loca' : ["Flavored"]
+      'Pina Loca' : ["Flavored"],
+      'Tanteo Jalapeno' : ["Flavored"],
+      'Tanteo Habanero' : ["Flavored"],
+      'Tanteo Chipotle' : ["Flavored"]
     }
 
     // Vodka List
@@ -444,7 +599,8 @@ function openFullscreen() {
       'Grey Goose' : ["Vodka"],
       'Ketel One' : ["Vodka"],
       'Ketel One Citroen' : ["Vodka"],
-      'Tito\'s' : ["Vodka"]
+      'Tito\'s' : ["Vodka"],
+      'Van Gogh Chocolate' : ["Vodka"],
       // Template  --------->    '' : ["Vodka"],
     }
 
@@ -455,9 +611,10 @@ function openFullscreen() {
       //'Indian' : ["ClassWhiskey"],
       'Irish' : ["ClassWhiskey"],
       //'Japanese' : ["ClassWhiskey"],
+      'Mexican' : ["ClassWhiskey"],
       'Rye' : ["ClassWhiskey"],
       'Scotch' : ["ClassWhiskey"],
-      'Single Malt & Blended' : ["ClassWhiskey"],
+      //'Single Malt & Blended' : ["ClassWhiskey"],
       'Tennessee' : ["ClassWhiskey"],
       //'White' : ["ClassWhiskey"],
       'Flavored Whiskey' : ["ClassWhiskey"]
@@ -466,31 +623,54 @@ function openFullscreen() {
     // Bourbon List
     const bourbonList = {
       'Jim Beam' : ["Bourbon"],
+      'Jim Beam Black' : ["Bourbon"],
+      'Knob Creek' : ["Bourbon"],
+      'Maker\'s Mark' : ["Bourbon"],
+      'Woodford Reserve' : ["Bourbon"],
+      'Yellowstone' : ["Bourbon"],
     }
 
     // Canadian List
     const canadianList = {
-      '' : ["Canadian"],
+      'Canadian Club (Rye)' : ["Canadian"],
+      'Crown Royal (Blended)' : ["Canadian"],
+      'Seagram\'s V.O. (Blended)' : ["Canadian"],
     }
 
     // Flavored Whiskey List
     const flavoredWhiskeyList = {
-      '' : ["FlavoredWhiskey"]
+      'Demon Seed (Rye)' : ["FlavoredWhiskey"],
+      'Drambuie (Scotch)' : ["FlavoredWhiskey"],
+      'Fireball (Canadian)' : ["FlavoredWhiskey"],
+      'Skrewball' : ["FlavoredWhiskey"],
     }
 
     // Irish List
     const irishList = {
-      '' : ["Irish"],
+      'Bushmills (Blended)' : ["Irish"],
+      'Jameson' : ["Irish"],
+      'Tullamore D.E.W. (Blended)' : ["Irish"],
+    }
+
+     // Mexican List
+     const mexicanList = {
+      'Abasolo' : ["Mexican"],
     }
 
     // Rye List
     const ryeList = {
-      '' : ["Rye"],
+      'Old Forester' : ["Rye"],
+      'Pendleton' : ["Rye"],
     }
 
     // Scotch List
     const scotchList = {
-      '' : ["Scotch"],
+      'Dewars (Blended)' : ["Scotch"],
+      'Glenfiddich 12 Year (Single Malt)' : ["Scotch"],
+      'J & B (Blended)' : ["Scotch"],
+      'Johnny Walker Red (Blended)' : ["Scotch"],
+      'Johnny Walker Black (Blended)' : ["Scotch"],
+      'Johnny Walker Blue (Blended)' : ["Scotch"],
     }
 
     // Single Malt & Blended List
@@ -501,6 +681,8 @@ function openFullscreen() {
     // TennesseeList
     const tennesseeList = {
       'Jack Daniels' : ["Tennessee"],
+      'Jack Daniels: Gentleman Jack' : ["Tennessee"],
+      'Jack Daniels (Single Barrel)' : ["Tennessee"],
     }
 
     // Rum List
@@ -532,10 +714,42 @@ function openFullscreen() {
       'Hendricks' : ["Gin"],
       'Tanqueray' : ["Gin"],
     }
-    
+
+    // Brandy List
+    const brandyList = {
+      'Hennessy (Cognac)' : ["Brandy"],
+      'Louis XIII (Cognac)' : ["Brandy"],
+    }
+
     // Cordials List
     const cordialsList = {
-      '' : ["Cordials"],
+      'Amaretto' : ["Cordials"],
+      'Aperol' : ["Cordials"],
+      'Bailey\'s Irish Cream' : ["Cordials"],
+      'Blackberry Brandy' : ["Cordials"],
+      'Blue Curacao' : ["Cordials"],
+      'Campari' : ["Cordials"],
+      'Cedilla Liqueur De Acai' : ["Cordials"],
+      'Chambord' : ["Cordials"],
+      'Chartreuse' : ["Cordials"],
+      'Chinola Passion Fruit' : ["Cordials"],
+      'Cointreau' : ["Cordials"],
+      'DHōS Bittersweet' : ["Cordials"],
+      'Frangelico' : ["Cordials"],
+      'Grand Marnier' : ["Cordials"],
+      'Jägermeister' : ["Cordials"],
+      'Kahlua' : ["Cordials"],
+      'Midori' : ["Cordials"],
+      'Nixta Elote' : ["Cordials"],
+      'Peach Schnapps' : ["Cordials"],
+      'Sambuca' : ["Cordials"],
+      'Sour Apple Pucker' : ["Cordials"],
+      'Southern Comfort' : ["Cordials"],
+      'St. Germaine Elderflower' : ["Cordials"],
+      'Disaronno Amaretto' : ["Cordials"],
+      'Vermouth Dry' : ["Cordials"],
+      'Vermouth Sweet' : ["Cordials"],
+      'Watermelon Pucker' : ["Cordials"]
     }
 
     // Wine List
@@ -601,19 +815,21 @@ function openFullscreen() {
 
    // Creates the main buttons for selecting which type of drink they want
    function loadTypes() {
-    const targetDiv = $("#mainButtonDiv");
+    let targetDiv = $("#mainButtonDiv")
+    //let targetDiv = document.createElement("div");
+    //targetDiv.setAttribute("id", "mainButtonDiv");
     Object.keys(typeList).forEach((type) => {
         let button = document.createElement("button");
         let span = document.createElement("span");
         button.appendChild(span);
         span.innerHTML = type;
-        span.setAttribute('class', 'button-text')
+        span.setAttribute('class', 'button-text');
         button.setAttribute('class', "main-buttons");
-        button.setAttribute('value', type)
+        button.setAttribute('value', type);
+        //document.body.append(targetDiv);
         targetDiv.append(button);
     });
 }
-
 
     // Creates buttons for the different brands of liquor
     function loadBrands(current) {
@@ -661,6 +877,8 @@ function openFullscreen() {
     // Loads Tequila Classes
     function loadTequilaClass(current) {
       const targetDiv = $("#buttonDiv");
+     //const targetDiv = document.createElement("div");
+      //targetDiv.setAttribute("id", "tequilaClassDiv");
       Object.keys(current).forEach((brand) => {
           let button = document.createElement("button");
           let span = document.createElement("span");
@@ -670,6 +888,7 @@ function openFullscreen() {
           button.setAttribute('id', brand);
           button.setAttribute('class', 'brand-buttons');
           button.setAttribute('value', current[brand]);
+          //document.body.append(targetDiv);
           targetDiv.append(button);
       });
 }
@@ -715,7 +934,14 @@ function openFullscreen() {
           targetDiv.append(button);
   });
 }
-    
+
+/*
+function backButtons(){
+  let backButtons = document.createElement("button");
+  backButtons.setAttribute("class", "back-button")
+  document.body.append(backButtons);
+}
+ */   
 
 
     // Initialization---------------------------------------------------------
@@ -736,6 +962,7 @@ function openFullscreen() {
     loadBrands(bourbonList);
     loadBrands(canadianList);
     loadBrands(irishList);
+    loadBrands(mexicanList);
     loadBrands(ryeList);
     loadBrands(scotchList);
     loadBrands(singleMaltBlendedList);
@@ -745,6 +972,8 @@ function openFullscreen() {
     loadBrands(rumList);
     // Gin----------------------------
     loadBrands(ginList);
+    // Brandy-------------------------
+    loadBrands(brandyList);
     // Cordials-----------------------
     loadBrands(cordialsList);
     // Wine---------------------------
@@ -755,10 +984,10 @@ function openFullscreen() {
     loadBrands(bottleBeerList);
     // Jarritos-----------------------
     loadBrands(jarritosList);
-    $("#alphabetDiv").hide();
     $(".back-button").hide();
     $(".brand-buttons").hide();
     $("#buttonDiv").hide();
+    //$("#tequilaClassDiv").hide();
     // -----------------------------------------------------------------------
 
 
@@ -775,8 +1004,8 @@ function openFullscreen() {
 
     // Show Tequila Class Buttons
     $(".main-buttons[value|='Tequila'").on('click', function(){
-        hide();
-        $(".brand-buttons[value|='ClassTequila'").show();
+      hide();
+      $(".brand-buttons[value|='ClassTequila'").show();
     });
 
     // Show Blanco Tequila Buttons
@@ -857,6 +1086,12 @@ function openFullscreen() {
       $(".brand-buttons[value|='Irish'").show();
     });
 
+    // Show Mexican Buttons
+    $("#Mexican").on('click', function(){
+      hide();
+      $(".brand-buttons[value|='Mexican'").show();
+    });
+
     // Show Rye Buttons
     $("#Rye").on('click', function(){
       hide();
@@ -905,6 +1140,18 @@ function openFullscreen() {
       $(".brand-buttons[value|='Gin'").show();
     });
 
+    // Show Brandy Buttons
+    $(".main-buttons[value|='Brandy'").on('click', function(){
+      hide();
+      $(".brand-buttons[value|='Brandy'").show();
+    });
+
+    // Show Cordials Buttons
+    $(".main-buttons[value|='Cordials'").on('click', function(){
+      hide();
+      $(".brand-buttons[value|='Cordials'").show();
+    });
+
     // Show Beer Class Buttons
     $(".main-buttons[value|='Beer'").on('click', function(){
       hide();
@@ -940,11 +1187,12 @@ function openFullscreen() {
       $("#buttonDiv").hide();
       $(".brand-buttons").hide();
       $(".back-button").hide();
-      $("#mainButtonDiv").show();
-      $(".main-buttons").show();
       $("#titleDiv").remove();
       $("#image").remove();
       $("#imageDiv").remove();
+
+      $("#mainButtonDiv").show();
+      $(".main-buttons").show();
     });
 
   });

@@ -39,13 +39,14 @@ body {
 
   #buttonDiv,
   #mainButtonDiv,
-  #titleDiv
+  #titleDiv,
+  #imageDiv
   {
     width: 90%;
     height: 80%;
     border: 4px outset rgb(122, 113, 113);
     margin: 3% 5%;
-    padding: 2vh 0;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     background-color: rgba(0, 0, 0, 0.4);
@@ -134,28 +135,37 @@ body {
     padding: 0%;
   }
 
+  #imageDiv{
+    border: none;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 35%;
+    margin: 0;
+    padding: 0%;
+    /*
+    box-shadow: 0 0 200px rgba(0,0,0,0.5) inset;
+    */
+  }
+
   #image{
-    border: 4px outset rgb(122, 113, 113);
-    margin:  5% auto;
+    margin:  5% auto 0 auto;
     max-width: 100%;
-    height: 50%;
+    height: 90%;
   }
 
   #titleDiv{
-    border: 4px inset rgb(122, 113, 113);
+    border: 0;
     background-color: rgba(0, 0, 0, 0.8);
-    margin: 0 auto 26vh auto;
+    margin: 0 auto 50vh auto;
     padding: 0;
-    width: 75vw;
+    width: 100%;
     height: 7vh;
   }
 
   #imageTitle{
-    color: antiquewhite;
+    color: white;
     margin: auto;
     font-size: 3vh;
     display: block;
   }
-
-
 }

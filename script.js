@@ -634,28 +634,28 @@ function openFullscreen() {
     // Creates buttons for the different brands of liquor
     function addBrandImage(current) {
       const targetDiv = $("#buttonDiv");
-      const titleDiv  = document.createElement('div');
-      titleDiv.setAttribute("id", "titleDiv")
- 
+      let imageDiv = document.createElement('div');
+      imageDiv.setAttribute("id", "imageDiv")
       let img = document.createElement('img');
+      img.setAttribute("id", "image")
       let categoryFirstLetter = current.value.toLowerCase()[0];
       let categoryRestOfLetters = current.value.slice(1).replaceAll(" ", "");
       let category = categoryFirstLetter + categoryRestOfLetters;
       let camelCase = current.id.replaceAll(" ", "");
-      img.setAttribute("id", "image")
       img.src = "./images/" + category + camelCase + ".png";
-
-
+      
+      const titleDiv  = document.createElement('div');
+      titleDiv.setAttribute("id", "titleDiv")
+ 
       let titleElement = document.createElement('p');
       titleElement.setAttribute("id", "imageTitle")
       titleElement.innerText = current.id;
       
-      
-      targetDiv.append(img);
+      targetDiv.append(imageDiv);
+      imageDiv.append(img);
       targetDiv.append(titleDiv);
       titleDiv.append(titleElement)
-      console.log(img.src);
-
+      //console.log(img.src);
 }
 
     // Loads Tequila Classes
@@ -881,6 +881,12 @@ function openFullscreen() {
       $(".brand-buttons[value|='Tennessee'").show();
     });
 
+    // Tennessee Button Actions
+    $(".brand-buttons[value|='Tennessee'").on('click', function(){
+      hide();
+      addBrandImage(this);
+    });
+
     // Show Flavored Whiskey Buttons
     $("#FlavoredWhiskey").on('click', function(){
       hide();
@@ -938,6 +944,7 @@ function openFullscreen() {
       $(".main-buttons").show();
       $("#titleDiv").remove();
       $("#image").remove();
+      $("#imageDiv").remove();
     });
 
   });

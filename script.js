@@ -752,9 +752,58 @@ function openFullscreen() {
       'Watermelon Pucker' : ["Cordials"]
     }
 
-    // Wine List
-    const wineList = {
-      '' : ["Wine"],
+    // Wine Class List
+    const wineClassList = {
+      'Red' : ["ClassWine"],
+      'White' : ["ClassWine"],
+      'Rosé' : ["ClassWine"],
+      'Sparkling' : ["ClassWine"],
+      'Champagne' : ["ClassWine"],
+    }
+
+    // Red Wine List
+    const redList = {
+      '19 Crimes (Red Blend)' : ["Red"],
+      'Dreaming Tree (Pinot Noir)' : ["Red"],
+      'Josh (Cabernet)' : ["Red"],
+      'La Crema (Pinot Noir)' : ["Red"],
+      'Lindeman\'s (Cabernet)' : ["Red"],
+      'Lindeman\'s (Merlot)' : ["Red"],
+      'Meiomi (Pinot Noir)' : ["Red"],
+      'Sterling (Merlot)' : ["Red"],
+      'Terrazas (Malbec)' : ["Red"],
+    }
+
+    // White Wine List
+    const whiteList = {
+      'Beringer (Sauvignon Blanc)' : ["White"],
+      'Chateau St. Jean (Chardonnay)' : ["White"],
+      'Chloe (Pinot Grigio)' : ["White"],
+      'Ferrari-Carano (Sauvignon Blanc)' : ["White"],
+      'Kim Crawford (Sauvignon Blanc)' : ["White"],
+      'Lindeman\'s (Chardonnay)' : ["White"],
+      'Lindeman\'s (Pinot Grigio)' : ["White"],
+      'Santa Margherita (Pinot Grigio)' : ["White"],
+      'Ruffino (Pinot Grigio)' : ["White"],
+      'Sonoma (Chardonnay)' : ["White"],
+      'Stags Leap (Chardonnay)' : ["White"]
+    }
+
+    // Rosé Wine List
+    const roseList = {
+      'Hampton Water' : ["Rose"],
+    }
+
+    // Sparkling Wine List
+    const sparklingList = {
+      'Maschino (Prosseco)' : ["Sparkling"],
+    }
+
+    // Champagne Wine List
+    const champagneList = {
+      'Chandon Brut (Split)' : ["Champagne"],
+      'Veuve Clicqout (Glass)' : ["Champagne"],
+      'Moet Rose Blend (Split)' : ["Champagne"],
     }
 
     // Beer Class List
@@ -874,27 +923,8 @@ function openFullscreen() {
       //console.log(img.src);
 }
 
-    // Loads Tequila Classes
-    function loadTequilaClass(current) {
-      const targetDiv = $("#buttonDiv");
-     //const targetDiv = document.createElement("div");
-      //targetDiv.setAttribute("id", "tequilaClassDiv");
-      Object.keys(current).forEach((brand) => {
-          let button = document.createElement("button");
-          let span = document.createElement("span");
-          button.appendChild(span);
-          span.innerHTML = brand;
-          span.setAttribute('class', 'button-text');
-          button.setAttribute('id', brand);
-          button.setAttribute('class', 'brand-buttons');
-          button.setAttribute('value', current[brand]);
-          //document.body.append(targetDiv);
-          targetDiv.append(button);
-      });
-}
-
-    // Loads Whiskey Classes
-    function loadWhiskeyClass(current) {
+    // Loads Classes
+    function loadClasses(current) {
       const targetDiv = $("#buttonDiv");
       Object.keys(current).forEach((brand) => {
           let button = document.createElement("button");
@@ -907,10 +937,12 @@ function openFullscreen() {
           button.setAttribute('value', current[brand]);
           targetDiv.append(button);
 
+          /*
           if(button.id === "Single Malt & Blended"){
             button.setAttribute('id', 'SingleMaltBlended');
             console.log(button.id)
           }
+          */
 
           if(button.id === "Flavored Whiskey"){
             button.setAttribute('id', 'FlavoredWhiskey');
@@ -919,21 +951,6 @@ function openFullscreen() {
       });
 }
 
-    // Loads Beer Classes
-    function loadBeerClass(current) {
-      const targetDiv = $("#buttonDiv");
-      Object.keys(current).forEach((brand) => {
-          let button = document.createElement("button");
-          let span = document.createElement("span");
-          button.appendChild(span);
-          span.innerHTML = brand;
-          span.setAttribute('class', 'button-text');
-          button.setAttribute('id', brand);
-          button.setAttribute('class', 'brand-buttons');
-          button.setAttribute('value', current[brand]);
-          targetDiv.append(button);
-  });
-}
 
 /*
 function backButtons(){
@@ -947,7 +964,7 @@ function backButtons(){
     // Initialization---------------------------------------------------------
     loadTypes();
     // Tequilas-----------------------
-    loadTequilaClass(tequilaClassList)
+    loadClasses(tequilaClassList)
     loadBrands(blancoList);
     loadBrands(reposadoList);
     loadBrands(anejoList);
@@ -958,7 +975,7 @@ function backButtons(){
     // Vodkas-------------------------
     loadBrands(vodkaList);
     // Whiskeys-----------------------
-    loadWhiskeyClass(whiskeyClassList);
+    loadClasses(whiskeyClassList);
     loadBrands(bourbonList);
     loadBrands(canadianList);
     loadBrands(irishList);
@@ -977,13 +994,19 @@ function backButtons(){
     // Cordials-----------------------
     loadBrands(cordialsList);
     // Wine---------------------------
-    loadBrands(wineList);
+    loadClasses(wineClassList);
+    loadBrands(redList);
+    loadBrands(whiteList);
+    loadBrands(roseList);
+    loadBrands(sparklingList);
+    loadBrands(champagneList)
     // Beer---------------------------
-    loadBeerClass(beerClassList);
+    loadClasses(beerClassList);
     loadBrands(draftBeerList);
     loadBrands(bottleBeerList);
     // Jarritos-----------------------
     loadBrands(jarritosList);
+    // Initial Hidden Items  ---------
     $(".back-button").hide();
     $(".brand-buttons").hide();
     $("#buttonDiv").hide();
@@ -1150,6 +1173,42 @@ function backButtons(){
     $(".main-buttons[value|='Cordials'").on('click', function(){
       hide();
       $(".brand-buttons[value|='Cordials'").show();
+    });
+
+    // Show Wine Class Buttons
+    $(".main-buttons[value|='Wine'").on('click', function(){
+      hide();
+      $(".brand-buttons[value|='ClassWine'").show();
+    });
+
+    // Show Red Wine Buttons
+    $("#Red").on('click', function(){
+      hide();
+      $(".brand-buttons[value|='Red'").show();
+    });
+
+    // Show White Wine Buttons
+    $("#White").on('click', function(){
+      hide();
+      $(".brand-buttons[value|='White'").show();
+    });
+
+    // Show Rose Wine Buttons
+    $("#Rosé").on('click', function(){
+      hide();
+      $(".brand-buttons[value|='Rose'").show();
+    });
+
+    // Show Sparkling Wine Buttons
+    $("#Sparkling").on('click', function(){
+      hide();
+      $(".brand-buttons[value|='Sparkling'").show();
+    });
+
+    // Show Champagne Wine Buttons
+    $("#Champagne").on('click', function(){
+      hide();
+      $(".brand-buttons[value|='Champagne'").show();
     });
 
     // Show Beer Class Buttons

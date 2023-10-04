@@ -52,6 +52,7 @@ body {
   #mainButtonDiv{
     width: 90%;
     height: 92vh;
+    padding: 2vh;
   }
 
   .main-buttons,
@@ -93,7 +94,8 @@ body {
   [value~="FlavoredWhiskey"],
   [value~="Gin"],
   [value~="Brandy"],
-  [value~="Wine"],
+  [value~="ClassWine"],
+  [value~="Champagne"],
   [value~="ClassBeer"],
   [value~="DraftBeer"],
   [value~="Jarritos"]
@@ -101,8 +103,12 @@ body {
     height: auto;
   }
 
-  #Abasolo{
+  #Abasolo,
+  [value~="Rose"],
+  [value~="Sparkling"]
+  {
     margin: auto;
+    height: 15vh;
   }
 /*
   #Bourbon,

@@ -152,7 +152,7 @@ body {
 
   #image{
     margin:  5% auto 0 auto;
-    max-width: 100%;
+    max-width: inherit;
     height: 90%;
   }
 

@@ -689,14 +689,14 @@ function openFullscreen() {
     const rumList = {
       'Bacardi' : ["Rum"],
       'Bacardi Coconut' : ["Rum"],
-      'Bacardi Coqito' : ["Rum"],
+      'Bacardi Coconut' : ["Rum"],
       'Bacardi Dragonberry' : ["Rum"],
       'Bacardi Lime' : ["Rum"],
       'Bacardi Limon' : ["Rum"],
       'Bacardi Pineapple' : ["Rum"],
       'Bacardi Raspberry' : ["Rum"],
       'Captain Morgan' : ["Rum"],
-      'Capatain Morgan Grapefruit' : ["Rum"],
+      'Captain Morgan Grapefruit' : ["Rum"],
       'Leblon' : ["Rum"],
       'Malibu' : ["Rum"],
       'Mount Gay' : ["Rum"],
@@ -710,7 +710,7 @@ function openFullscreen() {
       'Aviation' : ["Gin"],
       'Beefeater' : ["Gin"],
       'Bombay' : ["Gin"],
-      'Bombay Saphire' : ["Gin"],
+      'Bombay Sapphire' : ["Gin"],
       'Hendricks' : ["Gin"],
       'Tanqueray' : ["Gin"],
     }
@@ -816,11 +816,11 @@ function openFullscreen() {
     const draftBeerList = {
       'Bone Hook "Lager"' : ["DraftBeer"],
       'Bone Hook "Wicked Seas"' : ["DraftBeer"],
-      'Dos Equis "Lager"' : ["DraftBeer"],
+      'Dos Equis "Lager"' : ["DraftBeer"],              // ------------------- beer pictures are broken fix later
       'Kona "Big Wave"' : ["DraftBeer"],
       'Modelo Especial' : ["DraftBeer"],
       'Pacifico' : ["DraftBeer"],
-      'Ankrolab "Turtle Season"' : ["DraftBeer"],
+      'Ankrolab (Turtle Season)' : ["DraftBeer"],
     }
 
     // Bottle Beer List
@@ -1084,6 +1084,12 @@ function backButtons(){
   hide();
   $(".brand-buttons[value|='Vodka'").show();
     });
+
+    // Vodka Button Actions
+    $(".brand-buttons[value|='Vodka'").on('click', function(){
+      hide();
+      addBrandImage(this);
+  });
     
     // Show Whiskey Class Buttons
     $(".main-buttons[value|='Whiskey'").on('click', function(){
@@ -1157,17 +1163,35 @@ function backButtons(){
       $(".brand-buttons[value|='Rum'").show();
     });
 
+    // Rum Button Actions
+    $(".brand-buttons[value|='Rum'").on('click', function(){
+      hide();
+      addBrandImage(this);
+  });
+
     // Show Gin Buttons
     $(".main-buttons[value|='Gin'").on('click', function(){
       hide();
       $(".brand-buttons[value|='Gin'").show();
     });
 
+    // Gin Button Actions
+    $(".brand-buttons[value|='Gin'").on('click', function(){
+      hide();
+      addBrandImage(this);
+  });
+
     // Show Brandy Buttons
     $(".main-buttons[value|='Brandy'").on('click', function(){
       hide();
       $(".brand-buttons[value|='Brandy'").show();
     });
+
+    // Brandy Button Actions
+    $(".brand-buttons[value|='Brandy'").on('click', function(){
+      hide();
+      addBrandImage(this);
+  });
 
     // Show Cordials Buttons
     $(".main-buttons[value|='Cordials'").on('click', function(){
@@ -1222,6 +1246,12 @@ function backButtons(){
       hide();
       $(".brand-buttons[value|='DraftBeer'").show();
     });
+
+    // Draft Button Actions
+    $(".brand-buttons[value|='Draft'").on('click', function(){
+      hide();
+      addBrandImage(this);
+  });
 
     // Show Bottle Beer Buttons
     $("#Bottle").on('click', function(){

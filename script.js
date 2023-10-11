@@ -915,11 +915,22 @@ function openFullscreen() {
       let titleElement = document.createElement('p');
       titleElement.setAttribute("id", "imageTitle")
       titleElement.innerText = current.id;
+
+      const infoDiv  = document.createElement('div');
+      infoDiv.setAttribute("id", "infoDiv")
+
+      let infoElement = document.createElement('p');
+      infoElement.setAttribute("id", "brandInfo");
+      infoElement.innerText = "123 Tequila was founded by agave cultivator and distiller David Ravandi, and emphasizes a distinctly artisanal approach. From the hand-blown recycled glass bottles to the soy ink-printed labels that showcase local artists’ wood carving, the focus is firmly on sustainability, conservation, and regional expression. 123 Blanco is certified organic tequila from the lowlands of Jalisco, sourced from plantations northeast of Guadalajara where synthetic fertilizers and pesticides are prohibited. Ten year old blue agaves are farmed and harvested without large scale mechanical equipment to minimize soil and water impacts, then cooked for two days in traditional stone ovens, and double-distilled in small batches. The result is a beautifully balanced showcase of classic lowland tequila character, full of mineral and spice notes accompanied by citrusy, floral, and herbaceous tones. Delicious sipped by itself or with lime! Certified organic.";
+      // automate above ^^^^^^^^
+
       
       targetDiv.append(imageDiv);
       imageDiv.append(img);
       targetDiv.append(titleDiv);
-      titleDiv.append(titleElement)
+      titleDiv.append(titleElement);
+      targetDiv.append(infoDiv);
+      infoDiv.append(infoElement);
       //console.log(img.src);
 }
 
@@ -1010,6 +1021,7 @@ function backButtons(){
     $(".back-button").hide();
     $("#backButtonToMain").hide();
     $(".brand-buttons").hide();
+    $(".brand-buttons").hide();
     $("#buttonDiv").hide();
     //$("#tequilaClassDiv").hide();
     // -----------------------------------------------------------------------
@@ -1023,7 +1035,6 @@ function backButtons(){
       $(".brand-buttons").hide();
       $("#backButtonToMain").show();
       $("#buttonDiv").show();
-      $(".back-button").show();
       openFullscreen();
     }
 
@@ -1037,12 +1048,14 @@ function backButtons(){
     $("#Blanco").on('click', function(){
       hide();
       $(".brand-buttons[value|='Blanco'").show();
+      $(".back-button").show();
     });
 
     // Blanco Button Actions
     $(".brand-buttons[value|='Blanco'").on('click', function(){
       hide();
       addBrandImage(this);
+      $("#buttonDiv").show();
   });
 
     // Show Reposado Tequila Buttons
@@ -1273,7 +1286,7 @@ function backButtons(){
       addBrandImage(this);
     });
 
-    // Back Button
+    // Back Button To Main Screen
     $("#backButtonToMain").on('click', function(){
       $("#buttonDiv").hide();
       $(".brand-buttons").hide();
@@ -1282,9 +1295,11 @@ function backButtons(){
       $("#titleDiv").remove();
       $("#image").remove();
       $("#imageDiv").remove();
+      $("#infoDiv").remove();
 
       $("#mainButtonDiv").show();
       $(".main-buttons").show();
     });
+
 
   });

@@ -1,6 +1,5 @@
 * {
     margin: 0;
-    padding: 0;
     border: none;
     font-family: Arial, sans-serif;
   }
@@ -8,12 +7,14 @@
 ::-webkit-scrollbar {
     display: none;
   }
-  
+
 body {
     font-size: 14px;
     background-image: url("https://anyvoo.com/wp-content/uploads/2020/04/Old-School-Wood-Plank-Video-Conference-Background-Design-Full-Image-No-Logo.jpg");
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
+    height: 96vh;
+    padding: 3%;
+    
   }
 
   ::backdrop{
@@ -50,10 +51,10 @@ body {
   #titleDiv,
   #imageDiv
   {
-    width: 90%;
-    height: 80%;
+    width: 95%;
+    height: 84%;
     border: 4px outset rgb(122, 113, 113);
-    margin: 3% 5%;
+    margin: auto;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
@@ -61,9 +62,10 @@ body {
     overflow: scroll;
   }
 
-  #mainButtonDiv{
-    width: 90%;
-    height: 92vh;
+  #mainButtonDiv
+  {
+    width: 88%;
+    height: 95%;
     padding: 2vh;
   }
 
@@ -92,11 +94,16 @@ body {
   .brand-buttons{
     width: 80vw;
     height: 8vh;
-    margin: 2vw auto;
+    margin: 5% auto 0 auto;
+  }
+
+  [value~="ClassTequila"]
+  {
+    height: 12%;
+    margin: auto;
   }
 
   /* if theres fewer buttons */
-  [value~="ClassTequila"],
   [value~="Vodka"],
   [value~="Bourbon"],
   [value~="Canadian"],
@@ -145,15 +152,23 @@ body {
     justify-content: center
   }
 
+  #backButtonDiv{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 3% auto;
+    padding: 0;
+    width: 95%;
+  }
+
   .back-button,
   #backButtonToMain{
-    margin: .2vh auto 0 auto;
-    width: 90vw;
-    height: 10vh;
+    width: 100%;
+    margin: 1.5%;
+    height: 8vh;
   }
 
   #imageDiv{
-    border: none;
+    border: 0;
     background-color: rgb(255, 255, 255);
     width: 100%;
     height: 35%;
@@ -173,8 +188,8 @@ body {
   #titleDiv{
     border: 0;
     box-shadow: inset 0 0 2em .5em #000;
-    background-color: rgb(0, 0, 0, 0.1);
-    margin: 0 auto 50vh auto;
+    background-color: rgb(0, 0, 0, 0.2);
+    margin: 0 auto 0 auto;
     padding: 0;
     width: 100%;
     height: 7vh;
@@ -186,5 +201,18 @@ body {
     margin: auto;
     font-size: 3vh;
     display: block;
+  }
+
+  #infoDiv{
+    /*border: 2px solid red;*/
+    width: 100%;
+    height: 46%;
+    padding: 8%;
+    overflow: scroll;
+  }
+
+  #brandInfo{
+    color: white;
+    font-size: 2vh;
   }
 }

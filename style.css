@@ -22,7 +22,19 @@ body {
   
 
 @media screen and (orientation:landscape) {
-  .main-buttons{
+  .main-buttons,
+  #buttonDiv,
+  #mainButtonDiv,
+  #titleDiv,
+  #imageDiv
+  .brand-buttons,
+  .back-button,
+  #image,
+  #imageDiv,
+  #titleDiv,
+  #imageTitle,
+  #backButtonToMain
+  {
     display: none;
   }
 }
@@ -57,7 +69,8 @@ body {
 
   .main-buttons,
   .brand-buttons,
-  .back-button
+  .back-button,
+  #backButtonToMain
   {
     border: 4px outset rgb(122, 113, 113);
     width: 35vw;
@@ -132,7 +145,8 @@ body {
     justify-content: center
   }
 
-  .back-button{
+  .back-button,
+  #backButtonToMain{
     margin: .2vh auto 0 auto;
     width: 90vw;
     height: 10vh;
@@ -152,7 +166,7 @@ body {
 
   #image{
     margin:  5% auto 0 auto;
-    max-width: 70%;
+    max-width: 30%;
     height: 90%;
   }
 

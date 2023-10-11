@@ -205,14 +205,22 @@ body {
 
   #infoDiv{
     /*border: 2px solid red;*/
+    color: white;
     width: 100%;
     height: 46%;
     padding: 8%;
     overflow: scroll;
   }
 
-  #brandInfo{
-    color: white;
+  #descriptionTitle{
+    text-align: center;
+    border-bottom: 2px solid white;
+    padding-bottom: 2%;
+  }
+
+  
+  #brandDescription{
     font-size: 2vh;
+    padding-top: 4%;
   }
 }

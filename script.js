@@ -919,18 +919,22 @@ function openFullscreen() {
       const infoDiv  = document.createElement('div');
       infoDiv.setAttribute("id", "infoDiv")
 
-      let infoElement = document.createElement('p');
-      infoElement.setAttribute("id", "brandInfo");
-      infoElement.innerText = "123 Tequila was founded by agave cultivator and distiller David Ravandi, and emphasizes a distinctly artisanal approach. From the hand-blown recycled glass bottles to the soy ink-printed labels that showcase local artists’ wood carving, the focus is firmly on sustainability, conservation, and regional expression. 123 Blanco is certified organic tequila from the lowlands of Jalisco, sourced from plantations northeast of Guadalajara where synthetic fertilizers and pesticides are prohibited. Ten year old blue agaves are farmed and harvested without large scale mechanical equipment to minimize soil and water impacts, then cooked for two days in traditional stone ovens, and double-distilled in small batches. The result is a beautifully balanced showcase of classic lowland tequila character, full of mineral and spice notes accompanied by citrusy, floral, and herbaceous tones. Delicious sipped by itself or with lime! Certified organic.";
+      let descriptionTitle = document.createElement('h2');
+      descriptionTitle.setAttribute("id", "descriptionTitle");
+      descriptionTitle.innerText = "Description"
+      let descriptionElement = document.createElement('p');
+      descriptionElement.setAttribute("id", "brandDescription");
+      descriptionElement.innerText = "123 Tequila was founded by agave cultivator and distiller David Ravandi, and emphasizes a distinctly artisanal approach. From the hand-blown recycled glass bottles to the soy ink-printed labels that showcase local artists’ wood carving, the focus is firmly on sustainability, conservation, and regional expression. 123 Blanco is certified organic tequila from the lowlands of Jalisco, sourced from plantations northeast of Guadalajara where synthetic fertilizers and pesticides are prohibited. Ten year old blue agaves are farmed and harvested without large scale mechanical equipment to minimize soil and water impacts, then cooked for two days in traditional stone ovens, and double-distilled in small batches. The result is a beautifully balanced showcase of classic lowland tequila character, full of mineral and spice notes accompanied by citrusy, floral, and herbaceous tones. Delicious sipped by itself or with lime! Certified organic.";
       // automate above ^^^^^^^^
 
-      
+
       targetDiv.append(imageDiv);
       imageDiv.append(img);
       targetDiv.append(titleDiv);
       titleDiv.append(titleElement);
       targetDiv.append(infoDiv);
-      infoDiv.append(infoElement);
+      infoDiv.append(descriptionTitle);
+      infoDiv.append(descriptionElement);
       //console.log(img.src);
 }
 

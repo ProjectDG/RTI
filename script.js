@@ -1008,6 +1008,7 @@ function backButtons(){
     loadBrands(jarritosList);
     // Initial Hidden Items  ---------
     $(".back-button").hide();
+    $("#backButtonToMain").hide();
     $(".brand-buttons").hide();
     $("#buttonDiv").hide();
     //$("#tequilaClassDiv").hide();
@@ -1020,6 +1021,7 @@ function backButtons(){
       $("#mainButtonDiv").hide();
       $(".main-buttons").hide();
       $(".brand-buttons").hide();
+      $("#backButtonToMain").show();
       $("#buttonDiv").show();
       $(".back-button").show();
       openFullscreen();
@@ -1272,10 +1274,11 @@ function backButtons(){
     });
 
     // Back Button
-    $(".back-button").on('click', function(){
+    $("#backButtonToMain").on('click', function(){
       $("#buttonDiv").hide();
       $(".brand-buttons").hide();
       $(".back-button").hide();
+      $("#backButtonToMain").hide();
       $("#titleDiv").remove();
       $("#image").remove();
       $("#imageDiv").remove();

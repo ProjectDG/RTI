@@ -898,43 +898,79 @@ function openFullscreen() {
 
     // Creates buttons for the different brands of liquor
     function addBrandImage(current) {
+      // Accesses the div the image and description will be put in.
       const targetDiv = $("#buttonDiv");
+
+      // Creates the image and specific div for it. Also assigns I.D.s
       let imageDiv = document.createElement('div');
       imageDiv.setAttribute("id", "imageDiv")
       let img = document.createElement('img');
       img.setAttribute("id", "image")
+
+      // Breaks down the "current" argument so it can be used to search for the image file.
       let categoryFirstLetter = current.value.toLowerCase()[0];
       let categoryRestOfLetters = current.value.slice(1).replaceAll(" ", "");
       let category = categoryFirstLetter + categoryRestOfLetters;
       let camelCase = current.id.replaceAll(" ", "");
+
+      // Uses Breakdown to search for specific image.
       img.src = "./images/" + category + camelCase + ".png";
       
+      // Creates a div for the brand name or "title" and assigns an I.D.
       const titleDiv  = document.createElement('div');
       titleDiv.setAttribute("id", "titleDiv")
  
+      // Creates a <p> element for the "title" and assigns an I.D. Then uses the "current"
+      // argument to set the "title"
       let titleElement = document.createElement('p');
       titleElement.setAttribute("id", "imageTitle")
       titleElement.innerText = current.id;
 
+      // Creates a div where the brand information will be stored and assigns an I.D.
       const infoDiv  = document.createElement('div');
       infoDiv.setAttribute("id", "infoDiv")
 
+      // Creates sections and contents for them
+      // "Description Section"
       let descriptionTitle = document.createElement('h2');
       descriptionTitle.setAttribute("id", "descriptionTitle");
+      descriptionTitle.setAttribute("class", "section-titles");
       descriptionTitle.innerText = "Description"
       let descriptionElement = document.createElement('p');
       descriptionElement.setAttribute("id", "brandDescription");
-      descriptionElement.innerText = "123 Tequila was founded by agave cultivator and distiller David Ravandi, and emphasizes a distinctly artisanal approach. From the hand-blown recycled glass bottles to the soy ink-printed labels that showcase local artists’ wood carving, the focus is firmly on sustainability, conservation, and regional expression. 123 Blanco is certified organic tequila from the lowlands of Jalisco, sourced from plantations northeast of Guadalajara where synthetic fertilizers and pesticides are prohibited. Ten year old blue agaves are farmed and harvested without large scale mechanical equipment to minimize soil and water impacts, then cooked for two days in traditional stone ovens, and double-distilled in small batches. The result is a beautifully balanced showcase of classic lowland tequila character, full of mineral and spice notes accompanied by citrusy, floral, and herbaceous tones. Delicious sipped by itself or with lime! Certified organic.";
+      descriptionElement.setAttribute("class", "section-info");
+      descriptionElement.innerText = "123 Tequila was founded by agave cultivator and distiller David Ravandi, and emphasizes a distinctly artisanal approach. From the hand-blown recycled glass bottles to the soy ink-printed labels that showcase local artists’ wood carving, the focus is firmly on sustainability, conservation, and regional expression. 123 Blanco is certified organic tequila from the lowlands of Jalisco, sourced from plantations northeast of Guadalajara where synthetic fertilizers and pesticides are prohibited. Ten year old blue agaves are farmed and harvested without large scale mechanical equipment to minimize soil and water impacts, then cooked for two days in traditional stone ovens, and double-distilled in small batches. The result is a beautifully balanced showcase of classic lowland tequila character, full of mineral and spice notes accompanied by citrusy, floral, and herbaceous tones. Delicious sipped by itself or with lime! Certified organic.";//"./descriptions/" + category + camelCase + ".txt";
+      
+
+
+      // "Test Section"
+      let testTitle = document.createElement('h2');
+      testTitle.setAttribute("id", "testTitle");
+      testTitle.setAttribute("class", "section-titles");
+      testTitle.innerText = "Test Section"
+      let testElement = document.createElement('p');
+      testElement.setAttribute("id", "testInfo");
+      testElement.setAttribute("class", "section-info");
+      testElement.innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
       // automate above ^^^^^^^^
 
 
+      // Assembles the Brand Info Section
+      // Image and div
       targetDiv.append(imageDiv);
       imageDiv.append(img);
+      // Title and div
       targetDiv.append(titleDiv);
       titleDiv.append(titleElement);
+      // Info div
       targetDiv.append(infoDiv);
+      // Description Section
       infoDiv.append(descriptionTitle);
       infoDiv.append(descriptionElement);
+      // Test Section
+      infoDiv.append(testTitle);
+      infoDiv.append(testElement);
       //console.log(img.src);
 }
 
@@ -961,7 +997,7 @@ function openFullscreen() {
 
           if(button.id === "Flavored Whiskey"){
             button.setAttribute('id', 'FlavoredWhiskey');
-            console.log(button.id)
+            //console.log(button.id)
           }
       });
 }
@@ -1304,6 +1340,15 @@ function backButtons(){
       $("#mainButtonDiv").show();
       $(".main-buttons").show();
     });
+
+
+
+    // Description toggle testing ...................
+    $("#descriptionTitle").on("click", function (){
+      $("#brandDescription").toggle();
+  })
+
+
 
 
   });

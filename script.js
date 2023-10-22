@@ -899,7 +899,7 @@ function openFullscreen() {
     // Creates buttons for the different brands of liquor
     function addBrandImage(current) {
       // Accesses the div the image and description will be put in.
-      const targetDiv = $("#buttonDiv");
+      const targetDiv = $("#infoContainer");
 
       // Creates the image and specific div for it. Also assigns I.D.s
       let imageDiv = document.createElement('div');
@@ -930,28 +930,51 @@ function openFullscreen() {
       const infoDiv  = document.createElement('div');
       infoDiv.setAttribute("id", "infoDiv")
 
+      // Creates + / - signs for collapsing description elements
+      let plus = document.createElement('p');
+      plus.setAttribute("id", "plus")
+      plus.setAttribute("class", "plus-minus")
+      plus.innerText = "+";
+      let minus = document.createElement('p');
+      minus.setAttribute("id", "minus")
+      minus.setAttribute("class", "plus-minus")
+      minus.innerText = "-";
+
       // Creates sections and contents for them
       // "Description Section"
       let descriptionTitle = document.createElement('h2');
       descriptionTitle.setAttribute("id", "descriptionTitle");
-      descriptionTitle.setAttribute("class", "section-titles");
-      descriptionTitle.innerText = "Description"
+      descriptionTitle.setAttribute("class", "section-titles description-title");
+      descriptionTitle.innerText = "Description";
+      descriptionTitle.appendChild(plus);
+      descriptionTitle.appendChild(minus);
       let descriptionElement = document.createElement('p');
       descriptionElement.setAttribute("id", "brandDescription");
-      descriptionElement.setAttribute("class", "section-info");
-      descriptionElement.innerText = "123 Tequila was founded by agave cultivator and distiller David Ravandi, and emphasizes a distinctly artisanal approach. From the hand-blown recycled glass bottles to the soy ink-printed labels that showcase local artists’ wood carving, the focus is firmly on sustainability, conservation, and regional expression. 123 Blanco is certified organic tequila from the lowlands of Jalisco, sourced from plantations northeast of Guadalajara where synthetic fertilizers and pesticides are prohibited. Ten year old blue agaves are farmed and harvested without large scale mechanical equipment to minimize soil and water impacts, then cooked for two days in traditional stone ovens, and double-distilled in small batches. The result is a beautifully balanced showcase of classic lowland tequila character, full of mineral and spice notes accompanied by citrusy, floral, and herbaceous tones. Delicious sipped by itself or with lime! Certified organic.";//"./descriptions/" + category + camelCase + ".txt";
+      descriptionElement.setAttribute("class", "section-info description-info");
+      descriptionElement.innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       
 
+      // Creates + / - signs for collapsing test elements
+      let plusTest = document.createElement('p');
+      plusTest.setAttribute("id", "plusTest")
+      plusTest.setAttribute("class", "plus-minus")
+      plusTest.innerText = "+";
+      let minusTest = document.createElement('p');
+      minusTest.setAttribute("id", "minusTest")
+      minusTest.setAttribute("class", "plus-minus")
+      minusTest.innerText = "-";
 
       // "Test Section"
       let testTitle = document.createElement('h2');
       testTitle.setAttribute("id", "testTitle");
-      testTitle.setAttribute("class", "section-titles");
-      testTitle.innerText = "Test Section"
+      testTitle.setAttribute("class", "section-titles test-title");
+      testTitle.innerText = "Test Section";
+      testTitle.appendChild(plusTest);
+      testTitle.appendChild(minusTest);
       let testElement = document.createElement('p');
       testElement.setAttribute("id", "testInfo");
-      testElement.setAttribute("class", "section-info");
-      testElement.innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      testElement.setAttribute("class", "section-info test-info");
+      testElement.innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 
       // automate above ^^^^^^^^
 
@@ -972,6 +995,19 @@ function openFullscreen() {
       infoDiv.append(testTitle);
       infoDiv.append(testElement);
       //console.log(img.src);
+
+      $(".description-title").on("click", function(){
+        $(".description-info").toggle();
+        $("#minus").toggle();
+        $("#plus").toggle();
+      });
+
+      $(".test-title").on("click", function(){
+        $(".test-info").toggle();
+        $("#minusTest").toggle();
+        $("#plusTest").toggle();
+      });
+
 }
 
     // Loads Classes
@@ -1063,6 +1099,8 @@ function backButtons(){
     $(".brand-buttons").hide();
     $(".brand-buttons").hide();
     $("#buttonDiv").hide();
+    $("#infoContainer").hide();
+    
     //$("#tequilaClassDiv").hide();
     // -----------------------------------------------------------------------
 
@@ -1095,7 +1133,8 @@ function backButtons(){
     $(".brand-buttons[value|='Blanco'").on('click', function(){
       hide();
       addBrandImage(this);
-      $("#buttonDiv").show();
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
   });
 
     // Show Reposado Tequila Buttons
@@ -1329,6 +1368,7 @@ function backButtons(){
     // Back Button To Main Screen
     $("#backButtonToMain").on('click', function(){
       $("#buttonDiv").hide();
+      $("#infoContainer").hide();
       $(".brand-buttons").hide();
       $(".back-button").hide();
       $("#backButtonToMain").hide();
@@ -1336,6 +1376,9 @@ function backButtons(){
       $("#image").remove();
       $("#imageDiv").remove();
       $("#infoDiv").remove();
+      $("#descriptionTitle").remove();
+      $("#brandDescription").remove();
+
 
       $("#mainButtonDiv").show();
       $(".main-buttons").show();
@@ -1344,9 +1387,12 @@ function backButtons(){
 
 
     // Description toggle testing ...................
-    $("#descriptionTitle").on("click", function (){
-      $("#brandDescription").toggle();
-  })
+    //$("#descriptionTitle").on("click", function (){
+      //$("#brandDescription").toggle();
+  //})
+
+
+
 
 
 

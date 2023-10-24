@@ -227,7 +227,7 @@ body {
 
   .plus-minus{
     display: block;
-    float:left
+    float:left;
   }
 
   #minus,
@@ -252,5 +252,9 @@ body {
     padding: 0 0 10% 0;
     width: 90%;
     margin: 0 auto;
+  }
+
+  #testInfo > p{
+    margin: 10% 0;
   }
 }

@@ -1,5 +1,67 @@
+class BrandInfo{
+  constructor(name, description, tastingNotes = [], otherNotes = []){
+   this.name = name;
+   this.description = description;
+   this.tastingNotes = tastingNotes;
+   this.otherNotes = otherNotes;
+  };
+ };
 
 
+ 
+// Brand Info--------------------------------------------------------------------------------------------------
+  let tequila123 = new BrandInfo(
+    "1 2 3",
+    "123 Tequila was founded by agave cultivator and distiller David Ravandi, and emphasizes a distinctly artisanal approach. From the hand-blown recycled glass bottles to the soy ink-printed labels that showcase local artists’ wood carving, the focus is firmly on sustainability, conservation, and regional expression. 123 Blanco is certified organic tequila from the lowlands of Jalisco, sourced from plantations northeast of Guadalajara where synthetic fertilizers and pesticides are prohibited. Ten year old blue agaves are farmed and harvested without large scale mechanical equipment to minimize soil and water impacts, then cooked for two days in traditional stone ovens, and double-distilled in small batches. The result is a beautifully balanced showcase of classic lowland tequila character, full of mineral and spice notes accompanied by citrusy, floral, and herbaceous tones. Delicious sipped by itself or with lime! Certified organic.",
+    ['Aroma: cooked agave, cracked pepper, ripe fruits', 'Palate: both green and cooked agave, lemon, black pepper, spice', 'Finish: Lasting oiliness with dry spikes of spice'],
+    ["other notes", "etc..."]
+    );
+  
+  let tequila1800 = new BrandInfo(
+    "1800",
+    "Made from 100% Weber blue agave and double-distilled, 1800® Blanco is a special selection of white tequilas blended together for added complexity and character. The clean, balanced taste with hints of sweet fruit and pepper is perfect sipped neat, on the rocks, as a shot or in a cocktail.",
+    null,
+    ["other notes", "etc..."]
+    );
+
+    // Fill in later
+    let vodkaBelvedere = new BrandInfo(
+      "Belvedere",
+      null,
+      null,
+      ["other notes", "etc..."]
+      );
+
+
+
+
+
+
+
+
+// Brands Array For Matching-----------------------------------------------------------------------------------
+  let brands = [
+    tequila123,
+    tequila1800,
+    vodkaBelvedere
+   ]; // end of brands array
+
+
+//console.log(brands);
+  
+
+
+   
+
+
+
+
+
+
+
+
+
+// Start of JQuery --------------------------------------------------------------------------------------------------
 $(document).ready(function(){
 
   // Switches to fullscreen with first button press.
@@ -13,7 +75,6 @@ function openFullscreen() {
     elem.msRequestFullscreen();
   }
 }
-
 
     // Drink Type List
     const typeList = {
@@ -898,16 +959,16 @@ function openFullscreen() {
 
     // Creates buttons for the different brands of liquor
     function addBrandImage(current) {
-      // Accesses the div the image and description will be put in.
+      // Accesses the div the image and description will be put in-----------------------------------------------------
       const targetDiv = $("#infoContainer");
 
-      // Creates the image and specific div for it. Also assigns I.D.s
+      // Creates the image and specific div for it. Also assigns I.D.s-------------------------------------------------
       let imageDiv = document.createElement('div');
       imageDiv.setAttribute("id", "imageDiv")
       let img = document.createElement('img');
       img.setAttribute("id", "image")
 
-      // Breaks down the "current" argument so it can be used to search for the image file.
+      // Breaks down the "current" argument so it can be used to search for the image file.----------------------------
       let categoryFirstLetter = current.value.toLowerCase()[0];
       let categoryRestOfLetters = current.value.slice(1).replaceAll(" ", "");
       let category = categoryFirstLetter + categoryRestOfLetters;
@@ -916,21 +977,21 @@ function openFullscreen() {
       // Uses Breakdown to search for specific image.
       img.src = "./images/" + category + camelCase + ".png";
       
-      // Creates a div for the brand name or "title" and assigns an I.D.
+      // Creates a div for the brand name or "title" and assigns an I.D.-----------------------------------------------
       const titleDiv  = document.createElement('div');
       titleDiv.setAttribute("id", "titleDiv")
  
-      // Creates a <p> element for the "title" and assigns an I.D. Then uses the "current"
+      // Creates a <p> element for the "title" and assigns an I.D. Then uses the "current"-----------------------------
       // argument to set the "title"
       let titleElement = document.createElement('p');
       titleElement.setAttribute("id", "imageTitle")
       titleElement.innerText = current.id;
 
-      // Creates a div where the brand information will be stored and assigns an I.D.
+      // Creates a div where the brand information will be stored and assigns an I.D.----------------------------------
       const infoDiv  = document.createElement('div');
       infoDiv.setAttribute("id", "infoDiv")
 
-      // Creates + / - signs for collapsing description elements
+      // Creates + / - signs for collapsing description elements-------------------------------------------------------
       let plus = document.createElement('p');
       plus.setAttribute("id", "plus")
       plus.setAttribute("class", "plus-minus")
@@ -940,8 +1001,8 @@ function openFullscreen() {
       minus.setAttribute("class", "plus-minus")
       minus.innerText = "-";
 
-      // Creates sections and contents for them
-      // "Description Section"
+      // Creates sections and contents for them------------------------------------------------------------------------
+      // "Description Section"---------------------------------------------------
       let descriptionTitle = document.createElement('h2');
       descriptionTitle.setAttribute("id", "descriptionTitle");
       descriptionTitle.setAttribute("class", "section-titles description-title");
@@ -951,9 +1012,7 @@ function openFullscreen() {
       let descriptionElement = document.createElement('p');
       descriptionElement.setAttribute("id", "brandDescription");
       descriptionElement.setAttribute("class", "section-info description-info");
-      descriptionElement.innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       
-
       // Creates + / - signs for collapsing test elements
       let plusTest = document.createElement('p');
       plusTest.setAttribute("id", "plusTest")
@@ -961,25 +1020,21 @@ function openFullscreen() {
       plusTest.innerText = "+";
       let minusTest = document.createElement('p');
       minusTest.setAttribute("id", "minusTest")
-      minusTest.setAttribute("class", "plus-minus")
+      minusTest.setAttribute("class", "plus-minus");
       minusTest.innerText = "-";
 
-      // "Test Section"
+      // "Tasting Notes Section"------------------------------------------------
       let testTitle = document.createElement('h2');
       testTitle.setAttribute("id", "testTitle");
       testTitle.setAttribute("class", "section-titles test-title");
-      testTitle.innerText = "Test Section";
+      testTitle.innerText = "Tasting Notes";
       testTitle.appendChild(plusTest);
       testTitle.appendChild(minusTest);
       let testElement = document.createElement('p');
       testElement.setAttribute("id", "testInfo");
       testElement.setAttribute("class", "section-info test-info");
-      testElement.innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 
-      // automate above ^^^^^^^^
-
-
-      // Assembles the Brand Info Section
+      // Assembles the Brand Info Section------------------------------------------------------------------------------
       // Image and div
       targetDiv.append(imageDiv);
       imageDiv.append(img);
@@ -994,8 +1049,43 @@ function openFullscreen() {
       // Test Section
       infoDiv.append(testTitle);
       infoDiv.append(testElement);
-      //console.log(img.src);
 
+      // Start of function for brand info-----------------------------------------------------------------------------
+      let imgTitle = $("#imageTitle").text();
+      //console.log(imgTitle);
+
+      // Brand Info Function
+      brands.map(x => {
+        if(x["name"] === imgTitle){
+
+          // Description
+          if(x.description !== null){
+            descriptionElement.innerText = x.description;
+          } else {
+            $("#descriptionTitle").remove();
+            $("#brandDescription").remove();
+          }
+
+          // Tasting Notes
+          if(x.tastingNotes !== null){
+            let line2 = document.createElement('p');       //      fix the "testing name" and css the spacing for the tasting notes
+            let line3 = document.createElement('p');
+            testElement.innerText = x.tastingNotes[0]; 
+            line2.innerText = x.tastingNotes[1];
+            testElement.append(line2);
+            line3.innerText = x.tastingNotes[2];
+            testElement.append(line3);
+          } else {
+            $("#testTitle").remove();
+            $("#testElement").remove();
+          }
+
+
+          console.log(x);
+        }
+      });
+
+      // Plus / Minus for dropdown menu-------------------------------------------------------------------------------
       $(".description-title").on("click", function(){
         $(".description-info").toggle();
         $("#minus").toggle();
@@ -1038,14 +1128,6 @@ function openFullscreen() {
       });
 }
 
-
-/*
-function backButtons(){
-  let backButtons = document.createElement("button");
-  backButtons.setAttribute("class", "back-button")
-  document.body.append(backButtons);
-}
- */   
 
 
     // Initialization---------------------------------------------------------
@@ -1100,13 +1182,9 @@ function backButtons(){
     $(".brand-buttons").hide();
     $("#buttonDiv").hide();
     $("#infoContainer").hide();
-    
-    //$("#tequilaClassDiv").hide();
-    // -----------------------------------------------------------------------
 
 
-
-    // Repetative Hide Function
+    // Repetative Hide Function ---------------------------------------------------------------------------------------------
     function hide(){
       $("#mainButtonDiv").hide();
       $(".main-buttons").hide();
@@ -1115,7 +1193,8 @@ function backButtons(){
       $("#buttonDiv").show();
       openFullscreen();
     }
-
+    
+    // Tequila --------------------------------------------------------------------------------------------------------------
     // Show Tequila Class Buttons
     $(".main-buttons[value|='Tequila'").on('click', function(){
       hide();
@@ -1173,6 +1252,7 @@ function backButtons(){
       $(".brand-buttons[value|='Flavored'").show();
     });
 
+    // Vodka --------------------------------------------------------------------------------------------------------------
     // Show Vodka Buttons
     $(".main-buttons[value|='Vodka'").on('click', function(){
   hide();
@@ -1183,6 +1263,8 @@ function backButtons(){
     $(".brand-buttons[value|='Vodka'").on('click', function(){
       hide();
       addBrandImage(this);
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
   });
     
     // Show Whiskey Class Buttons
@@ -1378,23 +1460,12 @@ function backButtons(){
       $("#infoDiv").remove();
       $("#descriptionTitle").remove();
       $("#brandDescription").remove();
+      $("#testTitle").remove();
+      $("#testElement").remove();
 
 
       $("#mainButtonDiv").show();
       $(".main-buttons").show();
     });
 
-
-
-    // Description toggle testing ...................
-    //$("#descriptionTitle").on("click", function (){
-      //$("#brandDescription").toggle();
-  //})
-
-
-
-
-
-
-
-  });
+  }); // End of JQuery Tag

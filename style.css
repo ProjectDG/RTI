@@ -230,8 +230,11 @@ body {
     float:left;
   }
 
-  #minus,
-  #minusTest{
+  #minusBasicInfo,
+  #minusTastingNotes,
+  #minusSimilarBrands,
+  #minusDescription
+  {
     display: none;
   }
 
@@ -254,7 +257,9 @@ body {
     margin: 0 auto;
   }
 
-  #testInfo > p{
+  #tastingNotesInfo > p,
+  #basicInfoInfo > p,
+  #similarBrandsInfo > p{
     margin: 10% 0;
   }
 }

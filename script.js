@@ -1,9 +1,10 @@
 class BrandInfo{
-  constructor(name, description, tastingNotes = [], otherNotes = []){
+  constructor(name, basicInfo = [], tastingNotes = [], similarBrands = [], description,  ){
    this.name = name;
-   this.description = description;
+   this.basicInfo = basicInfo;
    this.tastingNotes = tastingNotes;
-   this.otherNotes = otherNotes;
+   this.similarBrands = similarBrands;
+   this.description = description;
   };
  };
 
@@ -11,10 +12,45 @@ class BrandInfo{
  
 // Brand Info--------------------------------------------------------------------------------------------------
   let tequila123 = new BrandInfo(
+    // Name 
     "1 2 3",
-    "123 Tequila was founded by agave cultivator and distiller David Ravandi, and emphasizes a distinctly artisanal approach. From the hand-blown recycled glass bottles to the soy ink-printed labels that showcase local artists’ wood carving, the focus is firmly on sustainability, conservation, and regional expression. 123 Blanco is certified organic tequila from the lowlands of Jalisco, sourced from plantations northeast of Guadalajara where synthetic fertilizers and pesticides are prohibited. Ten year old blue agaves are farmed and harvested without large scale mechanical equipment to minimize soil and water impacts, then cooked for two days in traditional stone ovens, and double-distilled in small batches. The result is a beautifully balanced showcase of classic lowland tequila character, full of mineral and spice notes accompanied by citrusy, floral, and herbaceous tones. Delicious sipped by itself or with lime! Certified organic.",
-    ['Aroma: cooked agave, cracked pepper, ripe fruits', 'Palate: both green and cooked agave, lemon, black pepper, spice', 'Finish: Lasting oiliness with dry spikes of spice'],
-    ["other notes", "etc..."]
+    // Basic Info
+    [
+      "Organic blanco great for purists looking for bright bursts of green agave, spice, and citrus peel with an almost oily mouthfeel 96 point rating from Tasting Panel Magazine Created by Master Distiller David Ravandi",
+      "80 proof / 40% ABV",
+      "NOM: 1480 / Tequila Las Americas / Amatitan, Jalisco"
+      ],
+      // Tasting Notes
+      [
+        'Aroma: cooked agave, cracked pepper, ripe fruits',
+        'Palate: both green and cooked agave, lemon, black pepper, spice',
+          'Finish: Lasting oiliness with dry spikes of spice'
+      ],
+      // Similar Brands
+      [
+        "Don Julio Blanco",
+        "Tequila Ocho Blanco",
+        "Casa Dragones Blanco",
+        "Siete Leguas Blanco",
+        "El Jimador Blanco",
+        "Espolon Tequila Blanco",
+        "Casamigos Blanco",
+        "Espolon Blanco",
+        "Olmeca Altos Blanco",
+        "Avión Añejo",
+        "Casa Noble Blanco",
+        "Cazadores Reposado tequila",
+        "Clase Azul Tequila",
+        "El Tesoro Blanco",
+        "Inspiro Tequila Luna Blanco",
+        "Jose Cuervo Teq",
+        "Chamucos Reposado",
+        "Hornitos Plata"
+      ],
+      // Description
+      "123 Tequila was founded by agave cultivator and distiller David Ravandi, and emphasizes a distinctly artisanal approach. From the hand-blown recycled glass bottles to the soy ink-printed labels that showcase local artists’ wood carving, the focus is firmly on sustainability, conservation, and regional expression. 123 Blanco is certified organic tequila from the lowlands of Jalisco, sourced from plantations northeast of Guadalajara where synthetic fertilizers and pesticides are prohibited. Ten year old blue agaves are farmed and harvested without large scale mechanical equipment to minimize soil and water impacts, then cooked for two days in traditional stone ovens, and double-distilled in small batches. The result is a beautifully balanced showcase of classic lowland tequila character, full of mineral and spice notes accompanied by citrusy, floral, and herbaceous tones. Delicious sipped by itself or with lime! Certified organic."
+    
+    
     );
   
   let tequila1800 = new BrandInfo(
@@ -991,48 +1027,94 @@ function openFullscreen() {
       const infoDiv  = document.createElement('div');
       infoDiv.setAttribute("id", "infoDiv")
 
-      // Creates + / - signs for collapsing description elements-------------------------------------------------------
-      let plus = document.createElement('p');
-      plus.setAttribute("id", "plus")
-      plus.setAttribute("class", "plus-minus")
-      plus.innerText = "+";
-      let minus = document.createElement('p');
-      minus.setAttribute("id", "minus")
-      minus.setAttribute("class", "plus-minus")
-      minus.innerText = "-";
+      
 
       // Creates sections and contents for them------------------------------------------------------------------------
+      // Creates + / - signs for collapsing similar brands elements
+      let plusSimilarBrands = document.createElement('p');
+      plusSimilarBrands.setAttribute("id", "plusSimilarBrands")
+      plusSimilarBrands.setAttribute("class", "plus-minus")
+      plusSimilarBrands.innerText = "+";
+      let minusSimilarBrands = document.createElement('p');
+      minusSimilarBrands.setAttribute("id", "minusSimilarBrands")
+      minusSimilarBrands.setAttribute("class", "plus-minus");
+      minusSimilarBrands.innerText = "-";
+
+      // "Tasting Notes Section"------------------------------------------------
+      let similarBrandsTitle = document.createElement('h2');
+      similarBrandsTitle.setAttribute("id", "similarBrandsTitle");
+      similarBrandsTitle.setAttribute("class", "section-titles similar-brands-title");
+      similarBrandsTitle.innerText = "Similar Brands";
+      similarBrandsTitle.appendChild(plusSimilarBrands);
+      similarBrandsTitle.appendChild(minusSimilarBrands);
+      let similarBrandsElement = document.createElement('p');
+      similarBrandsElement.setAttribute("id", "similarBrandsInfo");
+      similarBrandsElement.setAttribute("class", "section-info similar-brands-info");
+
+      // Creates + / - signs for collapsing basic info elements
+      let plusBasicInfo = document.createElement('p');
+      plusBasicInfo.setAttribute("id", "plusBasicInfo")
+      plusBasicInfo.setAttribute("class", "plus-minus")
+      plusBasicInfo.innerText = "+";
+      let minusBasicInfo = document.createElement('p');
+      minusBasicInfo.setAttribute("id", "minusBasicInfo")
+      minusBasicInfo.setAttribute("class", "plus-minus");
+      minusBasicInfo.innerText = "-";
+
+      // "Tasting Notes Section"------------------------------------------------
+      let basicInfoTitle = document.createElement('h2');
+      basicInfoTitle.setAttribute("id", "basicInfoTitle");
+      basicInfoTitle.setAttribute("class", "section-titles basic-info-title");
+      basicInfoTitle.innerText = "Basic Info";
+      basicInfoTitle.appendChild(plusBasicInfo);
+      basicInfoTitle.appendChild(minusBasicInfo);
+      let basicInfoElement = document.createElement('p');
+      basicInfoElement.setAttribute("id", "basicInfoInfo");
+      basicInfoElement.setAttribute("class", "section-info basic-info-info");
+
+      // Creates + / - signs for collapsing tasting notes elements
+      let plusTastingNotes = document.createElement('p');
+      plusTastingNotes.setAttribute("id", "plusTastingNotes")
+      plusTastingNotes.setAttribute("class", "plus-minus")
+      plusTastingNotes.innerText = "+";
+      let minusTastingNotes = document.createElement('p');
+      minusTastingNotes.setAttribute("id", "minusTastingNotes")
+      minusTastingNotes.setAttribute("class", "plus-minus");
+      minusTastingNotes.innerText = "-";
+
+      // "Tasting Notes Section"------------------------------------------------
+      let tastingNotesTitle = document.createElement('h2');
+      tastingNotesTitle.setAttribute("id", "tastingNotesTitle");
+      tastingNotesTitle.setAttribute("class", "section-titles tasting-notes-title");
+      tastingNotesTitle.innerText = "Tasting Notes";
+      tastingNotesTitle.appendChild(plusTastingNotes);
+      tastingNotesTitle.appendChild(minusTastingNotes);
+      let tastingNotesElement = document.createElement('p');
+      tastingNotesElement.setAttribute("id", "tastingNotesInfo");
+      tastingNotesElement.setAttribute("class", "section-info tasting-notes-info");
+
+      // Creates + / - signs for collapsing description elements-------------------------------------------------------
+      let plusDescription = document.createElement('p');
+      plusDescription.setAttribute("id", "plusDescription")
+      plusDescription.setAttribute("class", "plus-minus")
+      plusDescription.innerText = "+";
+      let minusDescription = document.createElement('p');
+      minusDescription.setAttribute("id", "minusDescription")
+      minusDescription.setAttribute("class", "plus-minus")
+      minusDescription.innerText = "-";
+
       // "Description Section"---------------------------------------------------
       let descriptionTitle = document.createElement('h2');
       descriptionTitle.setAttribute("id", "descriptionTitle");
       descriptionTitle.setAttribute("class", "section-titles description-title");
-      descriptionTitle.innerText = "Description";
-      descriptionTitle.appendChild(plus);
-      descriptionTitle.appendChild(minus);
+      descriptionTitle.innerText = "About the Brand";
+      descriptionTitle.appendChild(plusDescription);
+      descriptionTitle.appendChild(minusDescription);
       let descriptionElement = document.createElement('p');
       descriptionElement.setAttribute("id", "brandDescription");
       descriptionElement.setAttribute("class", "section-info description-info");
       
-      // Creates + / - signs for collapsing test elements
-      let plusTest = document.createElement('p');
-      plusTest.setAttribute("id", "plusTest")
-      plusTest.setAttribute("class", "plus-minus")
-      plusTest.innerText = "+";
-      let minusTest = document.createElement('p');
-      minusTest.setAttribute("id", "minusTest")
-      minusTest.setAttribute("class", "plus-minus");
-      minusTest.innerText = "-";
-
-      // "Tasting Notes Section"------------------------------------------------
-      let testTitle = document.createElement('h2');
-      testTitle.setAttribute("id", "testTitle");
-      testTitle.setAttribute("class", "section-titles test-title");
-      testTitle.innerText = "Tasting Notes";
-      testTitle.appendChild(plusTest);
-      testTitle.appendChild(minusTest);
-      let testElement = document.createElement('p');
-      testElement.setAttribute("id", "testInfo");
-      testElement.setAttribute("class", "section-info test-info");
+      
 
       // Assembles the Brand Info Section------------------------------------------------------------------------------
       // Image and div
@@ -1043,12 +1125,19 @@ function openFullscreen() {
       titleDiv.append(titleElement);
       // Info div
       targetDiv.append(infoDiv);
+      // Basic Info Section
+      infoDiv.append(basicInfoTitle);
+      infoDiv.append(basicInfoElement);
+      // Tasting Notes Section
+      infoDiv.append(tastingNotesTitle);
+      infoDiv.append(tastingNotesElement);
+      // Similar Brands Section
+      infoDiv.append(similarBrandsTitle);
+      infoDiv.append(similarBrandsElement);
       // Description Section
       infoDiv.append(descriptionTitle);
       infoDiv.append(descriptionElement);
-      // Test Section
-      infoDiv.append(testTitle);
-      infoDiv.append(testElement);
+      
 
       // Start of function for brand info-----------------------------------------------------------------------------
       let imgTitle = $("#imageTitle").text();
@@ -1058,6 +1147,49 @@ function openFullscreen() {
       brands.map(x => {
         if(x["name"] === imgTitle){
 
+          // Basic Info
+          if(x.basicInfo !== null){
+            let line2 = document.createElement('p');
+            let line3 = document.createElement('p');
+            basicInfoElement.innerText = x.basicInfo[0]; // Make a for loop to append each index of the array for this and tasting notes
+            line2.innerText = x.basicInfo[1];
+            basicInfoElement.append(line2);
+            line3.innerText = x.basicInfo[2];
+            basicInfoElement.append(line3);
+          } else {
+            $("#basicInfoTitle").remove();
+            $("#basicInfoElement").remove();
+          }
+
+
+          // Tasting Notes
+          if(x.tastingNotes !== null){
+            let line2 = document.createElement('p');
+            let line3 = document.createElement('p');
+            tastingNotesElement.innerText = x.tastingNotes[0]; 
+            line2.innerText = x.tastingNotes[1];
+            tastingNotesElement.append(line2);
+            line3.innerText = x.tastingNotes[2];
+            tastingNotesElement.append(line3);
+          } else {
+            $("#tastingNotesTitle").remove();
+            $("#tastingNotesElement").remove();
+          }
+
+          // Similar Brands
+          if(x.similarBrands !== null){
+            let line2 = document.createElement('p');
+            let line3 = document.createElement('p');
+            similarBrandsElement.innerText = x.similarBrands[0]; 
+            line2.innerText = x.similarBrands[1];
+            similarBrandsElement.append(line2);
+            line3.innerText = x.similarBrands[2];
+            similarBrandsElement.append(line3);
+          } else {
+            $("#similarBrandsTitle").remove();
+            $("#similarBrandsElement").remove();
+          }
+
           // Description
           if(x.description !== null){
             descriptionElement.innerText = x.description;
@@ -1066,19 +1198,7 @@ function openFullscreen() {
             $("#brandDescription").remove();
           }
 
-          // Tasting Notes
-          if(x.tastingNotes !== null){
-            let line2 = document.createElement('p');       //      fix the "testing name" and css the spacing for the tasting notes
-            let line3 = document.createElement('p');
-            testElement.innerText = x.tastingNotes[0]; 
-            line2.innerText = x.tastingNotes[1];
-            testElement.append(line2);
-            line3.innerText = x.tastingNotes[2];
-            testElement.append(line3);
-          } else {
-            $("#testTitle").remove();
-            $("#testElement").remove();
-          }
+          
 
 
           console.log(x);
@@ -1086,17 +1206,31 @@ function openFullscreen() {
       });
 
       // Plus / Minus for dropdown menu-------------------------------------------------------------------------------
-      $(".description-title").on("click", function(){
-        $(".description-info").toggle();
-        $("#minus").toggle();
-        $("#plus").toggle();
+      $(".basic-info-title").on("click", function(){
+        $(".basic-info-info").toggle();
+        $("#minusBasicInfo").toggle();
+        $("#plusBasicInfo").toggle();
       });
 
-      $(".test-title").on("click", function(){
-        $(".test-info").toggle();
-        $("#minusTest").toggle();
-        $("#plusTest").toggle();
+      $(".tasting-notes-title").on("click", function(){
+        $(".tasting-notes-info").toggle();
+        $("#minusTastingNotes").toggle();
+        $("#plusTastingNotes").toggle();
       });
+
+      $(".similar-brands-title").on("click", function(){
+        $(".similar-brands-info").toggle();
+        $("#minusSimilarBrands").toggle();
+        $("#plusSimilarBrands").toggle();
+      });
+
+      $(".description-title").on("click", function(){
+        $(".description-info").toggle();
+        $("#minusDescription").toggle();
+        $("#plusDescription").toggle();
+      });
+
+      
 
 }
 
@@ -1458,10 +1592,15 @@ function openFullscreen() {
       $("#image").remove();
       $("#imageDiv").remove();
       $("#infoDiv").remove();
+      $("#basicInfoTitle").remove();
+      $("#basicInfoElement").remove();
+      $("#tastingNotesTitle").remove();
+      $("#tastingNotesElement").remove();
+      $("similarBrandsTitle").remove();
+      $("#similarBrandsElement").remove();
       $("#descriptionTitle").remove();
       $("#brandDescription").remove();
-      $("#testTitle").remove();
-      $("#testElement").remove();
+      
 
 
       $("#mainButtonDiv").show();

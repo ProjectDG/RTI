@@ -19,55 +19,84 @@ class BrandInfo{
       "Organic blanco great for purists looking for bright bursts of green agave, spice, and citrus peel with an almost oily mouthfeel 96 point rating from Tasting Panel Magazine Created by Master Distiller David Ravandi",
       "80 proof / 40% ABV",
       "NOM: 1480 / Tequila Las Americas / Amatitan, Jalisco"
-      ],
-      // Tasting Notes
-      [
-        'Aroma: cooked agave, cracked pepper, ripe fruits',
-        'Palate: both green and cooked agave, lemon, black pepper, spice',
-          'Finish: Lasting oiliness with dry spikes of spice'
-      ],
-      // Similar Brands
-      [
-        "Don Julio Blanco",
-        "Tequila Ocho Blanco",
-        "Casa Dragones Blanco",
-        "Siete Leguas Blanco",
-        "El Jimador Blanco",
-        "Espolon Tequila Blanco",
-        "Casamigos Blanco",
-        "Espolon Blanco",
-        "Olmeca Altos Blanco",
-        "Avión Añejo",
-        "Casa Noble Blanco",
-        "Cazadores Reposado tequila",
-        "Clase Azul Tequila",
-        "El Tesoro Blanco",
-        "Inspiro Tequila Luna Blanco",
-        "Jose Cuervo Teq",
-        "Chamucos Reposado",
-        "Hornitos Plata"
-      ],
-      // Description
-      "123 Tequila was founded by agave cultivator and distiller David Ravandi, and emphasizes a distinctly artisanal approach. From the hand-blown recycled glass bottles to the soy ink-printed labels that showcase local artists’ wood carving, the focus is firmly on sustainability, conservation, and regional expression. 123 Blanco is certified organic tequila from the lowlands of Jalisco, sourced from plantations northeast of Guadalajara where synthetic fertilizers and pesticides are prohibited. Ten year old blue agaves are farmed and harvested without large scale mechanical equipment to minimize soil and water impacts, then cooked for two days in traditional stone ovens, and double-distilled in small batches. The result is a beautifully balanced showcase of classic lowland tequila character, full of mineral and spice notes accompanied by citrusy, floral, and herbaceous tones. Delicious sipped by itself or with lime! Certified organic."
-    
-    
+    ],
+    // Tasting Notes
+    [
+      'Aroma: cooked agave, cracked pepper, ripe fruits',
+      'Palate: both green and cooked agave, lemon, black pepper, spice',
+      'Finish: Lasting oiliness with dry spikes of spice'
+    ],
+     // Similar Brands
+    [
+      "Don Julio Blanco",
+      "Tequila Ocho Blanco",
+      "Casa Dragones Blanco",
+      "Siete Leguas Blanco",
+      "El Jimador Blanco",
+      "Espolon Blanco",
+      "Casamigos Blanco",
+      "Espolon Blanco",
+      "Olmeca Altos Blanco",
+      "Avión Añejo",
+      "Casa Noble Blanco",
+      "Cazadores Reposado",
+      "Clase Azul Blanco",
+      "El Tesoro Blanco",
+      "Inspiro Tequila Luna Blanco",
+      "Jose Cuervo Tradicional",
+      "Chamucos Reposado",
+      "Hornitos Plata"
+    ],
+    // Description
+    "123 Tequila was founded by agave cultivator and distiller David Ravandi, and emphasizes a distinctly artisanal approach. From the hand-blown recycled glass bottles to the soy ink-printed labels that showcase local artists’ wood carving, the focus is firmly on sustainability, conservation, and regional expression. 123 Blanco is certified organic tequila from the lowlands of Jalisco, sourced from plantations northeast of Guadalajara where synthetic fertilizers and pesticides are prohibited. Ten year old blue agaves are farmed and harvested without large scale mechanical equipment to minimize soil and water impacts, then cooked for two days in traditional stone ovens, and double-distilled in small batches. The result is a beautifully balanced showcase of classic lowland tequila character, full of mineral and spice notes accompanied by citrusy, floral, and herbaceous tones. Delicious sipped by itself or with lime! Certified organic."
     );
   
   let tequila1800 = new BrandInfo(
+    // Name 
     "1800",
-    "Made from 100% Weber blue agave and double-distilled, 1800® Blanco is a special selection of white tequilas blended together for added complexity and character. The clean, balanced taste with hints of sweet fruit and pepper is perfect sipped neat, on the rocks, as a shot or in a cocktail.",
+    // Basic Info
     null,
-    ["other notes", "etc..."]
+    // Tasting Notes
+    null,
+    // Similar Brands
+    null,
+    // Description
+    "Made from 100% Weber blue agave and double-distilled, 1800® Blanco is a special selection of white tequilas blended together for added complexity and character. The clean, balanced taste with hints of sweet fruit and pepper is perfect sipped neat, on the rocks, as a shot or in a cocktail.",
     );
+
 
     // Fill in later
     let vodkaBelvedere = new BrandInfo(
+      // Name 
       "Belvedere",
+      // Basic Info
       null,
+      // Tasting Notes
       null,
-      ["other notes", "etc..."]
+      // Similar Brands
+      null,
+      // Description
+      null
       );
 
+
+
+
+
+/*  Brand Info Template---------------------------------
+    let template = new BrandInfo(
+      // Name 
+      "",
+      // Basic Info
+      [],
+      // Tasting Notes
+      [],
+      // Similar Brands
+      [],
+      // Description
+      "", 
+      );
+*/
 
 
 
@@ -1149,13 +1178,12 @@ function openFullscreen() {
 
           // Basic Info
           if(x.basicInfo !== null){
-            let line2 = document.createElement('p');
-            let line3 = document.createElement('p');
-            basicInfoElement.innerText = x.basicInfo[0]; // Make a for loop to append each index of the array for this and tasting notes
-            line2.innerText = x.basicInfo[1];
-            basicInfoElement.append(line2);
-            line3.innerText = x.basicInfo[2];
-            basicInfoElement.append(line3);
+            x.basicInfo.map(i => {
+              console.log(i);
+              let p = document.createElement('p');
+              p.append(i);
+              basicInfoElement.append(p);
+            })
           } else {
             $("#basicInfoTitle").remove();
             $("#basicInfoElement").remove();
@@ -1164,13 +1192,12 @@ function openFullscreen() {
 
           // Tasting Notes
           if(x.tastingNotes !== null){
-            let line2 = document.createElement('p');
-            let line3 = document.createElement('p');
-            tastingNotesElement.innerText = x.tastingNotes[0]; 
-            line2.innerText = x.tastingNotes[1];
-            tastingNotesElement.append(line2);
-            line3.innerText = x.tastingNotes[2];
-            tastingNotesElement.append(line3);
+            x.tastingNotes.map(i => {
+              console.log(i);
+              let p = document.createElement('p');
+              p.append(i);
+              tastingNotesElement.append(p);
+            })
           } else {
             $("#tastingNotesTitle").remove();
             $("#tastingNotesElement").remove();
@@ -1178,13 +1205,12 @@ function openFullscreen() {
 
           // Similar Brands
           if(x.similarBrands !== null){
-            let line2 = document.createElement('p');
-            let line3 = document.createElement('p');
-            similarBrandsElement.innerText = x.similarBrands[0]; 
-            line2.innerText = x.similarBrands[1];
-            similarBrandsElement.append(line2);
-            line3.innerText = x.similarBrands[2];
-            similarBrandsElement.append(line3);
+            x.similarBrands.map(i => {
+              console.log(i);
+              let p = document.createElement('p');
+              p.append(i);
+              similarBrandsElement.append(p);
+            })
           } else {
             $("#similarBrandsTitle").remove();
             $("#similarBrandsElement").remove();
@@ -1197,8 +1223,6 @@ function openFullscreen() {
             $("#descriptionTitle").remove();
             $("#brandDescription").remove();
           }
-
-          
 
 
           console.log(x);
@@ -1339,7 +1363,7 @@ function openFullscreen() {
     $("#Blanco").on('click', function(){
       hide();
       $(".brand-buttons[value|='Blanco'").show();
-      $(".back-button").show();
+      $("#tequilaClassBackButton").show();
     });
 
     // Blanco Button Actions
@@ -1347,6 +1371,7 @@ function openFullscreen() {
       hide();
       addBrandImage(this);
       $("#buttonDiv").hide();
+      $("#tequilaClassBackButton").hide();
       $("#infoContainer").show();
   });
 
@@ -1354,36 +1379,42 @@ function openFullscreen() {
     $("#Reposado").on('click', function(){
       hide();
       $(".brand-buttons[value|='Reposado'").show();
+      $("#tequilaClassBackButton").show();
     });
 
     // Show Anejo Tequila Buttons
     $("#Anejo").on('click', function(){
       hide();
       $(".brand-buttons[value|='Anejo'").show();
+      $("#tequilaClassBackButton").show();
     });
 
     // Show Joven Tequila Buttons
     $("#Joven").on('click', function(){
     hide();
     $(".brand-buttons[value|='Joven'").show();
+    $("#tequilaClassBackButton").show();
     });
 
     // Show Select Reserves Tequila Buttons
     $("#Select").on('click', function(){
     hide();
     $(".brand-buttons[value|='Select'").show();
+    $("#tequilaClassBackButton").show();
 });
 
     // Show Mezcal Buttons
     $("#Mezcal").on('click', function(){
     hide();
     $(".brand-buttons[value|='Mezcal'").show();
+    $("#tequilaClassBackButton").show();
     });
 
     // Show Flavored Tequila Buttons
     $("#Flavored").on('click', function(){
       hide();
       $(".brand-buttons[value|='Flavored'").show();
+      $("#tequilaClassBackButton").show();
     });
 
     // Vodka --------------------------------------------------------------------------------------------------------------
@@ -1581,8 +1612,20 @@ function openFullscreen() {
       addBrandImage(this);
     });
 
-    // Back Button To Main Screen
+    // Back Button To Tequila Classes
+    $("#tequilaClassBackButton").on('click', function(){
+      // Hide -----------------------------
+      $(".brand-buttons").hide();
+      $("#tequilaClassBackButton").hide();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $(".brand-buttons[value|='ClassTequila'").show();
+      $("#backButtonToMain").show();
+    });
+
     $("#backButtonToMain").on('click', function(){
+      // Hide -----------------------------
       $("#buttonDiv").hide();
       $("#infoContainer").hide();
       $(".brand-buttons").hide();
@@ -1600,9 +1643,8 @@ function openFullscreen() {
       $("#similarBrandsElement").remove();
       $("#descriptionTitle").remove();
       $("#brandDescription").remove();
-      
 
-
+      // Show ------------------------------
       $("#mainButtonDiv").show();
       $(".main-buttons").show();
     });

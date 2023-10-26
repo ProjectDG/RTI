@@ -73,11 +73,22 @@ body {
 
   #buttonDiv
   {
-    height: 80%;
+    height: 84%;
+  }
+
+  #typeTitleDiv{
+    height: 5vh;
+    color: white;
+    text-align: center;
+  }
+
+  #typeTitleDiv > p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4vh;
   }
 
   #infoContainer{
-    height: 88%;
+    height: 82%;
     width: 98%;
     display: inline-block;
   }

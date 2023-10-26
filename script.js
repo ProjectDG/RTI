@@ -1,19 +1,22 @@
 class BrandInfo{
-  constructor(name, basicInfo = [], tastingNotes = [], similarBrands = [], description,  ){
+  constructor(name, basicInfo = [], tastingNotes = [], similarBrands = [], description, type){
    this.name = name;
    this.basicInfo = basicInfo;
    this.tastingNotes = tastingNotes;
    this.similarBrands = similarBrands;
    this.description = description;
-  };
+   this.type = type
+;  };
  };
 
 
  
-// Brand Info--------------------------------------------------------------------------------------------------
+// Brand Info-----------------------------------------------------------------------------------------------------------------------------------------------------
+// Tequilas -----------------------------------------------------------------------------------
+//Blanco----------------------------------------
   let tequila123 = new BrandInfo(
     // Name 
-    "1 2 3",
+    "123",
     // Basic Info
     [
       "Organic blanco great for purists looking for bright bursts of green agave, spice, and citrus peel with an almost oily mouthfeel 96 point rating from Tasting Panel Magazine Created by Master Distiller David Ravandi",
@@ -48,7 +51,9 @@ class BrandInfo{
       "Hornitos Plata"
     ],
     // Description
-    "123 Tequila was founded by agave cultivator and distiller David Ravandi, and emphasizes a distinctly artisanal approach. From the hand-blown recycled glass bottles to the soy ink-printed labels that showcase local artists’ wood carving, the focus is firmly on sustainability, conservation, and regional expression. 123 Blanco is certified organic tequila from the lowlands of Jalisco, sourced from plantations northeast of Guadalajara where synthetic fertilizers and pesticides are prohibited. Ten year old blue agaves are farmed and harvested without large scale mechanical equipment to minimize soil and water impacts, then cooked for two days in traditional stone ovens, and double-distilled in small batches. The result is a beautifully balanced showcase of classic lowland tequila character, full of mineral and spice notes accompanied by citrusy, floral, and herbaceous tones. Delicious sipped by itself or with lime! Certified organic."
+    "123 Tequila was founded by agave cultivator and distiller David Ravandi, and emphasizes a distinctly artisanal approach. From the hand-blown recycled glass bottles to the soy ink-printed labels that showcase local artists’ wood carving, the focus is firmly on sustainability, conservation, and regional expression. 123 Blanco is certified organic tequila from the lowlands of Jalisco, sourced from plantations northeast of Guadalajara where synthetic fertilizers and pesticides are prohibited. Ten year old blue agaves are farmed and harvested without large scale mechanical equipment to minimize soil and water impacts, then cooked for two days in traditional stone ovens, and double-distilled in small batches. The result is a beautifully balanced showcase of classic lowland tequila character, full of mineral and spice notes accompanied by citrusy, floral, and herbaceous tones. Delicious sipped by itself or with lime! Certified organic.",
+    // Type
+    "Blanco"
     );
   
   let tequila1800 = new BrandInfo(
@@ -62,22 +67,26 @@ class BrandInfo{
     null,
     // Description
     "Made from 100% Weber blue agave and double-distilled, 1800® Blanco is a special selection of white tequilas blended together for added complexity and character. The clean, balanced taste with hints of sweet fruit and pepper is perfect sipped neat, on the rocks, as a shot or in a cocktail.",
+    // Type
+    "Blanco"
     );
 
 
-    // Fill in later
-    let vodkaBelvedere = new BrandInfo(
-      // Name 
-      "Belvedere",
-      // Basic Info
-      null,
-      // Tasting Notes
-      null,
-      // Similar Brands
-      null,
-      // Description
-      null
-      );
+  // Fill in later
+  let vodkaBelvedere = new BrandInfo(
+    // Name 
+    "Belvedere",
+    // Basic Info
+    null,
+    // Tasting Notes
+    null,
+    // Similar Brands
+    null,
+    // Description
+    null,
+    // Type
+    null
+    );
 
 
 
@@ -171,7 +180,7 @@ function openFullscreen() {
       '512' : ["Blanco"],
       '818' : ["Blanco"],
       '1800' : ["Blanco"],
-      '1 2 3' : ["Blanco"],
+      '123' : ["Blanco"],
       '4 Copas' : ["Blanco"],
       'Adictivo' : ["Blanco"],
       'Agavales' : ["Blanco"],
@@ -990,9 +999,7 @@ function openFullscreen() {
 
    // Creates the main buttons for selecting which type of drink they want
    function loadTypes() {
-    let targetDiv = $("#mainButtonDiv")
-    //let targetDiv = document.createElement("div");
-    //targetDiv.setAttribute("id", "mainButtonDiv");
+    let targetDiv = $("#mainButtonDiv");
     Object.keys(typeList).forEach((type) => {
         let button = document.createElement("button");
         let span = document.createElement("span");
@@ -1024,14 +1031,25 @@ function openFullscreen() {
 
     // Creates buttons for the different brands of liquor
     function addBrandImage(current) {
+      let typeTitleDiv = $("#typeTitleDiv");
+      let typeTitle = document.createElement('p');
+      typeTitle.setAttribute("id", "typeTitle")
+      typeTitle.setAttribute("class", "all-info")
+      typeTitle.innerText = current.value;
+      typeTitleDiv.append(typeTitle);
+      $("#typeTitleDiv").show();
+      console.log(typeTitle.innerText)
+
       // Accesses the div the image and description will be put in-----------------------------------------------------
       const targetDiv = $("#infoContainer");
 
       // Creates the image and specific div for it. Also assigns I.D.s-------------------------------------------------
       let imageDiv = document.createElement('div');
-      imageDiv.setAttribute("id", "imageDiv")
+      imageDiv.setAttribute("id", "imageDiv");
+      imageDiv.setAttribute("class", "all-info");
       let img = document.createElement('img');
-      img.setAttribute("id", "image")
+      img.setAttribute("id", "image");
+      img.setAttribute("class", "all-info");
 
       // Breaks down the "current" argument so it can be used to search for the image file.----------------------------
       let categoryFirstLetter = current.value.toLowerCase()[0];
@@ -1044,104 +1062,107 @@ function openFullscreen() {
       
       // Creates a div for the brand name or "title" and assigns an I.D.-----------------------------------------------
       const titleDiv  = document.createElement('div');
-      titleDiv.setAttribute("id", "titleDiv")
+      titleDiv.setAttribute("id", "titleDiv");
+      titleDiv.setAttribute("class", "all-info");
  
       // Creates a <p> element for the "title" and assigns an I.D. Then uses the "current"-----------------------------
       // argument to set the "title"
       let titleElement = document.createElement('p');
-      titleElement.setAttribute("id", "imageTitle")
+      titleElement.setAttribute("id", "imageTitle");
+      titleElement.setAttribute("class", "all-info");
       titleElement.innerText = current.id;
 
       // Creates a div where the brand information will be stored and assigns an I.D.----------------------------------
       const infoDiv  = document.createElement('div');
-      infoDiv.setAttribute("id", "infoDiv")
+      infoDiv.setAttribute("id", "infoDiv");
+      infoDiv.setAttribute("class", "all-info");
 
       
 
       // Creates sections and contents for them------------------------------------------------------------------------
       // Creates + / - signs for collapsing similar brands elements
       let plusSimilarBrands = document.createElement('p');
-      plusSimilarBrands.setAttribute("id", "plusSimilarBrands")
-      plusSimilarBrands.setAttribute("class", "plus-minus")
+      plusSimilarBrands.setAttribute("id", "plusSimilarBrands");
+      plusSimilarBrands.setAttribute("class", "plus-minus all-info");
       plusSimilarBrands.innerText = "+";
       let minusSimilarBrands = document.createElement('p');
-      minusSimilarBrands.setAttribute("id", "minusSimilarBrands")
-      minusSimilarBrands.setAttribute("class", "plus-minus");
+      minusSimilarBrands.setAttribute("id", "minusSimilarBrands");
+      minusSimilarBrands.setAttribute("class", "plus-minus all-info");
       minusSimilarBrands.innerText = "-";
 
       // "Tasting Notes Section"------------------------------------------------
       let similarBrandsTitle = document.createElement('h2');
       similarBrandsTitle.setAttribute("id", "similarBrandsTitle");
-      similarBrandsTitle.setAttribute("class", "section-titles similar-brands-title");
+      similarBrandsTitle.setAttribute("class", "section-titles similar-brands-title all-info");
       similarBrandsTitle.innerText = "Similar Brands";
       similarBrandsTitle.appendChild(plusSimilarBrands);
       similarBrandsTitle.appendChild(minusSimilarBrands);
       let similarBrandsElement = document.createElement('p');
       similarBrandsElement.setAttribute("id", "similarBrandsInfo");
-      similarBrandsElement.setAttribute("class", "section-info similar-brands-info");
+      similarBrandsElement.setAttribute("class", "section-info similar-brands-info all-info");
 
       // Creates + / - signs for collapsing basic info elements
       let plusBasicInfo = document.createElement('p');
       plusBasicInfo.setAttribute("id", "plusBasicInfo")
-      plusBasicInfo.setAttribute("class", "plus-minus")
+      plusBasicInfo.setAttribute("class", "plus-minus all-info")
       plusBasicInfo.innerText = "+";
       let minusBasicInfo = document.createElement('p');
       minusBasicInfo.setAttribute("id", "minusBasicInfo")
-      minusBasicInfo.setAttribute("class", "plus-minus");
+      minusBasicInfo.setAttribute("class", "plus-minus all-info");
       minusBasicInfo.innerText = "-";
 
       // "Tasting Notes Section"------------------------------------------------
       let basicInfoTitle = document.createElement('h2');
       basicInfoTitle.setAttribute("id", "basicInfoTitle");
-      basicInfoTitle.setAttribute("class", "section-titles basic-info-title");
+      basicInfoTitle.setAttribute("class", "section-titles basic-info-title all-info");
       basicInfoTitle.innerText = "Basic Info";
       basicInfoTitle.appendChild(plusBasicInfo);
       basicInfoTitle.appendChild(minusBasicInfo);
       let basicInfoElement = document.createElement('p');
       basicInfoElement.setAttribute("id", "basicInfoInfo");
-      basicInfoElement.setAttribute("class", "section-info basic-info-info");
+      basicInfoElement.setAttribute("class", "section-info basic-info-info all-info");
 
       // Creates + / - signs for collapsing tasting notes elements
       let plusTastingNotes = document.createElement('p');
       plusTastingNotes.setAttribute("id", "plusTastingNotes")
-      plusTastingNotes.setAttribute("class", "plus-minus")
+      plusTastingNotes.setAttribute("class", "plus-minus all-info")
       plusTastingNotes.innerText = "+";
       let minusTastingNotes = document.createElement('p');
       minusTastingNotes.setAttribute("id", "minusTastingNotes")
-      minusTastingNotes.setAttribute("class", "plus-minus");
+      minusTastingNotes.setAttribute("class", "plus-minus all-info");
       minusTastingNotes.innerText = "-";
 
       // "Tasting Notes Section"------------------------------------------------
       let tastingNotesTitle = document.createElement('h2');
       tastingNotesTitle.setAttribute("id", "tastingNotesTitle");
-      tastingNotesTitle.setAttribute("class", "section-titles tasting-notes-title");
+      tastingNotesTitle.setAttribute("class", "section-titles tasting-notes-title all-info");
       tastingNotesTitle.innerText = "Tasting Notes";
       tastingNotesTitle.appendChild(plusTastingNotes);
       tastingNotesTitle.appendChild(minusTastingNotes);
       let tastingNotesElement = document.createElement('p');
       tastingNotesElement.setAttribute("id", "tastingNotesInfo");
-      tastingNotesElement.setAttribute("class", "section-info tasting-notes-info");
+      tastingNotesElement.setAttribute("class", "section-info tasting-notes-info all-info");
 
       // Creates + / - signs for collapsing description elements-------------------------------------------------------
       let plusDescription = document.createElement('p');
       plusDescription.setAttribute("id", "plusDescription")
-      plusDescription.setAttribute("class", "plus-minus")
+      plusDescription.setAttribute("class", "plus-minus all-info")
       plusDescription.innerText = "+";
       let minusDescription = document.createElement('p');
       minusDescription.setAttribute("id", "minusDescription")
-      minusDescription.setAttribute("class", "plus-minus")
+      minusDescription.setAttribute("class", "plus-minus all-info")
       minusDescription.innerText = "-";
 
       // "Description Section"---------------------------------------------------
       let descriptionTitle = document.createElement('h2');
       descriptionTitle.setAttribute("id", "descriptionTitle");
-      descriptionTitle.setAttribute("class", "section-titles description-title");
+      descriptionTitle.setAttribute("class", "section-titles description-title all-info");
       descriptionTitle.innerText = "About the Brand";
       descriptionTitle.appendChild(plusDescription);
       descriptionTitle.appendChild(minusDescription);
       let descriptionElement = document.createElement('p');
       descriptionElement.setAttribute("id", "brandDescription");
-      descriptionElement.setAttribute("class", "section-info description-info");
+      descriptionElement.setAttribute("class", "section-info description-info all-info");
       
       
 
@@ -1170,16 +1191,17 @@ function openFullscreen() {
 
       // Start of function for brand info-----------------------------------------------------------------------------
       let imgTitle = $("#imageTitle").text();
-      //console.log(imgTitle);
+      let title = $("#typeTitle").text();
+      //console.log(title);
 
       // Brand Info Function
       brands.map(x => {
-        if(x["name"] === imgTitle){
+        if(x["name"] === imgTitle && x["type"] === title){
 
           // Basic Info
           if(x.basicInfo !== null){
             x.basicInfo.map(i => {
-              console.log(i);
+              //console.log(i);
               let p = document.createElement('p');
               p.append(i);
               basicInfoElement.append(p);
@@ -1193,7 +1215,7 @@ function openFullscreen() {
           // Tasting Notes
           if(x.tastingNotes !== null){
             x.tastingNotes.map(i => {
-              console.log(i);
+              //console.log(i);
               let p = document.createElement('p');
               p.append(i);
               tastingNotesElement.append(p);
@@ -1206,7 +1228,7 @@ function openFullscreen() {
           // Similar Brands
           if(x.similarBrands !== null){
             x.similarBrands.map(i => {
-              console.log(i);
+              //console.log(i);
               let p = document.createElement('p');
               p.append(i);
               similarBrandsElement.append(p);
@@ -1225,7 +1247,7 @@ function openFullscreen() {
           }
 
 
-          console.log(x);
+          //console.log(x);
         }
       });
 
@@ -1339,6 +1361,7 @@ function openFullscreen() {
     $(".brand-buttons").hide();
     $(".brand-buttons").hide();
     $("#buttonDiv").hide();
+    $("#typeTitleDiv").hide();
     $("#infoContainer").hide();
 
 
@@ -1373,13 +1396,24 @@ function openFullscreen() {
       $("#buttonDiv").hide();
       $("#tequilaClassBackButton").hide();
       $("#infoContainer").show();
-  });
+      $("#tequilaBlancoBackButton").show();
+    });
 
     // Show Reposado Tequila Buttons
     $("#Reposado").on('click', function(){
       hide();
       $(".brand-buttons[value|='Reposado'").show();
       $("#tequilaClassBackButton").show();
+    });
+
+    // Reposado Button Actions
+    $(".brand-buttons[value|='Reposado'").on('click', function(){
+      hide();
+      addBrandImage(this);
+      $("#buttonDiv").hide();
+      $("#tequilaClassBackButton").hide();
+      $("#infoContainer").show();
+      $("#tequilaReposadoBackButton").show();
     });
 
     // Show Anejo Tequila Buttons
@@ -1389,6 +1423,16 @@ function openFullscreen() {
       $("#tequilaClassBackButton").show();
     });
 
+    // Anejo Button Actions
+      $(".brand-buttons[value|='Anejo'").on('click', function(){
+      hide();
+      addBrandImage(this);
+      $("#buttonDiv").hide();
+      $("#tequilaClassBackButton").hide();
+      $("#infoContainer").show();
+      $("#tequilaAnejoBackButton").show();
+    });
+
     // Show Joven Tequila Buttons
     $("#Joven").on('click', function(){
     hide();
@@ -1396,12 +1440,32 @@ function openFullscreen() {
     $("#tequilaClassBackButton").show();
     });
 
+    // Joven Button Actions
+    $(".brand-buttons[value|='Joven'").on('click', function(){
+      hide();
+      addBrandImage(this);
+      $("#buttonDiv").hide();
+      $("#tequilaClassBackButton").hide();
+      $("#infoContainer").show();
+      $("#tequilaJovenBackButton").show();
+    });
+
     // Show Select Reserves Tequila Buttons
     $("#Select").on('click', function(){
     hide();
     $(".brand-buttons[value|='Select'").show();
     $("#tequilaClassBackButton").show();
-});
+    });
+
+    // Select Button Actions
+    $(".brand-buttons[value|='Select'").on('click', function(){
+      hide();
+      addBrandImage(this);
+      $("#buttonDiv").hide();
+      $("#tequilaClassBackButton").hide();
+      $("#infoContainer").show();
+      $("#tequilaSelectBackButton").show();
+    });
 
     // Show Mezcal Buttons
     $("#Mezcal").on('click', function(){
@@ -1410,11 +1474,31 @@ function openFullscreen() {
     $("#tequilaClassBackButton").show();
     });
 
+    // Reposado Button Actions
+    $(".brand-buttons[value|='Mezcal'").on('click', function(){
+      hide();
+      addBrandImage(this);
+      $("#buttonDiv").hide();
+      $("#tequilaClassBackButton").hide();
+      $("#infoContainer").show();
+      $("#tequilaMezcalBackButton").show();
+    });
+
     // Show Flavored Tequila Buttons
     $("#Flavored").on('click', function(){
       hide();
       $(".brand-buttons[value|='Flavored'").show();
       $("#tequilaClassBackButton").show();
+    });
+
+    // Flavored Button Actions
+    $(".brand-buttons[value|='Flavored'").on('click', function(){
+      hide();
+      addBrandImage(this);
+      $("#buttonDiv").hide();
+      $("#tequilaClassBackButton").hide();
+      $("#infoContainer").show();
+      $("#tequilaFlavoredBackButton").show();
     });
 
     // Vodka --------------------------------------------------------------------------------------------------------------
@@ -1612,7 +1696,9 @@ function openFullscreen() {
       addBrandImage(this);
     });
 
-    // Back Button To Tequila Classes
+
+    // All Back Buttons ----------------------------------------------------------------------------------------------------------
+    // Back Button To Tequila Classes -----------------------------------------------
     $("#tequilaClassBackButton").on('click', function(){
       // Hide -----------------------------
       $(".brand-buttons").hide();
@@ -1624,25 +1710,119 @@ function openFullscreen() {
       $("#backButtonToMain").show();
     });
 
+    // Back Button To Blanco Tequila Brands -----------------------------------------
+    $("#tequilaBlancoBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#tequilaBlancoBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#tequilaClassBackButton").show();
+      $(".brand-buttons[value|='Blanco'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Reposado Tequila Brands -----------------------------------------
+    $("#tequilaReposadoBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#infoContainer").hide();
+      $("#tequilaReposadoBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#tequilaClassBackButton").show();
+      $(".brand-buttons[value|='Reposado'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Anejo Tequila Brands -----------------------------------------
+    $("#tequilaAnejoBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#infoContainer").hide();
+      $("#tequilaAnejoBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#tequilaClassBackButton").show();
+      $(".brand-buttons[value|='Anejo'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Joven Tequila Brands -----------------------------------------
+    $("#tequilaJovenBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#infoContainer").hide();
+      $("#tequilaJovenBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#tequilaClassBackButton").show();
+      $(".brand-buttons[value|='Joven'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Mezcal Tequila Brands -----------------------------------------
+    $("#tequilaMezcalBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#infoContainer").hide();
+      $("#tequilaMezcalBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#tequilaClassBackButton").show();
+      $(".brand-buttons[value|='Mezcal'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Flavored Tequila Brands -----------------------------------------
+    $("#tequilaFlavoredBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#infoContainer").hide();
+      $("#tequilaFlavoredBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#tequilaClassBackButton").show();
+      $(".brand-buttons[value|='Flavored'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Select Tequila Brands -----------------------------------------
+    $("#tequilaSelectBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#infoContainer").hide();
+      $("#tequilaSelectBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#tequilaClassBackButton").show();
+      $(".brand-buttons[value|='Selectt'").show();
+      $("#backButtonToMain").show();
+    });
+
+    
+
+
+    // Back to Main Screen-----------------------------------------------------------
     $("#backButtonToMain").on('click', function(){
       // Hide -----------------------------
       $("#buttonDiv").hide();
+      $("#typeTitleDiv").hide();
       $("#infoContainer").hide();
       $(".brand-buttons").hide();
       $(".back-button").hide();
       $("#backButtonToMain").hide();
-      $("#titleDiv").remove();
-      $("#image").remove();
-      $("#imageDiv").remove();
-      $("#infoDiv").remove();
-      $("#basicInfoTitle").remove();
-      $("#basicInfoElement").remove();
-      $("#tastingNotesTitle").remove();
-      $("#tastingNotesElement").remove();
-      $("similarBrandsTitle").remove();
-      $("#similarBrandsElement").remove();
-      $("#descriptionTitle").remove();
-      $("#brandDescription").remove();
+      $(".all-info").remove();
+      
 
       // Show ------------------------------
       $("#mainButtonDiv").show();

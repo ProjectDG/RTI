@@ -72,7 +72,7 @@ class BrandInfo{
     );
 
 
-  // Fill in later
+  // Vodka-------------------------------------------------------------------------------------
   let vodkaBelvedere = new BrandInfo(
     // Name 
     "Belvedere",
@@ -85,26 +85,42 @@ class BrandInfo{
     // Description
     null,
     // Type
-    null
-    );
+    "Vodka"
+  );
+
+  let vodkaFinlandia = new BrandInfo(
+    // Name 
+    "Finlandia",
+    // Basic Info
+    null,
+    // Tasting Notes
+    null,
+    // Similar Brands
+    null,
+    // Description
+    null, 
+    // Type
+    "Vodka"
+  );
+
 
 
 
 
 
 /*  Brand Info Template---------------------------------
-    let template = new BrandInfo(
-      // Name 
-      "",
-      // Basic Info
-      [],
-      // Tasting Notes
-      [],
-      // Similar Brands
-      [],
-      // Description
-      "", 
-      );
+  let template = new BrandInfo(
+    // Name 
+    "",
+    // Basic Info
+    [],
+    // Tasting Notes
+    [],
+    // Similar Brands
+    [],
+    // Description
+    "", 
+  );
 */
 
 
@@ -117,7 +133,8 @@ class BrandInfo{
   let brands = [
     tequila123,
     tequila1800,
-    vodkaBelvedere
+    vodkaBelvedere,
+    vodkaFinlandia
    ]; // end of brands array
 
 
@@ -955,7 +972,7 @@ function openFullscreen() {
       'Kona "Big Wave"' : ["DraftBeer"],
       'Modelo Especial' : ["DraftBeer"],
       'Pacifico' : ["DraftBeer"],
-      'Ankrolab (Turtle Season)' : ["DraftBeer"],
+      'Ankrolab "Turtle Season"' : ["DraftBeer"],
     }
 
     // Bottle Beer List
@@ -981,7 +998,7 @@ function openFullscreen() {
       'McKenzies "Pumpkin Jack"' : ["BottleBeer"],
       'Tecate' : ["BottleBeer"],
       'Victoria' : ["BottleBeer"],
-      'Bone hook " Wicked Seas"' : ["BottleBeer"],
+      'Bone Hook "Wicked Seas"' : ["BottleBeer"],
       'Yuengling' : ["BottleBeer"],
     }
    
@@ -2363,15 +2380,8 @@ function openFullscreen() {
       $("#backButtonToMain").show();
     });
 
-    
 
-
-
-
-
-
-
-    // Back to Main Screen-----------------------------------------------------------
+    // Back to Main Screen-----------------------------------------------------------------------------------------------------------
     $("#backButtonToMain").on('click', function(){
       // Hide -----------------------------
       $("#buttonDiv").hide();

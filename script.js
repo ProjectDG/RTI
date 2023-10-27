@@ -1038,7 +1038,12 @@ function openFullscreen() {
       typeTitle.innerText = current.value;
       typeTitleDiv.append(typeTitle);
       $("#typeTitleDiv").show();
-      console.log(typeTitle.innerText)
+      console.log(typeTitle.innerText);
+
+      // Puts a space in the typeTitle
+      if(current.value === "FlavoredWhiskey"){
+        typeTitle.innerText = "Flavored Whiskey";
+      }
 
       // Accesses the div the image and description will be put in-----------------------------------------------------
       const targetDiv = $("#infoContainer");
@@ -1474,7 +1479,7 @@ function openFullscreen() {
     $("#tequilaClassBackButton").show();
     });
 
-    // Reposado Button Actions
+    // Mezcal Button Actions
     $(".brand-buttons[value|='Mezcal'").on('click', function(){
       hide();
       addBrandImage(this);
@@ -1491,7 +1496,7 @@ function openFullscreen() {
       $("#tequilaClassBackButton").show();
     });
 
-    // Flavored Button Actions
+    // Flavored Tequila Button Actions
     $(".brand-buttons[value|='Flavored'").on('click', function(){
       hide();
       addBrandImage(this);
@@ -1514,8 +1519,10 @@ function openFullscreen() {
       addBrandImage(this);
       $("#buttonDiv").hide();
       $("#infoContainer").show();
-  });
+      $("#vodkaBackButton").show();
+    });
     
+  // Whiskey --------------------------------------------------------------------------------------------------------------
     // Show Whiskey Class Buttons
     $(".main-buttons[value|='Whiskey'").on('click', function(){
       hide();
@@ -1526,62 +1533,156 @@ function openFullscreen() {
     $("#Bourbon").on('click', function(){
       hide();
       $(".brand-buttons[value|='Bourbon'").show();
+      $("#whiskeyClassBackButton").show();
+    });
+
+    // Bourbon Button Actions
+    $(".brand-buttons[value|='Bourbon'").on('click', function(){
+      hide();
+      addBrandImage(this);
+      $("#whiskeyClassBackButton").hide();
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
+      $("#bourbonBackButton").show();
     });
 
     // Show Canadian Buttons
     $("#Canadian").on('click', function(){
       hide();
       $(".brand-buttons[value|='Canadian'").show();
+      $("#whiskeyClassBackButton").show();
+    });
+
+    // Canadian Button Actions
+    $(".brand-buttons[value|='Canadian'").on('click', function(){
+      hide();
+      addBrandImage(this);
+      $("#whiskeyClassBackButton").hide();
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
+      $("#canadianBackButton").show();
     });
     
     // Show Irish Buttons
     $("#Irish").on('click', function(){
       hide();
       $(".brand-buttons[value|='Irish'").show();
+      $("#whiskeyClassBackButton").show();
+    });
+
+    // Irish Button Actions
+    $(".brand-buttons[value|='Irish'").on('click', function(){
+      hide();
+      addBrandImage(this);
+      $("#whiskeyClassBackButton").hide();
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
+      $("#irishBackButton").show();
     });
 
     // Show Mexican Buttons
     $("#Mexican").on('click', function(){
       hide();
       $(".brand-buttons[value|='Mexican'").show();
+      $("#whiskeyClassBackButton").show();
+    });
+
+    // Mexican Button Actions
+    $(".brand-buttons[value|='Mexican'").on('click', function(){
+      hide();
+      addBrandImage(this);
+      $("#whiskeyClassBackButton").hide();
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
+      $("#mexicanBackButton").show();
     });
 
     // Show Rye Buttons
     $("#Rye").on('click', function(){
       hide();
       $(".brand-buttons[value|='Rye'").show();
+      $("#whiskeyClassBackButton").show();
+    });
+
+    // Rye Button Actions
+    $(".brand-buttons[value|='Rye'").on('click', function(){
+      hide();
+      addBrandImage(this);
+      $("#whiskeyClassBackButton").hide();
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
+      $("#ryeBackButton").show();
     });
 
     // Show Scotch Buttons
     $("#Scotch").on('click', function(){
       hide();
       $(".brand-buttons[value|='Scotch'").show();
+      $("#whiskeyClassBackButton").show();
+    });
+
+    // Scotch Button Actions
+    $(".brand-buttons[value|='Scotch'").on('click', function(){
+      hide();
+      addBrandImage(this);
+      $("#whiskeyClassBackButton").hide();
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
+      $("#scotchBackButton").show();
     });
 
     // Show Single Malt & Blended Buttons
     $("#SingleMaltBlended").on('click', function(){
       hide();
       $(".brand-buttons[value|='Single Malt & Blended'").show();
+      $("#whiskeyClassBackButton").show();
+    });
+
+    // Single Malt & Blended Button Actions
+    $(".brand-buttons[value|='SingleMaltBlended'").on('click', function(){
+      hide();
+      addBrandImage(this);
+      $("#whiskeyClassBackButton").hide();
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
+      $("#singleMaltBlendedBackButton").show();
     });
 
     // Show Tennessee Buttons
     $("#Tennessee").on('click', function(){
       hide();
       $(".brand-buttons[value|='Tennessee'").show();
+      $("#whiskeyClassBackButton").show();
     });
 
     // Tennessee Button Actions
     $(".brand-buttons[value|='Tennessee'").on('click', function(){
       hide();
       addBrandImage(this);
+      $("#whiskeyClassBackButton").hide();
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
+      $("#tennesseeBackButton").show();
     });
 
     // Show Flavored Whiskey Buttons
     $("#FlavoredWhiskey").on('click', function(){
       hide();
       $(".brand-buttons[value|='FlavoredWhiskey'").show();
+      $("#whiskeyClassBackButton").show();
     });
 
+    // Flavored Whiskey Button Actions
+    $(".brand-buttons[value|='FlavoredWhiskey'").on('click', function(){
+      hide();
+      addBrandImage(this);
+      $("#whiskeyClassBackButton").hide();
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
+      $("#flavoredWhiskeyBackButton").show();
+    });
+
+    // Rum ------------------------------------------------------------------------------------------------------------
     // Show Rum Buttons
     $(".main-buttons[value|='Rum'").on('click', function(){
       hide();
@@ -1592,8 +1693,12 @@ function openFullscreen() {
     $(".brand-buttons[value|='Rum'").on('click', function(){
       hide();
       addBrandImage(this);
-  });
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
+      $("#rumBackButton").show();
+    });
 
+    // Gin -----------------------------------------------------------------------------------------------------------
     // Show Gin Buttons
     $(".main-buttons[value|='Gin'").on('click', function(){
       hide();
@@ -1604,8 +1709,12 @@ function openFullscreen() {
     $(".brand-buttons[value|='Gin'").on('click', function(){
       hide();
       addBrandImage(this);
-  });
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
+      $("#ginBackButton").show();
+    });
 
+    // Brandy -------------------------------------------------------------------------------------------------------
     // Show Brandy Buttons
     $(".main-buttons[value|='Brandy'").on('click', function(){
       hide();
@@ -1616,75 +1725,166 @@ function openFullscreen() {
     $(".brand-buttons[value|='Brandy'").on('click', function(){
       hide();
       addBrandImage(this);
-  });
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
+      $("#brandyBackButton").show();
+    });
 
+    // Cordials ----------------------------------------------------------------------------------------------------
     // Show Cordials Buttons
     $(".main-buttons[value|='Cordials'").on('click', function(){
       hide();
       $(".brand-buttons[value|='Cordials'").show();
     });
 
+    // Cordials Button Actions
+    $(".brand-buttons[value|='Cordials'").on('click', function(){
+      hide();
+      addBrandImage(this);
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
+      $("#cordialsBackButton").show();
+    });
+
+    // Wine -------------------------------------------------------------------------------------------------------
     // Show Wine Class Buttons
     $(".main-buttons[value|='Wine'").on('click', function(){
       hide();
       $(".brand-buttons[value|='ClassWine'").show();
     });
 
-    // Show Red Wine Buttons
+    // Show Red Wine Buttons ------------------------------------------
     $("#Red").on('click', function(){
       hide();
       $(".brand-buttons[value|='Red'").show();
+      $("#wineClassBackButton").show();
     });
 
-    // Show White Wine Buttons
+    // Red Wine Button Actions
+    $(".brand-buttons[value|='Red'").on('click', function(){
+      hide();
+      addBrandImage(this);
+      $("#wineClassBackButton").hide();
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
+      $("#redBackButton").show();
+    });
+
+    // Show White Wine Buttons ----------------------------------------
     $("#White").on('click', function(){
       hide();
       $(".brand-buttons[value|='White'").show();
+      $("#wineClassBackButton").show();
     });
 
-    // Show Rose Wine Buttons
+    // White Wine Button Actions
+    $(".brand-buttons[value|='White'").on('click', function(){
+      hide();
+      addBrandImage(this);
+      $("#wineClassBackButton").hide();
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
+      $("#whiteBackButton").show();
+    });
+
+    // Show Rose Wine Buttons -----------------------------------------
     $("#Rosé").on('click', function(){
       hide();
       $(".brand-buttons[value|='Rose'").show();
+      $("#wineClassBackButton").show();
     });
 
-    // Show Sparkling Wine Buttons
+    // Rose Button Actions
+    $(".brand-buttons[value|='Rose'").on('click', function(){
+      hide();
+      addBrandImage(this);
+      $("#wineClassBackButton").hide();
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
+      $("#roseBackButton").show();
+    });
+
+    // Show Sparkling Wine Buttons ------------------------------------
     $("#Sparkling").on('click', function(){
       hide();
       $(".brand-buttons[value|='Sparkling'").show();
+      $("#wineClassBackButton").show();
     });
 
-    // Show Champagne Wine Buttons
+    // Sparkling Button Actions
+    $(".brand-buttons[value|='Sparkling'").on('click', function(){
+      hide();
+      addBrandImage(this);
+      $("#wineClassBackButton").hide();
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
+      $("#sparklingBackButton").show();
+    });
+
+    // Show Champagne Wine Buttons ------------------------------------
     $("#Champagne").on('click', function(){
       hide();
       $(".brand-buttons[value|='Champagne'").show();
+      $("#wineClassBackButton").show();
     });
 
-    // Show Beer Class Buttons
+    // Champagne Button Actions
+    $(".brand-buttons[value|='Champagne'").on('click', function(){
+      hide();
+      addBrandImage(this);
+      $("#wineClassBackButton").hide();
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
+      $("#champagneBackButton").show();
+    });
+
+    // Show Beer Class Buttons -----------------------------------------------------------------------------------
     $(".main-buttons[value|='Beer'").on('click', function(){
       hide();
       $(".brand-buttons[value|='ClassBeer'").show();
     });
 
-    // Show Draft Beer Buttons
+    // Show Draft Beer Buttons-----------------------------------------
     $("#Draft").on('click', function(){
       hide();
       $(".brand-buttons[value|='DraftBeer'").show();
+      $("#beerClassBackButton").show();
     });
 
     // Draft Button Actions
-    $(".brand-buttons[value|='Draft'").on('click', function(){
+    $(".brand-buttons[value|='DraftBeer'").on('click', function(){
       hide();
       addBrandImage(this);
+      $("#beerClassBackButton").hide();
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
+      $("#draftBackButton").show();
   });
 
-    // Show Bottle Beer Buttons
+  // Show Bottle Beer Buttons-----------------------------------------
+  $("#Bottle").on('click', function(){
+    hide();
+    $(".brand-buttons[value|='BottleBeer'").show();
+    $("#beerClassBackButton").show();
+  });
+
+  // Bottle Button Actions
+  $(".brand-buttons[value|='BottleBeer'").on('click', function(){
+    hide();
+    addBrandImage(this);
+    $("#beerClassBackButton").hide();
+    $("#buttonDiv").hide();
+    $("#infoContainer").show();
+    $("#bottleBackButton").show();
+});
+
+    // Show Bottle Beer Buttons----------------------------------------
     $("#Bottle").on('click', function(){
       hide();
       $(".brand-buttons[value|='BottleBeer'").show();
     });
 
-    // Show Jarritos Buttons
+    // Show Jarritos Buttons-------------------------------------------------------------------------------------
     $(".main-buttons[value|='Jarritos'").on('click', function(){
   hide();
   $(".brand-buttons[value|='Jarritos'").show();
@@ -1694,11 +1894,14 @@ function openFullscreen() {
     $(".brand-buttons[value|='Jarritos'").on('click', function(){
       hide();
       addBrandImage(this);
+      $("#buttonDiv").hide();
+      $("#infoContainer").show();
+      $("#jarritosBackButton").show();
     });
 
 
     // All Back Buttons ----------------------------------------------------------------------------------------------------------
-    // Back Button To Tequila Classes -----------------------------------------------
+    // Back Button To Tequila Classes --------------------------------------------------------------------------------------------
     $("#tequilaClassBackButton").on('click', function(){
       // Hide -----------------------------
       $(".brand-buttons").hide();
@@ -1728,6 +1931,7 @@ function openFullscreen() {
     // Back Button To Reposado Tequila Brands -----------------------------------------
     $("#tequilaReposadoBackButton").on('click', function(){
       // Hide -----------------------------
+      $("#typeTitleDiv").hide();
       $("#infoContainer").hide();
       $("#tequilaReposadoBackButton").hide();
       $(".all-info").remove();
@@ -1742,6 +1946,7 @@ function openFullscreen() {
     // Back Button To Anejo Tequila Brands -----------------------------------------
     $("#tequilaAnejoBackButton").on('click', function(){
       // Hide -----------------------------
+      $("#typeTitleDiv").hide();
       $("#infoContainer").hide();
       $("#tequilaAnejoBackButton").hide();
       $(".all-info").remove();
@@ -1756,6 +1961,7 @@ function openFullscreen() {
     // Back Button To Joven Tequila Brands -----------------------------------------
     $("#tequilaJovenBackButton").on('click', function(){
       // Hide -----------------------------
+      $("#typeTitleDiv").hide();
       $("#infoContainer").hide();
       $("#tequilaJovenBackButton").hide();
       $(".all-info").remove();
@@ -1770,6 +1976,7 @@ function openFullscreen() {
     // Back Button To Mezcal Tequila Brands -----------------------------------------
     $("#tequilaMezcalBackButton").on('click', function(){
       // Hide -----------------------------
+      $("#typeTitleDiv").hide();
       $("#infoContainer").hide();
       $("#tequilaMezcalBackButton").hide();
       $(".all-info").remove();
@@ -1784,6 +1991,7 @@ function openFullscreen() {
     // Back Button To Flavored Tequila Brands -----------------------------------------
     $("#tequilaFlavoredBackButton").on('click', function(){
       // Hide -----------------------------
+      $("#typeTitleDiv").hide();
       $("#infoContainer").hide();
       $("#tequilaFlavoredBackButton").hide();
       $(".all-info").remove();
@@ -1798,6 +2006,7 @@ function openFullscreen() {
     // Back Button To Select Tequila Brands -----------------------------------------
     $("#tequilaSelectBackButton").on('click', function(){
       // Hide -----------------------------
+      $("#typeTitleDiv").hide();
       $("#infoContainer").hide();
       $("#tequilaSelectBackButton").hide();
       $(".all-info").remove();
@@ -1805,11 +2014,361 @@ function openFullscreen() {
       // Show ------------------------------
       $("#buttonDiv").show();
       $("#tequilaClassBackButton").show();
-      $(".brand-buttons[value|='Selectt'").show();
+      $(".brand-buttons[value|='Select'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Vodka Brands ---------------------------------------------------------------------------------------------
+    $("#vodkaBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#vodkaBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $(".brand-buttons[value|='Vodka'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Whiskey Classes ------------------------------------------------------------------------------------------
+    $("#whiskeyClassBackButton").on('click', function(){
+      // Hide -----------------------------
+      $(".brand-buttons").hide();
+      $("#whiskeyClassBackButton").hide();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $(".brand-buttons[value|='ClassWhiskey'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Bourbon Brands -----------------------------------------
+    $("#bourbonBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#bourbonBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#whiskeyClassBackButton").show();
+      $(".brand-buttons[value|='Bourbon'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Canadian Brands ----------------------------------------
+    $("#canadianBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#canadianBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#whiskeyClassBackButton").show();
+      $(".brand-buttons[value|='Canadian'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Irish Brands -------------------------------------------
+    $("#irishBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#irishBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#whiskeyClassBackButton").show();
+      $(".brand-buttons[value|='Irish'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Mexican Brands -----------------------------------------
+    $("#mexicanBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#mexicanBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#whiskeyClassBackButton").show();
+      $(".brand-buttons[value|='Mexican'").show();
+      $("#backButtonToMain").show();
+    });
+    
+    // Back Button To Rye Brands ---------------------------------------------
+    $("#ryeBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#ryeBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#whiskeyClassBackButton").show();
+      $(".brand-buttons[value|='Rye'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Scotch Brands ------------------------------------------
+    $("#scotchBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#scotchBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#whiskeyClassBackButton").show();
+      $(".brand-buttons[value|='Scotch'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Tennessee Brands ---------------------------------------
+    $("#tennesseeBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#tennesseeBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#whiskeyClassBackButton").show();
+      $(".brand-buttons[value|='Tennessee'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Flavored Whiskey Brands --------------------------------
+    $("#flavoredWhiskeyBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#flavoredWhiskeyBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#whiskeyClassBackButton").show();
+      $(".brand-buttons[value|='FlavoredWhiskey'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Rum Brands ----------------------------------------------------------------------------------------------------
+    $("#rumBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#rumBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $(".brand-buttons[value|='Rum'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Gin Brands ----------------------------------------------------------------------------------------------------
+    $("#ginBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#ginBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $(".brand-buttons[value|='Gin'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To brandy Brands -------------------------------------------------------------------------------------------------
+    $("#brandyBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#brandyBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $(".brand-buttons[value|='Brandy'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Cordials Brands -----------------------------------------------------------------------------------------------
+    $("#cordialsBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#cordialsBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $(".brand-buttons[value|='Cordials'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Wine Classes --------------------------------------------------------------------------------------------------
+    $("#wineClassBackButton").on('click', function(){
+      // Hide -----------------------------
+      $(".brand-buttons").hide();
+      $("#wineClassBackButton").hide();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $(".brand-buttons[value|='ClassWine'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Red Brands -----------------------------------------
+    $("#redBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#redBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#wineClassBackButton").show();
+      $(".brand-buttons[value|='Red'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To White Brands -----------------------------------------
+    $("#whiteBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#whiteBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#wineClassBackButton").show();
+      $(".brand-buttons[value|='White'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Rosé Brands -----------------------------------------
+    $("#roseBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#roseBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#wineClassBackButton").show();
+      $(".brand-buttons[value|='Rose'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Sparkling Brands -----------------------------------------
+    $("#sparklingBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#sparklingBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#wineClassBackButton").show();
+      $(".brand-buttons[value|='Sparkling'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Champagne Brands -----------------------------------------
+    $("#champagneBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#champagneBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#wineClassBackButton").show();
+      $(".brand-buttons[value|='Champagne'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Beer Classes --------------------------------------------------------------------------------------------------
+    $("#beerClassBackButton").on('click', function(){
+      // Hide -----------------------------
+      $(".brand-buttons").hide();
+      $("#beerClassBackButton").hide();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $(".brand-buttons[value|='ClassBeer'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Draft Brands -----------------------------------------
+    $("#draftBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#draftBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#beerClassBackButton").show();
+      $(".brand-buttons[value|='DraftBeer'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Draft Brands -----------------------------------------
+    $("#bottleBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#bottleBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $("#beerClassBackButton").show();
+      $(".brand-buttons[value|='BottleBeer'").show();
+      $("#backButtonToMain").show();
+    });
+
+    // Back Button To Jarritos Brands -----------------------------------------------------------------------------------------------
+    $("#jarritosBackButton").on('click', function(){
+      // Hide -----------------------------
+      $("#typeTitleDiv").hide();
+      $("#infoContainer").hide();
+      $("#jarritosBackButton").hide();
+      $(".all-info").remove();
+      
+      // Show ------------------------------
+      $("#buttonDiv").show();
+      $(".brand-buttons[value|='Jarritos'").show();
       $("#backButtonToMain").show();
     });
 
     
+
+
+
+
+
 
 
     // Back to Main Screen-----------------------------------------------------------

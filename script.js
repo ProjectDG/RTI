@@ -171,6 +171,113 @@ class BrandInfo{
     "Jarritos"
   );
 
+  let jarritosGrapefruit = new BrandInfo(
+    // Name 
+    "Grapefruit",
+    // Basic Info
+    ["This naturally-flavored soda features a lightly carbonated fizz, and a true grapefruit aroma with a perfectly balanced tart and sweet flavor. It is made with real fruit flavors, real cane sugar, and is never made with high fructose corn syrup to deliver a clean, non-syrupy sweetness."],
+    // Tasting Notes
+    null,
+    // Similar Brands
+    null,
+    // Description
+    "Jarritos is made in fruit flavors and is less carbonated than popular soft drinks. It is made in Mexico. Many Jarritos varieties are naturally flavored. The word jarrito means\"little jug\" in Spanish and refers to the Mexican tradition of drinking water and other drinks in clay pottery jugs.", 
+    // Type
+    "Jarritos"
+  );
+
+  let jarritosGuava = new BrandInfo(
+    // Name 
+    "Guava",
+    // Basic Info
+    ["This naturally-flavored soda features a lightly carbonated fizz, mild tropical fruit aroma, and a subtly sweet, refreshing guava taste with notes of passion fruit. It is made with real fruit flavors, real cane sugar, and is never made with high fructose corn syrup to deliver a clean, non-syrupy sweetness."],
+    // Tasting Notes
+    null,
+    // Similar Brands
+    null,
+    // Description
+    "Jarritos is made in fruit flavors and is less carbonated than popular soft drinks. It is made in Mexico. Many Jarritos varieties are naturally flavored. The word jarrito means\"little jug\" in Spanish and refers to the Mexican tradition of drinking water and other drinks in clay pottery jugs.", 
+    // Type
+    "Jarritos"
+  );
+
+  let jarritosLime = new BrandInfo(
+    // Name 
+    "Lime",
+    // Basic Info
+    ["Jarritos Natural Lime soda is one of Mexico's premier sodas, and its popularity has extended well past the country's borders due to its refreshing flavor and use of actual sugar. This comes at a time when so many companies are using high-fructose corn syrup in their sodas."],
+    // Tasting Notes
+    null,
+    // Similar Brands
+    null,
+    // Description
+    "Jarritos is made in fruit flavors and is less carbonated than popular soft drinks. It is made in Mexico. Many Jarritos varieties are naturally flavored. The word jarrito means\"little jug\" in Spanish and refers to the Mexican tradition of drinking water and other drinks in clay pottery jugs.", 
+    // Type
+    "Jarritos"
+  );
+
+  let jarritosMandarin = new BrandInfo(
+    // Name 
+    "Mandarin",
+    // Basic Info
+    ["Jarritos Mandarin is a delicious and refreshing soda that has a unique and authentic flavor. The mandarin orange taste is prominent and not too sweet, making it a great option for those looking for a tasty alternative to traditional cola drinks."],
+    // Tasting Notes
+    null,
+    // Similar Brands
+    null,
+    // Description
+    "Jarritos is made in fruit flavors and is less carbonated than popular soft drinks. It is made in Mexico. Many Jarritos varieties are naturally flavored. The word jarrito means\"little jug\" in Spanish and refers to the Mexican tradition of drinking water and other drinks in clay pottery jugs.", 
+    // Type
+    "Jarritos"
+  );
+
+  let jarritosMango = new BrandInfo(
+    // Name 
+    "Mango",
+    // Basic Info
+    ["This soda features a lightly carbonated fizz, ripe, tropical aroma, and a sweet mango flavor. It is made with real fruit flavors, real cane sugar, and is never made with high fructose corn syrup to deliver a clean, non-syrupy sweetness. Plus, it is naturally caffeine-free."],
+    // Tasting Notes
+    null,
+    // Similar Brands
+    null,
+    // Description
+    "Jarritos is made in fruit flavors and is less carbonated than popular soft drinks. It is made in Mexico. Many Jarritos varieties are naturally flavored. The word jarrito means\"little jug\" in Spanish and refers to the Mexican tradition of drinking water and other drinks in clay pottery jugs.", 
+    // Type
+    "Jarritos"
+  );
+
+  let jarritosPineapple = new BrandInfo(
+    // Name 
+    "Pineapple",
+    // Basic Info
+    ["Super Good Since 1950. Enjoy the exceptional summery flavor and juiciness of pineapple. Made with 100% real sugar and a whole lot of tropical awesomeness. Try it today, just open a bottle and with each sip discover why Jarritos is the Authentic Mexican Soda Pop."],
+    // Tasting Notes
+    null,
+    // Similar Brands
+    null,
+    // Description
+    "Jarritos is made in fruit flavors and is less carbonated than popular soft drinks. It is made in Mexico. Many Jarritos varieties are naturally flavored. The word jarrito means\"little jug\" in Spanish and refers to the Mexican tradition of drinking water and other drinks in clay pottery jugs.", 
+    // Type
+    "Jarritos"
+  );
+
+  let jarritosTamarind = new BrandInfo(
+    // Name 
+    "Tamarind",
+    // Basic Info
+    ["This naturally-flavored soda features a lightly carbonated fizz and a refreshingly sweet, mild tamarind flavor with notes of caramel and bitter orange. It is made with real fruit flavors, real cane sugar, and is never made with high fructose corn syrup to deliver a clean, non-syrupy sweetness."],
+    // Tasting Notes
+    null,
+    // Similar Brands
+    null,
+    // Description
+    "Jarritos is made in fruit flavors and is less carbonated than popular soft drinks. It is made in Mexico. Many Jarritos varieties are naturally flavored. The word jarrito means\"little jug\" in Spanish and refers to the Mexican tradition of drinking water and other drinks in clay pottery jugs.", 
+    // Type
+    "Jarritos"
+  );
+
+
+
 
 
 
@@ -205,7 +312,14 @@ class BrandInfo{
     tequilaAdictivo,
     vodkaBelvedere,
     vodkaFinlandia,
-    jarritosFruitPunch
+    jarritosFruitPunch,
+    jarritosGrapefruit,
+    jarritosGuava,
+    jarritosLime,
+    jarritosMandarin,
+    jarritosMango,
+    jarritosPineapple,
+    jarritosTamarind
    ]; // end of brands array
 
 

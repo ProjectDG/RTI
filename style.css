@@ -20,7 +20,7 @@ body {
 
   ::backdrop{
     background-image: url("./images/newWoodBackground2.jpg");
-    background-size: 100% 80%;
+    background-size: 110% 80%;
 }
   
 
@@ -272,7 +272,7 @@ body {
   }
 
   .section-info > p{
-    margin: 10% auto;
+    margin: 0% auto 10% auto;
   }
 
   .similar-brands-info{

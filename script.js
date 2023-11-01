@@ -3,7 +3,7 @@ class BrandInfo{
    this.name = name;
    this.basicInfo = basicInfo;
    this.tastingNotes = tastingNotes;
-   this.similarBrands = similarBrands;
+   this.similarBrands = similarBrands;    //  maybe make a similar taste and simialr production section
    this.description = description;
    this.type = type
 ;  };
@@ -31,6 +31,8 @@ class BrandInfo{
     ],
      // Similar Brands
     [
+      'Coming Soon...'
+      /*
       "Don Julio Blanco",
       "Tequila Ocho Blanco",
       "Casa Dragones Blanco",
@@ -49,6 +51,7 @@ class BrandInfo{
       "Jose Cuervo Tradicional",
       "Chamucos Reposado",
       "Hornitos Plata"
+      */
     ],
     // Description
     "123 Tequila was founded by agave cultivator and distiller David Ravandi, and emphasizes a distinctly artisanal approach. From the hand-blown recycled glass bottles to the soy ink-printed labels that showcase local artists’ wood carving, the focus is firmly on sustainability, conservation, and regional expression. 123 Blanco is certified organic tequila from the lowlands of Jalisco, sourced from plantations northeast of Guadalajara where synthetic fertilizers and pesticides are prohibited. Ten year old blue agaves are farmed and harvested without large scale mechanical equipment to minimize soil and water impacts, then cooked for two days in traditional stone ovens, and double-distilled in small batches. The result is a beautifully balanced showcase of classic lowland tequila character, full of mineral and spice notes accompanied by citrusy, floral, and herbaceous tones. Delicious sipped by itself or with lime! Certified organic.",
@@ -60,16 +63,62 @@ class BrandInfo{
     // Name 
     "1800",
     // Basic Info
-    null,
+    [
+    "Clean, delicate, balanced, smooth. Soft, sweet, floral, fruit, agave. Medium finish. Rested in mostly American oak, with a small portion of French oak for up to 15 days.",
+    "80 proof / 40% ABV",
+    "DISTILLATION:	2x distilled",
+    "COOKING:	Autoclave (high pressure)",
+    "NOM: 1122 / Jalisco (Los Valles)"
+    ],
     // Tasting Notes
     null,
     // Similar Brands
     null,
     // Description
-    "Made from 100% Weber blue agave and double-distilled, 1800® Blanco is a special selection of white tequilas blended together for added complexity and character. The clean, balanced taste with hints of sweet fruit and pepper is perfect sipped neat, on the rocks, as a shot or in a cocktail.",
+    "Made from 100% Weber blue agave and double-distilled, 1800 Blanco is a special selection of white tequilas blended together for added complexity and character. The clean, balanced taste with hints of sweet fruit and pepper is perfect sipped neat, on the rocks, as a shot or in a cocktail.",
     // Type
     "Blanco"
     );
+
+    let tequila4Copas = new BrandInfo(
+      // Name 
+      "4 Copas",
+      // Basic Info
+      null,
+      // Tasting Notes
+      null,
+      // Similar Brands
+      null,
+      // Description
+      "", 
+      // Type
+      "Blanco"
+    );
+
+    let tequilaAdictivo = new BrandInfo(
+      // Name 
+      "Adictivo",
+      // Basic Info
+      [
+        "Mexico- Tequila Adictivo Plata is a 100% pure Blue Agave, Crystal Bright Color with a soft warm flavor and herbaceous aromas. Awarded Silver Medal & Double Gold San Diego Spirits Festival 2017, Bronze Medal San Diego Spirits Festival 2018, Gold & Best In Show World Spirit Competition.",
+        "80 proof / 40% ABV",
+        "NOM #1560 / El Arenal, Jalisco"
+      ],
+      // Tasting Notes
+      [
+        'Nose: Herbaceous, slightly sweet with hints of vanilla',
+        'Taste: Cooked agave, vanilla, white pepper',
+        'Finish: Soft, warm, full body'
+      ],
+      // Similar Brands
+      ["Coming Soon..."],
+      // Description
+      "Made from 100% pure Blue Agave, Adictivo Tequila is made by Gildardo Partida who comes from a family that has been dedicated to the art of making tequila for over 100 years. The Partida family, based in El Arenal, is the spirit behind not only Adictivo but well loved brands like Cava de Oro and Gran Reserva de Don Alberto.", 
+      // Type
+      "Blanco"
+    );
+
+
 
 
   // Vodka-------------------------------------------------------------------------------------
@@ -106,6 +155,23 @@ class BrandInfo{
 
 
 
+// Jarritos ---------------------------------------------------------------------------------
+  let jarritosFruitPunch = new BrandInfo(
+    // Name 
+    "Fruit Punch",
+    // Basic Info
+    ["This soda features a lightly carbonated fizz, mild fruity aroma, and a sweet, candied fruit taste that combines notes of cherry, strawberry, and citrus flavors. It is made with real fruit flavors, real cane sugar, and is never made with high fructose corn syrup to deliver a clean, non-syrupy sweetness."],
+    // Tasting Notes
+    null,
+    // Similar Brands
+    null,
+    // Description
+    "Jarritos is made in fruit flavors and is less carbonated than popular soft drinks. It is made in Mexico. Many Jarritos varieties are naturally flavored. The word jarrito means\"little jug\" in Spanish and refers to the Mexican tradition of drinking water and other drinks in clay pottery jugs.", 
+    // Type
+    "Jarritos"
+  );
+
+
 
 
 /*  Brand Info Template---------------------------------
@@ -120,6 +186,8 @@ class BrandInfo{
     [],
     // Description
     "", 
+    // Type
+    ""
   );
 */
 
@@ -133,8 +201,11 @@ class BrandInfo{
   let brands = [
     tequila123,
     tequila1800,
+    tequila4Copas,
+    tequilaAdictivo,
     vodkaBelvedere,
-    vodkaFinlandia
+    vodkaFinlandia,
+    jarritosFruitPunch
    ]; // end of brands array
 
 

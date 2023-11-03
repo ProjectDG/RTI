@@ -120,7 +120,6 @@ class BrandInfo{
 
 
 
-
   // Vodka-------------------------------------------------------------------------------------
   let vodkaBelvedere = new BrandInfo(
     // Name 
@@ -153,9 +152,30 @@ class BrandInfo{
   );
 
 
+  
+// Whiskey -------------------------------------------------------------------------------------
+// Bourbon --------------------------------------
+let bourbonJimBeam = new BrandInfo(
+  // Name 
+  "Jim Beam",
+  // Basic Info
+  ["Kentucky- The world's number one bourbon. Jim Beam was founded in 1795 and has been operated by one family for seven generations. We've always created bourbon our way, aging it twice as long as the law requires.", 
+  "Jim Beam is produced from the fermentation and distillation of corn, rye, and malted barley.", 
+  "80 proof / 40% ABV"],
+  // Tasting Notes
+  ["Rich, Vanilla, Oak, Cinnamon, Balanced"],
+  // Similar Brands
+  null,
+  // Description
+  "Jim Beam is an American brand of bourbon whiskey produced in Clermont, Kentucky, by Beam Suntory. It is one of the best-selling brands of bourbon in the world. Since 1795 (interrupted by Prohibition), seven generations of the Beam family have been involved in whiskey production for the company that produces the brand.", 
+  // Type
+  "Bourbon"
+);
 
 
-// Jarritos ---------------------------------------------------------------------------------
+
+
+// Jarritos ------------------------------------------------------------------------------------
   let jarritosFruitPunch = new BrandInfo(
     // Name 
     "Fruit Punch",
@@ -312,6 +332,7 @@ class BrandInfo{
     tequilaAdictivo,
     vodkaBelvedere,
     vodkaFinlandia,
+    bourbonJimBeam,
     jarritosFruitPunch,
     jarritosGrapefruit,
     jarritosGuava,

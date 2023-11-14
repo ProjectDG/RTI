@@ -1075,8 +1075,8 @@ function openFullscreen() {
 
     // Brandy List
     const brandyList = {
-      'Hennessy (Cognac)' : ["Brandy"],
-      'Louis XIII (Cognac)' : ["Brandy"],
+      'Hennessy' : ["Brandy"],
+      'LouisXIII' : ["Brandy"],
     }
 
     // Cordials List
@@ -1103,7 +1103,7 @@ function openFullscreen() {
       'Sambuca' : ["Cordials"],
       'Sour Apple Pucker' : ["Cordials"],
       'Southern Comfort' : ["Cordials"],
-      'St. Germaine Elderflower' : ["Cordials"],
+      'St Germain Elderflower' : ["Cordials"],
       'Disaronno Amaretto' : ["Cordials"],
       'Vermouth Dry' : ["Cordials"],
       'Vermouth Sweet' : ["Cordials"],
@@ -1249,6 +1249,14 @@ function openFullscreen() {
             button.setAttribute('class', 'brand-buttons');
             button.setAttribute('value', current[brand]);
             targetDiv.append(button);
+
+            if(button.id === "Hennessy"){
+              span.innerText = "Hennessy (Cognac)";
+            }
+      
+            if(button.id === "LouisXIII"){
+              span.innerText = "Louis XIII (Cognac)";
+            }
         });
 }
 
@@ -1283,7 +1291,8 @@ function openFullscreen() {
       let categoryFirstLetter = current.value.toLowerCase()[0];
       let categoryRestOfLetters = current.value.slice(1).replaceAll(" ", "");
       let category = categoryFirstLetter + categoryRestOfLetters;
-      let camelCase = current.id.replaceAll(" ", "");
+      let preCamelCase = current.id.replaceAll(":", "");
+      let camelCase = preCamelCase.replaceAll(" ", "");
 
       // Uses Breakdown to search for specific image.
       img.src = "./images/" + category + camelCase + ".png";
@@ -1299,6 +1308,16 @@ function openFullscreen() {
       titleElement.setAttribute("id", "imageTitle");
       titleElement.setAttribute("class", "all-info");
       titleElement.innerText = current.id;
+
+      if(current.id === "Hennessy"){
+        titleElement.innerText = "Hennessy (Cognac)";
+      }
+
+      if(current.id === "LouisXIII"){
+        titleElement.innerText = "Louis XIII (Cognac)";
+      }
+
+      console.log(current.id)
 
       // Creates a div where the brand information will be stored and assigns an I.D.----------------------------------
       const infoDiv  = document.createElement('div');

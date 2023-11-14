@@ -129,6 +129,13 @@ body {
     margin: auto;
   }
 
+
+  [value~="ClassWhiskey"]
+  {
+    height: 11%;
+    margin: auto;
+  }
+
   /* if theres fewer buttons */
   [value~="Vodka"],
   [value~="Bourbon"],
@@ -150,12 +157,27 @@ body {
   }
 
   #Abasolo,
+  #Draft,
+  #Bottle,
   [value~="Rose"],
   [value~="Sparkling"]
   {
     margin: auto;
     height: 15vh;
   }
+
+  #Draft,
+  #Hennessy{
+    margin: auto 0 3% 0;
+    height: 12%;
+  }
+
+  #Bottle,
+  #LouisXIII{
+    margin: 3% 0 auto 0;
+    height: 12%;
+  }
+
 /*
   #Bourbon,
   #Canadian,
@@ -207,8 +229,8 @@ body {
 
   #image{
     margin:  5% auto 0 auto;
-    max-width: 40%;
-    height: 90%;
+    max-width: 100%;
+    max-height: 90%;
   }
 
   #titleDiv{
